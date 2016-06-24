@@ -15,6 +15,7 @@
 		0EC3AAC61D1CFA0A00615F05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EC3AAC41D1CFA0A00615F05 /* LaunchScreen.storyboard */; };
 		0EC3AAD11D1CFA0B00615F05 /* iOSSampleCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AAD01D1CFA0B00615F05 /* iOSSampleCodeTests.m */; };
 		0EC3AADC1D1CFA0B00615F05 /* iOSSampleCodeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AADB1D1CFA0B00615F05 /* iOSSampleCodeUITests.m */; };
+		0EC3AAEC1D1D1D1600615F05 /* UnderconstrainedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AAEB1D1D1D1600615F05 /* UnderconstrainedViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		0EC3AAD71D1CFA0B00615F05 /* iOSSampleCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSSampleCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC3AADB1D1CFA0B00615F05 /* iOSSampleCodeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSSampleCodeUITests.m; sourceTree = "<group>"; };
 		0EC3AADD1D1CFA0B00615F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EC3AAEA1D1D1D1600615F05 /* UnderconstrainedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnderconstrainedViewController.h; sourceTree = "<group>"; };
+		0EC3AAEB1D1D1D1600615F05 /* UnderconstrainedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnderconstrainedViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		0EC3AAB51D1CFA0A00615F05 /* iOSSampleCode */ = {
 			isa = PBXGroup;
 			children = (
+				0EC3AAE91D1D1C1000615F05 /* AutoLayout */,
 				0EC3AAB91D1CFA0A00615F05 /* AppDelegate.h */,
 				0EC3AABA1D1CFA0A00615F05 /* AppDelegate.m */,
 				0EC3AABC1D1CFA0A00615F05 /* ViewController.h */,
@@ -138,6 +142,15 @@
 				0EC3AADD1D1CFA0B00615F05 /* Info.plist */,
 			);
 			path = iOSSampleCodeUITests;
+			sourceTree = "<group>";
+		};
+		0EC3AAE91D1D1C1000615F05 /* AutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				0EC3AAEA1D1D1D1600615F05 /* UnderconstrainedViewController.h */,
+				0EC3AAEB1D1D1D1600615F05 /* UnderconstrainedViewController.m */,
+			);
+			name = AutoLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EC3AAEC1D1D1D1600615F05 /* UnderconstrainedViewController.m in Sources */,
 				0EC3AABE1D1CFA0A00615F05 /* ViewController.m in Sources */,
 				0EC3AABB1D1CFA0A00615F05 /* AppDelegate.m in Sources */,
 				0EC3AAB81D1CFA0A00615F05 /* main.m in Sources */,
