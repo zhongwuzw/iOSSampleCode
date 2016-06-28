@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E4C0A471D20EFD000AFC7CF /* ZWBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C0A461D20EFD000AFC7CF /* ZWBaseTableViewController.m */; };
+		0E4C0A4C1D20F15C00AFC7CF /* ZWHitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C0A4B1D20F15C00AFC7CF /* ZWHitTestViewController.m */; };
+		0E4C0A4F1D20F27700AFC7CF /* ZWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C0A4E1D20F27700AFC7CF /* ZWBaseViewController.m */; };
+		0E4C0A551D2122C100AFC7CF /* ZWAutoLayoutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C0A541D2122C100AFC7CF /* ZWAutoLayoutTableViewController.m */; };
+		0E4C0A581D21230F00AFC7CF /* ZWCocoaTouchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C0A571D21230F00AFC7CF /* ZWCocoaTouchTableViewController.m */; };
+		0E5AF51C1D20E1A1009F9511 /* ZWHitTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AF51B1D20E1A1009F9511 /* ZWHitTestView.m */; };
 		0EC3AAB81D1CFA0A00615F05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AAB71D1CFA0A00615F05 /* main.m */; };
 		0EC3AABB1D1CFA0A00615F05 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AABA1D1CFA0A00615F05 /* AppDelegate.m */; };
 		0EC3AABE1D1CFA0A00615F05 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AABD1D1CFA0A00615F05 /* ViewController.m */; };
@@ -15,7 +21,7 @@
 		0EC3AAC61D1CFA0A00615F05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EC3AAC41D1CFA0A00615F05 /* LaunchScreen.storyboard */; };
 		0EC3AAD11D1CFA0B00615F05 /* iOSSampleCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AAD01D1CFA0B00615F05 /* iOSSampleCodeTests.m */; };
 		0EC3AADC1D1CFA0B00615F05 /* iOSSampleCodeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AADB1D1CFA0B00615F05 /* iOSSampleCodeUITests.m */; };
-		0EC3AAEC1D1D1D1600615F05 /* UnderconstrainedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AAEB1D1D1D1600615F05 /* UnderconstrainedViewController.m */; };
+		0EC3AAEC1D1D1D1600615F05 /* ZWUnderconstrainedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AAEB1D1D1D1600615F05 /* ZWUnderconstrainedViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E4C0A451D20EFD000AFC7CF /* ZWBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWBaseTableViewController.h; sourceTree = "<group>"; };
+		0E4C0A461D20EFD000AFC7CF /* ZWBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWBaseTableViewController.m; sourceTree = "<group>"; };
+		0E4C0A4A1D20F15C00AFC7CF /* ZWHitTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWHitTestViewController.h; sourceTree = "<group>"; };
+		0E4C0A4B1D20F15C00AFC7CF /* ZWHitTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWHitTestViewController.m; sourceTree = "<group>"; };
+		0E4C0A4D1D20F27700AFC7CF /* ZWBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWBaseViewController.h; sourceTree = "<group>"; };
+		0E4C0A4E1D20F27700AFC7CF /* ZWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWBaseViewController.m; sourceTree = "<group>"; };
+		0E4C0A531D2122C100AFC7CF /* ZWAutoLayoutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWAutoLayoutTableViewController.h; sourceTree = "<group>"; };
+		0E4C0A541D2122C100AFC7CF /* ZWAutoLayoutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWAutoLayoutTableViewController.m; sourceTree = "<group>"; };
+		0E4C0A561D21230F00AFC7CF /* ZWCocoaTouchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWCocoaTouchTableViewController.h; sourceTree = "<group>"; };
+		0E4C0A571D21230F00AFC7CF /* ZWCocoaTouchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWCocoaTouchTableViewController.m; sourceTree = "<group>"; };
+		0E5AF51A1D20E1A1009F9511 /* ZWHitTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWHitTestView.h; sourceTree = "<group>"; };
+		0E5AF51B1D20E1A1009F9511 /* ZWHitTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWHitTestView.m; sourceTree = "<group>"; };
 		0EC3AAB31D1CFA0A00615F05 /* iOSSampleCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSampleCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC3AAB71D1CFA0A00615F05 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0EC3AAB91D1CFA0A00615F05 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,8 +70,8 @@
 		0EC3AAD71D1CFA0B00615F05 /* iOSSampleCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSSampleCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC3AADB1D1CFA0B00615F05 /* iOSSampleCodeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSSampleCodeUITests.m; sourceTree = "<group>"; };
 		0EC3AADD1D1CFA0B00615F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0EC3AAEA1D1D1D1600615F05 /* UnderconstrainedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnderconstrainedViewController.h; sourceTree = "<group>"; };
-		0EC3AAEB1D1D1D1600615F05 /* UnderconstrainedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnderconstrainedViewController.m; sourceTree = "<group>"; };
+		0EC3AAEA1D1D1D1600615F05 /* ZWUnderconstrainedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWUnderconstrainedViewController.h; sourceTree = "<group>"; };
+		0EC3AAEB1D1D1D1600615F05 /* ZWUnderconstrainedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWUnderconstrainedViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +99,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E4C0A481D20F10100AFC7CF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0E4C0A451D20EFD000AFC7CF /* ZWBaseTableViewController.h */,
+				0E4C0A461D20EFD000AFC7CF /* ZWBaseTableViewController.m */,
+				0E4C0A4D1D20F27700AFC7CF /* ZWBaseViewController.h */,
+				0E4C0A4E1D20F27700AFC7CF /* ZWBaseViewController.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		0E4C0A491D20F13100AFC7CF /* CocoaTouch */ = {
+			isa = PBXGroup;
+			children = (
+				0E4C0A4A1D20F15C00AFC7CF /* ZWHitTestViewController.h */,
+				0E4C0A4B1D20F15C00AFC7CF /* ZWHitTestViewController.m */,
+				0E5AF51A1D20E1A1009F9511 /* ZWHitTestView.h */,
+				0E5AF51B1D20E1A1009F9511 /* ZWHitTestView.m */,
+				0E4C0A561D21230F00AFC7CF /* ZWCocoaTouchTableViewController.h */,
+				0E4C0A571D21230F00AFC7CF /* ZWCocoaTouchTableViewController.m */,
+			);
+			name = CocoaTouch;
+			sourceTree = "<group>";
+		};
 		0EC3AAAA1D1CFA0A00615F05 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +146,8 @@
 		0EC3AAB51D1CFA0A00615F05 /* iOSSampleCode */ = {
 			isa = PBXGroup;
 			children = (
+				0E4C0A491D20F13100AFC7CF /* CocoaTouch */,
+				0E4C0A481D20F10100AFC7CF /* Utilities */,
 				0EC3AAE91D1D1C1000615F05 /* AutoLayout */,
 				0EC3AAB91D1CFA0A00615F05 /* AppDelegate.h */,
 				0EC3AABA1D1CFA0A00615F05 /* AppDelegate.m */,
@@ -147,8 +191,10 @@
 		0EC3AAE91D1D1C1000615F05 /* AutoLayout */ = {
 			isa = PBXGroup;
 			children = (
-				0EC3AAEA1D1D1D1600615F05 /* UnderconstrainedViewController.h */,
-				0EC3AAEB1D1D1D1600615F05 /* UnderconstrainedViewController.m */,
+				0EC3AAEA1D1D1D1600615F05 /* ZWUnderconstrainedViewController.h */,
+				0EC3AAEB1D1D1D1600615F05 /* ZWUnderconstrainedViewController.m */,
+				0E4C0A531D2122C100AFC7CF /* ZWAutoLayoutTableViewController.h */,
+				0E4C0A541D2122C100AFC7CF /* ZWAutoLayoutTableViewController.m */,
 			);
 			name = AutoLayout;
 			sourceTree = "<group>";
@@ -215,6 +261,7 @@
 		0EC3AAAB1D1CFA0A00615F05 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ZW;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "钟武";
 				TargetAttributes = {
@@ -283,8 +330,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EC3AAEC1D1D1D1600615F05 /* UnderconstrainedViewController.m in Sources */,
+				0E4C0A581D21230F00AFC7CF /* ZWCocoaTouchTableViewController.m in Sources */,
+				0EC3AAEC1D1D1D1600615F05 /* ZWUnderconstrainedViewController.m in Sources */,
 				0EC3AABE1D1CFA0A00615F05 /* ViewController.m in Sources */,
+				0E4C0A471D20EFD000AFC7CF /* ZWBaseTableViewController.m in Sources */,
+				0E5AF51C1D20E1A1009F9511 /* ZWHitTestView.m in Sources */,
+				0E4C0A4F1D20F27700AFC7CF /* ZWBaseViewController.m in Sources */,
+				0E4C0A551D2122C100AFC7CF /* ZWAutoLayoutTableViewController.m in Sources */,
+				0E4C0A4C1D20F15C00AFC7CF /* ZWHitTestViewController.m in Sources */,
 				0EC3AABB1D1CFA0A00615F05 /* AppDelegate.m in Sources */,
 				0EC3AAB81D1CFA0A00615F05 /* main.m in Sources */,
 			);
@@ -510,6 +563,7 @@
 				0EC3AAE21D1CFA0B00615F05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0EC3AAE31D1CFA0B00615F05 /* Build configuration list for PBXNativeTarget "iOSSampleCodeTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +572,7 @@
 				0EC3AAE51D1CFA0B00615F05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0EC3AAE61D1CFA0B00615F05 /* Build configuration list for PBXNativeTarget "iOSSampleCodeUITests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +581,7 @@
 				0EC3AAE81D1CFA0B00615F05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

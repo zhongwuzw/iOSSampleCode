@@ -7,14 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "UnderconstrainedViewController.h"
-
-static NSString *CELL_IDENTIFIER = @"cell_identifier";
+#import "ZWCocoaTouchTableViewController.h"
+#import "ZWAutoLayoutTableViewController.h"
 
 @interface ViewController ()
-
-@property (nonatomic, copy) NSArray *dataArray;
-@property (nonatomic, copy) NSArray *selectorArray;
 
 @end
 
@@ -22,12 +18,8 @@ static NSString *CELL_IDENTIFIER = @"cell_identifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+
     self.title = @"iOS 学习样例";
-    
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CELL_IDENTIFIER];
-    self.tableView.tableFooterView = [UIView new];
 
     [self inilializeDataArray];
     // Do any additional setup after loading the view, typically from a nib.
@@ -35,8 +27,8 @@ static NSString *CELL_IDENTIFIER = @"cell_identifier";
 
 - (void)inilializeDataArray
 {
-    self.dataArray = @[@"AutoLayout样例"];
-    self.selectorArray = @[@"jumpToAutoLayout"];
+    self.dataArray = @[@"AutoLayout样例",@"Cocoa Touch样例"];
+    self.selectorArray = @[@"jumpToAutoLayout",@"jumpToCocoaTouch"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,40 +39,16 @@ static NSString *CELL_IDENTIFIER = @"cell_identifier";
 #pragma mark -
 #pragma mark Handle VC Jump
 
-- (void)jumpToAutoLayout
+- (void)jumpToCocoaTouch
 {
-    UnderconstrainedViewController *controller = [UnderconstrainedViewController new];
+    ZWCocoaTouchTableViewController *controller = [ZWCocoaTouchTableViewController new];
     [self.navigationController pushViewController:controller animated:YES];
 }
 
-#pragma mark -
-#pragma mark UITableViewDataSource
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)jumpToAutoLayout
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER];
-    [cell.textLabel setText:_dataArray[indexPath.row]];
-    
-    return cell;
+    ZWAutoLayoutTableViewController *controller = [ZWAutoLayoutTableViewController new];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return _dataArray.count;
-}
-
-#pragma mark -
-#pragma mark UITableViewDelegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    #pragma clang diagnostic push
-    #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-    
-    if ([self respondsToSelector:NSSelectorFromString(_selectorArray[indexPath.row])]) {
-        [self performSelector:NSSelectorFromString(_selectorArray[indexPath.row])];
-    }
-    
-    #pragma clang diagnostic pop
-}
 @end

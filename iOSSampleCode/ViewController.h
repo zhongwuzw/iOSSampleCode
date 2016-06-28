@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZWBaseTableViewController.h"
 
-@interface ViewController : UITableViewController
+@interface ViewController : ZWBaseTableViewController
 
 
 @end
