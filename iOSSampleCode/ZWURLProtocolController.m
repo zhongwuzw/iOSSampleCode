@@ -31,8 +31,9 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[webView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(webView)]];
      
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[webView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(webView)]];
-    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"ad_page_pc" ofType:@"html"];
-    NSData *data = [[NSData alloc] initWithContentsOfFile:fileName];
+    
+//    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"ad_page_pc" ofType:@"html"];
+//    NSData *data = [[NSData alloc] initWithContentsOfFile:fileName];
     
     //当html中需要加载本地的图片等资源时，需要添加设置baseURL的值
 //    [webView loadHTMLString:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] baseURL:[[NSBundle mainBundle] bundleURL]];

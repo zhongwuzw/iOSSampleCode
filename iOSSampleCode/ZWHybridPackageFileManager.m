@@ -12,7 +12,10 @@
 
 + (BOOL)hasPackageWithURL:(NSURL *)url
 {
-    return YES;
+    if ([url.absoluteString rangeOfString:@"haha"].location != NSNotFound) {
+        return YES;
+    }
+    return NO;
 }
 
 + (NSData *)dataWithURL:(NSURL *)url

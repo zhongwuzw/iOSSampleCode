@@ -11,7 +11,7 @@
 
 static NSString *const HybridResourceProtocolKey = @"HybridResourceProtocolKey";
 
-@interface ZWHybridPackageProtocol ()<NSURLConnectionDataDelegate>
+@interface ZWHybridPackageProtocol ()<NSURLConnectionDataDelegate,NSURLSessionDataDelegate,NSURLSessionTaskDelegate>
 
 @property (nonatomic, strong)NSURLConnection *connection;
 
@@ -19,6 +19,15 @@ static NSString *const HybridResourceProtocolKey = @"HybridResourceProtocolKey";
 
 @implementation ZWHybridPackageProtocol
 
+/**
+ *  @author 钟武, 16-06-29 18:06:47
+ *
+ *  @brief 如果返回NO，则request会进入默认的URL Loading System进行处理
+ *
+ *  @param request
+ *
+ *  @return
+ */
 + (BOOL)canInitWithRequest:(NSURLRequest *)request
 {
     if ([NSURLProtocol propertyForKey:HybridResourceProtocolKey inRequest:request]) {
@@ -55,8 +64,12 @@ static NSString *const HybridResourceProtocolKey = @"HybridResourceProtocolKey";
         newRequest.allHTTPHeaderFields = self.request.allHTTPHeaderFields;
         
         [NSURLProtocol setProperty:@YES forKey:HybridResourceProtocolKey inRequest:newRequest];
-        
-        self.connection = [NSURLConnection connectionWithRequest:newRequest delegate:self];
+
+        NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:nil];
+        [[session dataTaskWithRequest:newRequest] resume];
+
+        //使用NSURLSession替换NSURLConnection
+//        self.connection = [NSURLConnection connectionWithRequest:newRequest delegate:self];
     }
 }
 
@@ -85,6 +98,29 @@ static NSString *const HybridResourceProtocolKey = @"HybridResourceProtocolKey";
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
     [self.client URLProtocol:self didFailWithError:error];
+}
+
+#pragma mark -NSURLSessionDelegate
+
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler
+{
+    [self.client URLProtocol:self didReceiveResponse:response cacheStoragePolicy:NSURLCacheStorageNotAllowed];
+    
+    completionHandler(NSURLSessionResponseAllow);
+}
+
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
+{
+    [self.client URLProtocol:self didLoadData:data];
+}
+
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
+{
+    if (error) {
+        [self.client URLProtocol:self didFailWithError:error];
+    }
+    else
+        [self.client URLProtocolDidFinishLoading:self];
 }
 
 @end
