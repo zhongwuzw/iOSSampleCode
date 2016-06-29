@@ -11,6 +11,6 @@
 @interface ZWBaseTableViewController : UITableViewController
 
 @property (nonatomic, copy) NSArray *dataArray;
-@property (nonatomic, copy) NSArray *selectorArray;
+@property (nonatomic, copy) NSArray *controllerStrArray;
 
 @end

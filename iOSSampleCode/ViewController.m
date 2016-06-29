@@ -7,8 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "ZWCocoaTouchTableViewController.h"
-#import "ZWAutoLayoutTableViewController.h"
+#import "Header.h"
 
 @interface ViewController ()
 
@@ -27,8 +26,8 @@
 
 - (void)inilializeDataArray
 {
-    self.dataArray = @[@"AutoLayout样例",@"Cocoa Touch样例"];
-    self.selectorArray = @[@"jumpToAutoLayout",@"jumpToCocoaTouch"];
+    self.dataArray = @[@"AutoLayout样例",@"UIkit样例",@"Network样例"];
+    self.controllerStrArray = @[@"ZWAutoLayoutTableViewController",@"ZWCocoaTouchTableViewController",@"ZWNetworkTableViewController"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,16 +38,11 @@
 #pragma mark -
 #pragma mark Handle VC Jump
 
-- (void)jumpToCocoaTouch
+- (void)jumpToController:(NSString *)controllerStr
 {
-    ZWCocoaTouchTableViewController *controller = [ZWCocoaTouchTableViewController new];
+    id controller = [NSClassFromString(controllerStr) new];
     [self.navigationController pushViewController:controller animated:YES];
 }
 
-- (void)jumpToAutoLayout
-{
-    ZWAutoLayoutTableViewController *controller = [ZWAutoLayoutTableViewController new];
-    [self.navigationController pushViewController:controller animated:YES];
-}
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ZWHybridPackageProtocol.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [NSURLProtocol registerClass:[ZWHybridPackageProtocol class]];
+    
     // Override point for customization after application launch.
     return YES;
 }

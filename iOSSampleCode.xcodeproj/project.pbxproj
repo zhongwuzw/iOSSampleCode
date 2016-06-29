@@ -12,6 +12,13 @@
 		0E4C0A4F1D20F27700AFC7CF /* ZWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C0A4E1D20F27700AFC7CF /* ZWBaseViewController.m */; };
 		0E4C0A551D2122C100AFC7CF /* ZWAutoLayoutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C0A541D2122C100AFC7CF /* ZWAutoLayoutTableViewController.m */; };
 		0E4C0A581D21230F00AFC7CF /* ZWCocoaTouchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C0A571D21230F00AFC7CF /* ZWCocoaTouchTableViewController.m */; };
+		0E5354541D2362EF00C2ACAA /* ZWTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5354531D2362EF00C2ACAA /* ZWTextViewController.m */; };
+		0E53545C1D23A11700C2ACAA /* ZWNetworkTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E53545B1D23A11700C2ACAA /* ZWNetworkTableViewController.m */; };
+		0E5354631D23A1B600C2ACAA /* ZWURLProtocolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5354621D23A1B600C2ACAA /* ZWURLProtocolController.m */; };
+		0E5354671D23A25B00C2ACAA /* ZWHybridPackageProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5354661D23A25B00C2ACAA /* ZWHybridPackageProtocol.m */; };
+		0E53546A1D23A35700C2ACAA /* ZWHybridPackageFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5354691D23A35700C2ACAA /* ZWHybridPackageFileManager.m */; };
+		0E53546E1D23A9B500C2ACAA /* ad_page_pc.html in Resources */ = {isa = PBXBuildFile; fileRef = 0E53546D1D23A9B500C2ACAA /* ad_page_pc.html */; };
+		0E5354821D23D2C600C2ACAA /* images in Resources */ = {isa = PBXBuildFile; fileRef = 0E5354811D23D2C600C2ACAA /* images */; };
 		0E5AF51C1D20E1A1009F9511 /* ZWHitTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AF51B1D20E1A1009F9511 /* ZWHitTestView.m */; };
 		0EC3AAB81D1CFA0A00615F05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AAB71D1CFA0A00615F05 /* main.m */; };
 		0EC3AABB1D1CFA0A00615F05 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AABA1D1CFA0A00615F05 /* AppDelegate.m */; };
@@ -52,6 +59,22 @@
 		0E4C0A541D2122C100AFC7CF /* ZWAutoLayoutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWAutoLayoutTableViewController.m; sourceTree = "<group>"; };
 		0E4C0A561D21230F00AFC7CF /* ZWCocoaTouchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWCocoaTouchTableViewController.h; sourceTree = "<group>"; };
 		0E4C0A571D21230F00AFC7CF /* ZWCocoaTouchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWCocoaTouchTableViewController.m; sourceTree = "<group>"; };
+		0E5354521D2362EF00C2ACAA /* ZWTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWTextViewController.h; sourceTree = "<group>"; };
+		0E5354531D2362EF00C2ACAA /* ZWTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWTextViewController.m; sourceTree = "<group>"; };
+		0E5354571D23742D00C2ACAA /* AutoLayoutControllerHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoLayoutControllerHeader.h; sourceTree = "<group>"; };
+		0E5354581D23745600C2ACAA /* CocoaTouchControllerHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CocoaTouchControllerHeader.h; sourceTree = "<group>"; };
+		0E53545A1D23A11700C2ACAA /* ZWNetworkTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWNetworkTableViewController.h; sourceTree = "<group>"; };
+		0E53545B1D23A11700C2ACAA /* ZWNetworkTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWNetworkTableViewController.m; sourceTree = "<group>"; };
+		0E5354601D23A15B00C2ACAA /* NetworkHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkHeader.h; sourceTree = "<group>"; };
+		0E5354611D23A1B600C2ACAA /* ZWURLProtocolController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWURLProtocolController.h; sourceTree = "<group>"; };
+		0E5354621D23A1B600C2ACAA /* ZWURLProtocolController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWURLProtocolController.m; sourceTree = "<group>"; };
+		0E5354651D23A25B00C2ACAA /* ZWHybridPackageProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWHybridPackageProtocol.h; sourceTree = "<group>"; };
+		0E5354661D23A25B00C2ACAA /* ZWHybridPackageProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWHybridPackageProtocol.m; sourceTree = "<group>"; };
+		0E5354681D23A35700C2ACAA /* ZWHybridPackageFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWHybridPackageFileManager.h; sourceTree = "<group>"; };
+		0E5354691D23A35700C2ACAA /* ZWHybridPackageFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWHybridPackageFileManager.m; sourceTree = "<group>"; };
+		0E53546D1D23A9B500C2ACAA /* ad_page_pc.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ad_page_pc.html; sourceTree = "<group>"; };
+		0E5354771D23AD3900C2ACAA /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		0E5354811D23D2C600C2ACAA /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		0E5AF51A1D20E1A1009F9511 /* ZWHitTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWHitTestView.h; sourceTree = "<group>"; };
 		0E5AF51B1D20E1A1009F9511 /* ZWHitTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWHitTestView.m; sourceTree = "<group>"; };
 		0EC3AAB31D1CFA0A00615F05 /* iOSSampleCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSampleCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,17 +133,141 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
-		0E4C0A491D20F13100AFC7CF /* CocoaTouch */ = {
+		0E4C0A491D20F13100AFC7CF /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				0E5354561D23739900C2ACAA /* Header */,
+				0E53544F1D23629000C2ACAA /* View */,
+				0E53544E1D23628400C2ACAA /* Controller */,
+				0E4C0A561D21230F00AFC7CF /* ZWCocoaTouchTableViewController.h */,
+				0E4C0A571D21230F00AFC7CF /* ZWCocoaTouchTableViewController.m */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		0E53544E1D23628400C2ACAA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				0E4C0A4A1D20F15C00AFC7CF /* ZWHitTestViewController.h */,
 				0E4C0A4B1D20F15C00AFC7CF /* ZWHitTestViewController.m */,
+				0E5354521D2362EF00C2ACAA /* ZWTextViewController.h */,
+				0E5354531D2362EF00C2ACAA /* ZWTextViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0E53544F1D23629000C2ACAA /* View */ = {
+			isa = PBXGroup;
+			children = (
 				0E5AF51A1D20E1A1009F9511 /* ZWHitTestView.h */,
 				0E5AF51B1D20E1A1009F9511 /* ZWHitTestView.m */,
-				0E4C0A561D21230F00AFC7CF /* ZWCocoaTouchTableViewController.h */,
-				0E4C0A571D21230F00AFC7CF /* ZWCocoaTouchTableViewController.m */,
 			);
-			name = CocoaTouch;
+			name = View;
+			sourceTree = "<group>";
+		};
+		0E5354501D2362AF00C2ACAA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0EC3AAEA1D1D1D1600615F05 /* ZWUnderconstrainedViewController.h */,
+				0EC3AAEB1D1D1D1600615F05 /* ZWUnderconstrainedViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0E5354511D2362B700C2ACAA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0E5354551D23738F00C2ACAA /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				0E5354571D23742D00C2ACAA /* AutoLayoutControllerHeader.h */,
+			);
+			name = Header;
+			sourceTree = "<group>";
+		};
+		0E5354561D23739900C2ACAA /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				0E5354581D23745600C2ACAA /* CocoaTouchControllerHeader.h */,
+			);
+			name = Header;
+			sourceTree = "<group>";
+		};
+		0E5354591D23A0CB00C2ACAA /* Netwotk */ = {
+			isa = PBXGroup;
+			children = (
+				0E5354641D23A22F00C2ACAA /* Model */,
+				0E53545F1D23A14700C2ACAA /* Controller */,
+				0E53545E1D23A14100C2ACAA /* View */,
+				0E53545D1D23A13700C2ACAA /* Header */,
+				0E53545A1D23A11700C2ACAA /* ZWNetworkTableViewController.h */,
+				0E53545B1D23A11700C2ACAA /* ZWNetworkTableViewController.m */,
+			);
+			name = Netwotk;
+			sourceTree = "<group>";
+		};
+		0E53545D1D23A13700C2ACAA /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				0E5354601D23A15B00C2ACAA /* NetworkHeader.h */,
+			);
+			name = Header;
+			sourceTree = "<group>";
+		};
+		0E53545E1D23A14100C2ACAA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0E53545F1D23A14700C2ACAA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0E5354611D23A1B600C2ACAA /* ZWURLProtocolController.h */,
+				0E5354621D23A1B600C2ACAA /* ZWURLProtocolController.m */,
+				0E5354681D23A35700C2ACAA /* ZWHybridPackageFileManager.h */,
+				0E5354691D23A35700C2ACAA /* ZWHybridPackageFileManager.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0E5354641D23A22F00C2ACAA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E5354651D23A25B00C2ACAA /* ZWHybridPackageProtocol.h */,
+				0E5354661D23A25B00C2ACAA /* ZWHybridPackageProtocol.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0E53546B1D23A95300C2ACAA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0E53546C1D23A96B00C2ACAA /* html */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0E53546C1D23A96B00C2ACAA /* html */ = {
+			isa = PBXGroup;
+			children = (
+				0E5354811D23D2C600C2ACAA /* images */,
+				0E53546D1D23A9B500C2ACAA /* ad_page_pc.html */,
+			);
+			name = html;
+			sourceTree = "<group>";
+		};
+		0E5354761D23AD2F00C2ACAA /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				0E5354771D23AD3900C2ACAA /* Header.h */,
+			);
+			name = Header;
 			sourceTree = "<group>";
 		};
 		0EC3AAAA1D1CFA0A00615F05 = {
@@ -146,7 +293,10 @@
 		0EC3AAB51D1CFA0A00615F05 /* iOSSampleCode */ = {
 			isa = PBXGroup;
 			children = (
-				0E4C0A491D20F13100AFC7CF /* CocoaTouch */,
+				0E5354761D23AD2F00C2ACAA /* Header */,
+				0E53546B1D23A95300C2ACAA /* Resources */,
+				0E5354591D23A0CB00C2ACAA /* Netwotk */,
+				0E4C0A491D20F13100AFC7CF /* UIKit */,
 				0E4C0A481D20F10100AFC7CF /* Utilities */,
 				0EC3AAE91D1D1C1000615F05 /* AutoLayout */,
 				0EC3AAB91D1CFA0A00615F05 /* AppDelegate.h */,
@@ -191,8 +341,9 @@
 		0EC3AAE91D1D1C1000615F05 /* AutoLayout */ = {
 			isa = PBXGroup;
 			children = (
-				0EC3AAEA1D1D1D1600615F05 /* ZWUnderconstrainedViewController.h */,
-				0EC3AAEB1D1D1D1600615F05 /* ZWUnderconstrainedViewController.m */,
+				0E5354551D23738F00C2ACAA /* Header */,
+				0E5354511D2362B700C2ACAA /* View */,
+				0E5354501D2362AF00C2ACAA /* Controller */,
 				0E4C0A531D2122C100AFC7CF /* ZWAutoLayoutTableViewController.h */,
 				0E4C0A541D2122C100AFC7CF /* ZWAutoLayoutTableViewController.m */,
 			);
@@ -267,6 +418,7 @@
 				TargetAttributes = {
 					0EC3AAB21D1CFA0A00615F05 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 9R74JVS7P9;
 					};
 					0EC3AACB1D1CFA0B00615F05 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -303,7 +455,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E5354821D23D2C600C2ACAA /* images in Resources */,
 				0EC3AAC61D1CFA0A00615F05 /* LaunchScreen.storyboard in Resources */,
+				0E53546E1D23A9B500C2ACAA /* ad_page_pc.html in Resources */,
 				0EC3AAC31D1CFA0A00615F05 /* Assets.xcassets in Resources */,
 				0EC3AAC11D1CFA0A00615F05 /* Main.storyboard in Resources */,
 			);
@@ -331,13 +485,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E4C0A581D21230F00AFC7CF /* ZWCocoaTouchTableViewController.m in Sources */,
+				0E5354631D23A1B600C2ACAA /* ZWURLProtocolController.m in Sources */,
 				0EC3AAEC1D1D1D1600615F05 /* ZWUnderconstrainedViewController.m in Sources */,
+				0E5354671D23A25B00C2ACAA /* ZWHybridPackageProtocol.m in Sources */,
 				0EC3AABE1D1CFA0A00615F05 /* ViewController.m in Sources */,
+				0E5354541D2362EF00C2ACAA /* ZWTextViewController.m in Sources */,
 				0E4C0A471D20EFD000AFC7CF /* ZWBaseTableViewController.m in Sources */,
 				0E5AF51C1D20E1A1009F9511 /* ZWHitTestView.m in Sources */,
 				0E4C0A4F1D20F27700AFC7CF /* ZWBaseViewController.m in Sources */,
+				0E53545C1D23A11700C2ACAA /* ZWNetworkTableViewController.m in Sources */,
 				0E4C0A551D2122C100AFC7CF /* ZWAutoLayoutTableViewController.m in Sources */,
 				0E4C0A4C1D20F15C00AFC7CF /* ZWHitTestViewController.m in Sources */,
+				0E53546A1D23A35700C2ACAA /* ZWHybridPackageFileManager.m in Sources */,
 				0EC3AABB1D1CFA0A00615F05 /* AppDelegate.m in Sources */,
 				0EC3AAB81D1CFA0A00615F05 /* main.m in Sources */,
 			);
@@ -480,10 +639,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iOSSampleCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhongwu.iOSSampleCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -491,10 +653,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iOSSampleCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhongwu.iOSSampleCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

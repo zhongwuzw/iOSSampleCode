@@ -50,14 +50,12 @@ static NSString *CELL_IDENTIFIER = @"cell_identifier";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-    
-    if ([self respondsToSelector:NSSelectorFromString(_selectorArray[indexPath.row])]) {
-        [self performSelector:NSSelectorFromString(_selectorArray[indexPath.row])];
-    }
-    
-#pragma clang diagnostic pop
+    [self jumpToController:_controllerStrArray[indexPath.row]];
 }
+
+#pragma mark -
+#pragma mark Handle VC Jump
+
+- (void)jumpToController:(NSString *)controllerStr{}
 
 @end

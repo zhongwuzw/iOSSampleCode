@@ -7,15 +7,14 @@
 //
 
 #import "ZWCocoaTouchTableViewController.h"
-#import "ZWHitTestViewController.h"
-#import "ZWUnderconstrainedViewController.h"
+#import "CocoaTouchControllerHeader.h"
 
 @implementation ZWCocoaTouchTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"CocoaTouch学习样例";
+    self.title = @"UIkit学习样例";
     
     [self inilializeDataArray];
     // Do any additional setup after loading the view, typically from a nib.
@@ -23,8 +22,8 @@
 
 - (void)inilializeDataArray
 {
-    self.dataArray = @[@"Button超出父视图范围"];
-    self.selectorArray = @[@"jumpToCocoaTouch"];
+    self.dataArray = @[@"Button超出父视图范围",@"TextView和inputAccessoryView"];
+    self.controllerStrArray = @[@"ZWHitTestViewController",@"ZWTextViewController"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,9 +34,9 @@
 #pragma mark -
 #pragma mark Handle VC Jump
 
-- (void)jumpToCocoaTouch
+- (void)jumpToController:(NSString *)controllerStr
 {
-    ZWHitTestViewController *controller = [ZWHitTestViewController new];
+    id controller = [NSClassFromString(controllerStr) new];
     [self.navigationController pushViewController:controller animated:YES];
 }
 

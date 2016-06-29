@@ -7,8 +7,7 @@
 //
 
 #import "ZWAutoLayoutTableViewController.h"
-#import "ZWHitTestViewController.h"
-#import "ZWUnderconstrainedViewController.h"
+#import "AutoLayoutControllerHeader.h"
 
 @implementation ZWAutoLayoutTableViewController
 
@@ -24,7 +23,7 @@
 - (void)inilializeDataArray
 {
     self.dataArray = @[@"不充足的约束"];
-    self.selectorArray = @[@"jumpToAutoLayout"];
+    self.controllerStrArray = @[@"ZWUnderconstrainedViewController"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,9 +34,9 @@
 #pragma mark -
 #pragma mark Handle VC Jump
 
-- (void)jumpToAutoLayout
+- (void)jumpToController:(NSString *)controllerStr
 {
-    ZWUnderconstrainedViewController *controller = [ZWUnderconstrainedViewController new];
+    id controller = [NSClassFromString(controllerStr) new];
     [self.navigationController pushViewController:controller animated:YES];
 }
 
