@@ -12,5 +12,6 @@
 #import "ZWHitTestViewController.h"
 #import "ZWUnderconstrainedViewController.h"
 #import "ZWTextViewController.h"
+#import "ZWTextKitTableViewController.h"
 
 #endif /* CocoaTouchControllerHeader_h */

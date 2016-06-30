@@ -20,6 +20,13 @@
     
     [NSURLProtocol registerClass:[ZWHybridPackageProtocol class]];
     
+    UIColor* navColor = [UIColor colorWithRed:0.175f green:0.458f blue:0.831f alpha:1.0f];
+    [[UINavigationBar appearance] setBarTintColor:navColor];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
     // Override point for customization after application launch.
     return YES;
 }

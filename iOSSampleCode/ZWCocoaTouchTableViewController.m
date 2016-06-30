@@ -22,8 +22,8 @@
 
 - (void)inilializeDataArray
 {
-    self.dataArray = @[@"Button超出父视图范围",@"TextView和inputAccessoryView"];
-    self.controllerStrArray = @[@"ZWHitTestViewController",@"ZWTextViewController"];
+    self.dataArray = @[@"Button超出父视图范围",@"TextView和inputAccessoryView",@"Text Kit范例"];
+    self.controllerStrArray = @[@"ZWHitTestViewController",@"ZWTextViewController",@"ZWTextKitTableViewController"];
 }
 
 - (void)didReceiveMemoryWarning {

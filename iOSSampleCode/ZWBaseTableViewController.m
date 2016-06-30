@@ -7,6 +7,7 @@
 //
 
 #import "ZWBaseTableViewController.h"
+#import "ZWBaseTableViewCell.h"
 
 static NSString *CELL_IDENTIFIER = @"cell_identifier";
 
@@ -18,7 +19,7 @@ static NSString *CELL_IDENTIFIER = @"cell_identifier";
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CELL_IDENTIFIER];
+    [self.tableView registerClass:[ZWBaseTableViewCell class] forCellReuseIdentifier:CELL_IDENTIFIER];
     self.tableView.tableFooterView = [UIView new];
     
     // Do any additional setup after loading the view, typically from a nib.
@@ -34,7 +35,7 @@ static NSString *CELL_IDENTIFIER = @"cell_identifier";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER];
+    ZWBaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER];
     [cell.textLabel setText:_dataArray[indexPath.row]];
     
     return cell;

@@ -12,6 +12,7 @@
 		0E4C0A4F1D20F27700AFC7CF /* ZWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C0A4E1D20F27700AFC7CF /* ZWBaseViewController.m */; };
 		0E4C0A551D2122C100AFC7CF /* ZWAutoLayoutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C0A541D2122C100AFC7CF /* ZWAutoLayoutTableViewController.m */; };
 		0E4C0A581D21230F00AFC7CF /* ZWCocoaTouchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C0A571D21230F00AFC7CF /* ZWCocoaTouchTableViewController.m */; };
+		0E51409F1D24C654009672FA /* ZWBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E51409E1D24C654009672FA /* ZWBaseTableViewCell.m */; };
 		0E5354541D2362EF00C2ACAA /* ZWTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5354531D2362EF00C2ACAA /* ZWTextViewController.m */; };
 		0E53545C1D23A11700C2ACAA /* ZWNetworkTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E53545B1D23A11700C2ACAA /* ZWNetworkTableViewController.m */; };
 		0E5354631D23A1B600C2ACAA /* ZWURLProtocolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5354621D23A1B600C2ACAA /* ZWURLProtocolController.m */; };
@@ -20,6 +21,11 @@
 		0E53546E1D23A9B500C2ACAA /* ad_page_pc.html in Resources */ = {isa = PBXBuildFile; fileRef = 0E53546D1D23A9B500C2ACAA /* ad_page_pc.html */; };
 		0E5354821D23D2C600C2ACAA /* images in Resources */ = {isa = PBXBuildFile; fileRef = 0E5354811D23D2C600C2ACAA /* images */; };
 		0E5AF51C1D20E1A1009F9511 /* ZWHitTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AF51B1D20E1A1009F9511 /* ZWHitTestView.m */; };
+		0E7E3B9F1D24D68B00D51178 /* ZWTextKitTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E3B9E1D24D68B00D51178 /* ZWTextKitTableViewController.m */; };
+		0E7E3BA31D24F3B800D51178 /* ZWNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E3BA21D24F3B800D51178 /* ZWNote.m */; };
+		0E7E3BA61D24F42E00D51178 /* ZWTimeIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E3BA51D24F42E00D51178 /* ZWTimeIndicatorView.m */; };
+		0E7E3BA91D24F81700D51178 /* ZWNoteEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E3BA81D24F81700D51178 /* ZWNoteEditorViewController.m */; };
+		0E7E3BAC1D25168200D51178 /* ZWSyntaxHighlightTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E3BAB1D25168200D51178 /* ZWSyntaxHighlightTextStorage.m */; };
 		0EC3AAB81D1CFA0A00615F05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AAB71D1CFA0A00615F05 /* main.m */; };
 		0EC3AABB1D1CFA0A00615F05 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AABA1D1CFA0A00615F05 /* AppDelegate.m */; };
 		0EC3AABE1D1CFA0A00615F05 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AABD1D1CFA0A00615F05 /* ViewController.m */; };
@@ -59,6 +65,8 @@
 		0E4C0A541D2122C100AFC7CF /* ZWAutoLayoutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWAutoLayoutTableViewController.m; sourceTree = "<group>"; };
 		0E4C0A561D21230F00AFC7CF /* ZWCocoaTouchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWCocoaTouchTableViewController.h; sourceTree = "<group>"; };
 		0E4C0A571D21230F00AFC7CF /* ZWCocoaTouchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWCocoaTouchTableViewController.m; sourceTree = "<group>"; };
+		0E51409D1D24C654009672FA /* ZWBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWBaseTableViewCell.h; sourceTree = "<group>"; };
+		0E51409E1D24C654009672FA /* ZWBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWBaseTableViewCell.m; sourceTree = "<group>"; };
 		0E5354521D2362EF00C2ACAA /* ZWTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWTextViewController.h; sourceTree = "<group>"; };
 		0E5354531D2362EF00C2ACAA /* ZWTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWTextViewController.m; sourceTree = "<group>"; };
 		0E5354571D23742D00C2ACAA /* AutoLayoutControllerHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoLayoutControllerHeader.h; sourceTree = "<group>"; };
@@ -77,6 +85,16 @@
 		0E5354811D23D2C600C2ACAA /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		0E5AF51A1D20E1A1009F9511 /* ZWHitTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWHitTestView.h; sourceTree = "<group>"; };
 		0E5AF51B1D20E1A1009F9511 /* ZWHitTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWHitTestView.m; sourceTree = "<group>"; };
+		0E7E3B9D1D24D68B00D51178 /* ZWTextKitTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWTextKitTableViewController.h; sourceTree = "<group>"; };
+		0E7E3B9E1D24D68B00D51178 /* ZWTextKitTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWTextKitTableViewController.m; sourceTree = "<group>"; };
+		0E7E3BA11D24F3B800D51178 /* ZWNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWNote.h; sourceTree = "<group>"; };
+		0E7E3BA21D24F3B800D51178 /* ZWNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWNote.m; sourceTree = "<group>"; };
+		0E7E3BA41D24F42E00D51178 /* ZWTimeIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWTimeIndicatorView.h; sourceTree = "<group>"; };
+		0E7E3BA51D24F42E00D51178 /* ZWTimeIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWTimeIndicatorView.m; sourceTree = "<group>"; };
+		0E7E3BA71D24F81700D51178 /* ZWNoteEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWNoteEditorViewController.h; sourceTree = "<group>"; };
+		0E7E3BA81D24F81700D51178 /* ZWNoteEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWNoteEditorViewController.m; sourceTree = "<group>"; };
+		0E7E3BAA1D25168200D51178 /* ZWSyntaxHighlightTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWSyntaxHighlightTextStorage.h; sourceTree = "<group>"; };
+		0E7E3BAB1D25168200D51178 /* ZWSyntaxHighlightTextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWSyntaxHighlightTextStorage.m; sourceTree = "<group>"; };
 		0EC3AAB31D1CFA0A00615F05 /* iOSSampleCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSampleCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC3AAB71D1CFA0A00615F05 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0EC3AAB91D1CFA0A00615F05 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -129,6 +147,8 @@
 				0E4C0A461D20EFD000AFC7CF /* ZWBaseTableViewController.m */,
 				0E4C0A4D1D20F27700AFC7CF /* ZWBaseViewController.h */,
 				0E4C0A4E1D20F27700AFC7CF /* ZWBaseViewController.m */,
+				0E51409D1D24C654009672FA /* ZWBaseTableViewCell.h */,
+				0E51409E1D24C654009672FA /* ZWBaseTableViewCell.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -136,6 +156,7 @@
 		0E4C0A491D20F13100AFC7CF /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				0E7E3BA01D24F39600D51178 /* Model */,
 				0E5354561D23739900C2ACAA /* Header */,
 				0E53544F1D23629000C2ACAA /* View */,
 				0E53544E1D23628400C2ACAA /* Controller */,
@@ -152,6 +173,10 @@
 				0E4C0A4B1D20F15C00AFC7CF /* ZWHitTestViewController.m */,
 				0E5354521D2362EF00C2ACAA /* ZWTextViewController.h */,
 				0E5354531D2362EF00C2ACAA /* ZWTextViewController.m */,
+				0E7E3B9D1D24D68B00D51178 /* ZWTextKitTableViewController.h */,
+				0E7E3B9E1D24D68B00D51178 /* ZWTextKitTableViewController.m */,
+				0E7E3BA71D24F81700D51178 /* ZWNoteEditorViewController.h */,
+				0E7E3BA81D24F81700D51178 /* ZWNoteEditorViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -161,6 +186,8 @@
 			children = (
 				0E5AF51A1D20E1A1009F9511 /* ZWHitTestView.h */,
 				0E5AF51B1D20E1A1009F9511 /* ZWHitTestView.m */,
+				0E7E3BA41D24F42E00D51178 /* ZWTimeIndicatorView.h */,
+				0E7E3BA51D24F42E00D51178 /* ZWTimeIndicatorView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -268,6 +295,17 @@
 				0E5354771D23AD3900C2ACAA /* Header.h */,
 			);
 			name = Header;
+			sourceTree = "<group>";
+		};
+		0E7E3BA01D24F39600D51178 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E7E3BA11D24F3B800D51178 /* ZWNote.h */,
+				0E7E3BA21D24F3B800D51178 /* ZWNote.m */,
+				0E7E3BAA1D25168200D51178 /* ZWSyntaxHighlightTextStorage.h */,
+				0E7E3BAB1D25168200D51178 /* ZWSyntaxHighlightTextStorage.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		0EC3AAAA1D1CFA0A00615F05 = {
@@ -488,9 +526,13 @@
 				0E5354631D23A1B600C2ACAA /* ZWURLProtocolController.m in Sources */,
 				0EC3AAEC1D1D1D1600615F05 /* ZWUnderconstrainedViewController.m in Sources */,
 				0E5354671D23A25B00C2ACAA /* ZWHybridPackageProtocol.m in Sources */,
+				0E7E3BA91D24F81700D51178 /* ZWNoteEditorViewController.m in Sources */,
 				0EC3AABE1D1CFA0A00615F05 /* ViewController.m in Sources */,
 				0E5354541D2362EF00C2ACAA /* ZWTextViewController.m in Sources */,
 				0E4C0A471D20EFD000AFC7CF /* ZWBaseTableViewController.m in Sources */,
+				0E7E3B9F1D24D68B00D51178 /* ZWTextKitTableViewController.m in Sources */,
+				0E7E3BA31D24F3B800D51178 /* ZWNote.m in Sources */,
+				0E7E3BA61D24F42E00D51178 /* ZWTimeIndicatorView.m in Sources */,
 				0E5AF51C1D20E1A1009F9511 /* ZWHitTestView.m in Sources */,
 				0E4C0A4F1D20F27700AFC7CF /* ZWBaseViewController.m in Sources */,
 				0E53545C1D23A11700C2ACAA /* ZWNetworkTableViewController.m in Sources */,
@@ -498,7 +540,9 @@
 				0E4C0A4C1D20F15C00AFC7CF /* ZWHitTestViewController.m in Sources */,
 				0E53546A1D23A35700C2ACAA /* ZWHybridPackageFileManager.m in Sources */,
 				0EC3AABB1D1CFA0A00615F05 /* AppDelegate.m in Sources */,
+				0E7E3BAC1D25168200D51178 /* ZWSyntaxHighlightTextStorage.m in Sources */,
 				0EC3AAB81D1CFA0A00615F05 /* main.m in Sources */,
+				0E51409F1D24C654009672FA /* ZWBaseTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
