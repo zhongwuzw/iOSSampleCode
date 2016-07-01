@@ -12,9 +12,9 @@
 #import "TBClusterAnnotationView.h"
 #import "TBClusterAnnotation.h"
 
-@interface ZWBaiduMapViewController ()<BMKGeneralDelegate,BMKMapViewDelegate>
+@interface ZWBaiduMapViewController ()<BMKMapViewDelegate>
 
-@property (nonatomic, strong)BMKMapManager * mapManager;
+
 @property (nonatomic, strong)BMKMapView *mapView;
 @property (strong, nonatomic) TBCoordinateQuadTree *coordinateQuadTree;
 
@@ -24,9 +24,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    _mapManager = [[BMKMapManager alloc]init];
-    [_mapManager start:@"Cgyj45Ndrhl5pxgzgLtI6mGpymrl6hmG" generalDelegate:self];
     
     _mapView = [BMKMapView new];
     [self.view addSubview:_mapView];
@@ -51,6 +48,10 @@
 {
     [super viewWillDisappear:animated];
     _mapView.delegate = nil;
+}
+
+- (void)dealloc
+{
     if (_mapView) {
         _mapView = nil;
     }

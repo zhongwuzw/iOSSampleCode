@@ -8,8 +8,11 @@
 
 #import "AppDelegate.h"
 #import "ZWHybridPackageProtocol.h"
+#import <BaiduMapAPI_Map/BMKMapComponent.h>
 
-@interface AppDelegate ()
+@interface AppDelegate ()<BMKGeneralDelegate>
+
+@property (nonatomic, strong)BMKMapManager * mapManager;
 
 @end
 
@@ -26,6 +29,9 @@
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
+    _mapManager = [[BMKMapManager alloc]init];
+    [_mapManager start:@"Cgyj45Ndrhl5pxgzgLtI6mGpymrl6hmG" generalDelegate:nil];
     
     // Override point for customization after application launch.
     return YES;

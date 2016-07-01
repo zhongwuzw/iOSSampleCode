@@ -13,7 +13,7 @@
 @interface TBCoordinateQuadTree : NSObject
 
 @property (assign, nonatomic) TBQuadTreeNode* root;
-@property (strong, nonatomic) BMKMapView *mapView;
+@property (weak, nonatomic) BMKMapView *mapView;
 
 - (void)buildTree;
 - (void)freeTree;
