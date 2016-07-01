@@ -8,9 +8,9 @@
 
 #import "ZWBaiduMapViewController.h"
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
-#import "TBCoordinateQuadTree.h"
-#import "TBClusterAnnotationView.h"
-#import "TBClusterAnnotation.h"
+#import "ZWCoordinateQuadTree.h"
+#import "ZWClusterAnnotationView.h"
+#import "ZWClusterAnnotation.h"
 
 @interface ZWBaiduMapViewController ()<BMKMapViewDelegate>
 

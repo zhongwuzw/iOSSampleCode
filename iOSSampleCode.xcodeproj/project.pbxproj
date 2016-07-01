@@ -45,10 +45,10 @@
 		0E8E6CE11D265CFF00579898 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E8E6CE01D265CFF00579898 /* mapapi.bundle */; };
 		0E8E6CE41D265DA300579898 /* ZWBaiduMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E6CE31D265DA300579898 /* ZWBaiduMapViewController.m */; };
 		0E8E6CE61D26657500579898 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8E6CE51D26657500579898 /* UIKit.framework */; };
-		0E8E6CED1D2668BD00579898 /* TBQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E6CE81D2668BD00579898 /* TBQuadTree.m */; };
-		0E8E6CEE1D2668BD00579898 /* TBCoordinateQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E6CEA1D2668BD00579898 /* TBCoordinateQuadTree.m */; };
-		0E8E6CEF1D2668BD00579898 /* TBClusterAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E6CEC1D2668BD00579898 /* TBClusterAnnotation.m */; };
-		0E8E6CF21D2668DB00579898 /* TBClusterAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E6CF11D2668DB00579898 /* TBClusterAnnotationView.m */; };
+		0E8E6CED1D2668BD00579898 /* ZWQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E6CE81D2668BD00579898 /* ZWQuadTree.m */; };
+		0E8E6CEE1D2668BD00579898 /* ZWCoordinateQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E6CEA1D2668BD00579898 /* ZWCoordinateQuadTree.m */; };
+		0E8E6CEF1D2668BD00579898 /* ZWClusterAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E6CEC1D2668BD00579898 /* ZWClusterAnnotation.m */; };
+		0E8E6CF21D2668DB00579898 /* ZWClusterAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E6CF11D2668DB00579898 /* ZWClusterAnnotationView.m */; };
 		0E8E6CF81D2678BE00579898 /* USA-HotelMotel.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0E8E6CF71D2678BE00579898 /* USA-HotelMotel.csv */; };
 		0EC3AAB81D1CFA0A00615F05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AAB71D1CFA0A00615F05 /* main.m */; };
 		0EC3AABB1D1CFA0A00615F05 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AABA1D1CFA0A00615F05 /* AppDelegate.mm */; };
@@ -139,14 +139,14 @@
 		0E8E6CE21D265DA300579898 /* ZWBaiduMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWBaiduMapViewController.h; sourceTree = "<group>"; };
 		0E8E6CE31D265DA300579898 /* ZWBaiduMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWBaiduMapViewController.m; sourceTree = "<group>"; };
 		0E8E6CE51D26657500579898 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		0E8E6CE71D2668BD00579898 /* TBQuadTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBQuadTree.h; sourceTree = "<group>"; };
-		0E8E6CE81D2668BD00579898 /* TBQuadTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBQuadTree.m; sourceTree = "<group>"; };
-		0E8E6CE91D2668BD00579898 /* TBCoordinateQuadTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCoordinateQuadTree.h; sourceTree = "<group>"; };
-		0E8E6CEA1D2668BD00579898 /* TBCoordinateQuadTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCoordinateQuadTree.m; sourceTree = "<group>"; };
-		0E8E6CEB1D2668BD00579898 /* TBClusterAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBClusterAnnotation.h; sourceTree = "<group>"; };
-		0E8E6CEC1D2668BD00579898 /* TBClusterAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBClusterAnnotation.m; sourceTree = "<group>"; };
-		0E8E6CF01D2668DB00579898 /* TBClusterAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBClusterAnnotationView.h; sourceTree = "<group>"; };
-		0E8E6CF11D2668DB00579898 /* TBClusterAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBClusterAnnotationView.m; sourceTree = "<group>"; };
+		0E8E6CE71D2668BD00579898 /* ZWQuadTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWQuadTree.h; sourceTree = "<group>"; };
+		0E8E6CE81D2668BD00579898 /* ZWQuadTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWQuadTree.m; sourceTree = "<group>"; };
+		0E8E6CE91D2668BD00579898 /* ZWCoordinateQuadTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWCoordinateQuadTree.h; sourceTree = "<group>"; };
+		0E8E6CEA1D2668BD00579898 /* ZWCoordinateQuadTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWCoordinateQuadTree.m; sourceTree = "<group>"; };
+		0E8E6CEB1D2668BD00579898 /* ZWClusterAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWClusterAnnotation.h; sourceTree = "<group>"; };
+		0E8E6CEC1D2668BD00579898 /* ZWClusterAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWClusterAnnotation.m; sourceTree = "<group>"; };
+		0E8E6CF01D2668DB00579898 /* ZWClusterAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWClusterAnnotationView.h; sourceTree = "<group>"; };
+		0E8E6CF11D2668DB00579898 /* ZWClusterAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWClusterAnnotationView.m; sourceTree = "<group>"; };
 		0E8E6CF71D2678BE00579898 /* USA-HotelMotel.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "USA-HotelMotel.csv"; sourceTree = "<group>"; };
 		0EC3AAB31D1CFA0A00615F05 /* iOSSampleCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSampleCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC3AAB71D1CFA0A00615F05 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -256,8 +256,8 @@
 		0E53544F1D23629000C2ACAA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0E8E6CF01D2668DB00579898 /* TBClusterAnnotationView.h */,
-				0E8E6CF11D2668DB00579898 /* TBClusterAnnotationView.m */,
+				0E8E6CF01D2668DB00579898 /* ZWClusterAnnotationView.h */,
+				0E8E6CF11D2668DB00579898 /* ZWClusterAnnotationView.m */,
 				0E5AF51A1D20E1A1009F9511 /* ZWHitTestView.h */,
 				0E5AF51B1D20E1A1009F9511 /* ZWHitTestView.m */,
 				0E7E3BA41D24F42E00D51178 /* ZWTimeIndicatorView.h */,
@@ -379,12 +379,12 @@
 				0E7E3BA21D24F3B800D51178 /* ZWNote.m */,
 				0E7E3BAA1D25168200D51178 /* ZWSyntaxHighlightTextStorage.h */,
 				0E7E3BAB1D25168200D51178 /* ZWSyntaxHighlightTextStorage.m */,
-				0E8E6CE71D2668BD00579898 /* TBQuadTree.h */,
-				0E8E6CE81D2668BD00579898 /* TBQuadTree.m */,
-				0E8E6CE91D2668BD00579898 /* TBCoordinateQuadTree.h */,
-				0E8E6CEA1D2668BD00579898 /* TBCoordinateQuadTree.m */,
-				0E8E6CEB1D2668BD00579898 /* TBClusterAnnotation.h */,
-				0E8E6CEC1D2668BD00579898 /* TBClusterAnnotation.m */,
+				0E8E6CE71D2668BD00579898 /* ZWQuadTree.h */,
+				0E8E6CE81D2668BD00579898 /* ZWQuadTree.m */,
+				0E8E6CE91D2668BD00579898 /* ZWCoordinateQuadTree.h */,
+				0E8E6CEA1D2668BD00579898 /* ZWCoordinateQuadTree.m */,
+				0E8E6CEB1D2668BD00579898 /* ZWClusterAnnotation.h */,
+				0E8E6CEC1D2668BD00579898 /* ZWClusterAnnotation.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -641,14 +641,14 @@
 			files = (
 				0E4C0A581D21230F00AFC7CF /* ZWCocoaTouchTableViewController.m in Sources */,
 				0E5354631D23A1B600C2ACAA /* ZWURLProtocolController.m in Sources */,
-				0E8E6CEE1D2668BD00579898 /* TBCoordinateQuadTree.m in Sources */,
+				0E8E6CEE1D2668BD00579898 /* ZWCoordinateQuadTree.m in Sources */,
 				0EC3AAEC1D1D1D1600615F05 /* ZWUnderconstrainedViewController.m in Sources */,
 				0E5354671D23A25B00C2ACAA /* ZWHybridPackageProtocol.m in Sources */,
 				0E7E3BA91D24F81700D51178 /* ZWNoteEditorViewController.m in Sources */,
 				0EC3AABE1D1CFA0A00615F05 /* ViewController.m in Sources */,
 				0E5354541D2362EF00C2ACAA /* ZWTextViewController.m in Sources */,
 				0E4C0A471D20EFD000AFC7CF /* ZWBaseTableViewController.m in Sources */,
-				0E8E6CED1D2668BD00579898 /* TBQuadTree.m in Sources */,
+				0E8E6CED1D2668BD00579898 /* ZWQuadTree.m in Sources */,
 				0E7E3B9F1D24D68B00D51178 /* ZWTextKitTableViewController.m in Sources */,
 				0E7E3BA31D24F3B800D51178 /* ZWNote.m in Sources */,
 				0E7E3BA61D24F42E00D51178 /* ZWTimeIndicatorView.m in Sources */,
@@ -661,9 +661,9 @@
 				0EC3AABB1D1CFA0A00615F05 /* AppDelegate.mm in Sources */,
 				0E8E6CE41D265DA300579898 /* ZWBaiduMapViewController.m in Sources */,
 				0E7E3BAC1D25168200D51178 /* ZWSyntaxHighlightTextStorage.m in Sources */,
-				0E8E6CF21D2668DB00579898 /* TBClusterAnnotationView.m in Sources */,
+				0E8E6CF21D2668DB00579898 /* ZWClusterAnnotationView.m in Sources */,
 				0EC3AAB81D1CFA0A00615F05 /* main.m in Sources */,
-				0E8E6CEF1D2668BD00579898 /* TBClusterAnnotation.m in Sources */,
+				0E8E6CEF1D2668BD00579898 /* ZWClusterAnnotation.m in Sources */,
 				0E51409F1D24C654009672FA /* ZWBaseTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

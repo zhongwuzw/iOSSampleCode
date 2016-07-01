@@ -1,13 +1,13 @@
 //
-//  TBQuadTree.m
-//  TBQuadTree
+//  ZWQuadTree.m
+//  ZWQuadTree
 //
-//  Created by Theodore Calmes on 9/19/13.
-//  Copyright (c) 2013 Theodore Calmes. All rights reserved.
+//  Created by 钟武 on 16/6/30.
+//  Copyright © 2016年 钟武. All rights reserved.
 //
 
-#import "TBQuadTree.h"
-#import "TBCoordinateQuadTree.h"
+#import "ZWQuadTree.h"
+#import "ZWCoordinateQuadTree.h"
 
 #pragma mark - Constructors
 
@@ -169,6 +169,7 @@ void TBFreeQuadTreeNode(TBQuadTreeNode* node)
     if (node->southEast != NULL) TBFreeQuadTreeNode(node->southEast);
 
     for (int i=0; i < node->count; i++) {
+        //修复内存泄露
         free(((TBHotelInfo *)(node->points[i].data))->hotelName);
         free(((TBHotelInfo *)(node->points[i].data))->hotelPhoneNumber);
         free(node->points[i].data);

@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Theodore Calmes. All rights reserved.
 //
 
-#import "TBClusterAnnotationView.h"
+#import "ZWClusterAnnotationView.h"
 
 CGPoint TBRectCenter(CGRect rect)
 {

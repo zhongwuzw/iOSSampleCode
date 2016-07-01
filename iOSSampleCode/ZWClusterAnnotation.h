@@ -1,9 +1,9 @@
 //
-//  TBClusterAnnotation.h
-//  TBAnnotationClustering
+//  ZWClusterAnnotation.h
+//  ZWAnnotationClustering
 //
-//  Created by Theodore Calmes on 10/8/13.
-//  Copyright (c) 2013 Theodore Calmes. All rights reserved.
+//  Created by 钟武 on 16/6/30.
+//  Copyright © 2016年 钟武. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
