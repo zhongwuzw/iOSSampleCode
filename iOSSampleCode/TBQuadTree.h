@@ -45,4 +45,4 @@ typedef void(^TBDataReturnBlock)(TBQuadTreeNodeData data);
 void TBQuadTreeGatherDataInRange(TBQuadTreeNode* node, TBBoundingBox range, TBDataReturnBlock block);
 
 bool TBQuadTreeNodeInsertData(TBQuadTreeNode* node, TBQuadTreeNodeData data);
-TBQuadTreeNode* TBQuadTreeBuildWithData(TBQuadTreeNodeData *data, int count, TBBoundingBox boundingBox, int capacity);
+TBQuadTreeNode* TBQuadTreeBuildWithData(TBQuadTreeNodeData *data, NSInteger count, TBBoundingBox boundingBox, int capacity);

@@ -10,11 +10,6 @@
 #import "TBClusterAnnotation.h"
 #import <BaiduMapAPI_Utils/BMKUtilsComponent.h>
 
-typedef struct TBHotelInfo {
-    char* hotelName;
-    char* hotelPhoneNumber;
-} TBHotelInfo;
-
 TBQuadTreeNodeData TBDataFromLine(NSString *line)
 {
     NSArray *components = [line componentsSeparatedByString:@","];

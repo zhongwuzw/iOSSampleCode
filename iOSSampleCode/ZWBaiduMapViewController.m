@@ -105,7 +105,7 @@
 - (void)updateMapViewAnnotationsWithAnnotations:(NSArray *)annotations
 {
     NSMutableSet *before = [NSMutableSet setWithArray:self.mapView.annotations];
-//    [before removeObject:[self.mapView userLocation]];
+
     NSSet *after = [NSSet setWithArray:annotations];
     
     NSMutableSet *toKeep = [NSMutableSet setWithSet:before];

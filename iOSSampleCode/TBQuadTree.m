@@ -7,6 +7,7 @@
 //
 
 #import "TBQuadTree.h"
+#import "TBCoordinateQuadTree.h"
 
 #pragma mark - Constructors
 
@@ -150,7 +151,7 @@ void TBQuadTreeTraverse(TBQuadTreeNode* node, TBQuadTreeTraverseBlock block)
     TBQuadTreeTraverse(node->southEast, block);
 }
 
-TBQuadTreeNode* TBQuadTreeBuildWithData(TBQuadTreeNodeData *data, int count, TBBoundingBox boundingBox, int capacity)
+TBQuadTreeNode* TBQuadTreeBuildWithData(TBQuadTreeNodeData *data, NSInteger count, TBBoundingBox boundingBox, int capacity)
 {
     TBQuadTreeNode* root = TBQuadTreeNodeMake(boundingBox, capacity);
     for (int i = 0; i < count; i++) {
@@ -168,6 +169,8 @@ void TBFreeQuadTreeNode(TBQuadTreeNode* node)
     if (node->southEast != NULL) TBFreeQuadTreeNode(node->southEast);
 
     for (int i=0; i < node->count; i++) {
+        free(((TBHotelInfo *)(node->points[i].data))->hotelName);
+        free(((TBHotelInfo *)(node->points[i].data))->hotelPhoneNumber);
         free(node->points[i].data);
     }
     free(node->points);

@@ -10,6 +10,11 @@
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 #import "TBQuadTree.h"
 
+typedef struct TBHotelInfo {
+    char* hotelName;
+    char* hotelPhoneNumber;
+} TBHotelInfo;
+
 @interface TBCoordinateQuadTree : NSObject
 
 @property (assign, nonatomic) TBQuadTreeNode* root;
