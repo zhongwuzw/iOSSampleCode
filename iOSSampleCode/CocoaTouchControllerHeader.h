@@ -13,5 +13,6 @@
 #import "ZWUnderconstrainedViewController.h"
 #import "ZWTextViewController.h"
 #import "ZWTextKitTableViewController.h"
+#import "ZWBaiduMapViewController.h"
 
 #endif /* CocoaTouchControllerHeader_h */
