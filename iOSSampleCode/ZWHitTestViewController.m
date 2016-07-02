@@ -8,6 +8,7 @@
 
 #import "ZWHitTestViewController.h"
 #import "ZWHitTestView.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @implementation ZWHitTestViewController
 
@@ -35,7 +36,14 @@
  */
 - (void)handleButtonClicked:(UIButton *)button
 {
-    NSLog(@"button clicked!");
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"按钮点击";
+    hud.mode = MBProgressHUDModeText;
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    });
+
 }
 
 @end
