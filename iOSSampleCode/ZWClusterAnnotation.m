@@ -15,7 +15,7 @@
     self = [super init];
     if (self) {
         _coordinate = coordinate;
-        _title = [NSString stringWithFormat:@"%ld个4G测速", (long)count];
+        self.title = [NSString stringWithFormat:@"%ld个4G测速", (long)count];
         _count = count;
     }
     return self;

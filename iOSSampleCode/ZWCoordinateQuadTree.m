@@ -22,7 +22,7 @@ TBQuadTreeNodeData TBDataFromLine(NSString *line)
     hotelInfo->hotelName = (char *)malloc(sizeof(char) * hotelName.length + 1);
     strncpy(hotelInfo->hotelName, [hotelName UTF8String], hotelName.length + 1);
 
-    NSString *hotelPhoneNumber = [[components lastObject] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *hotelPhoneNumber = [components[4] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     hotelInfo->hotelPhoneNumber = (char *)malloc(sizeof(char) * hotelPhoneNumber.length + 1);
     strncpy(hotelInfo->hotelPhoneNumber, [hotelPhoneNumber UTF8String], hotelPhoneNumber.length + 1);
 

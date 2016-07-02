@@ -85,6 +85,8 @@
     }
 }
 
+#pragma mark -annotation animation
+
 - (void)addBounceAnnimationToView:(UIView *)view
 {
     CAKeyframeAnimation *bounceAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
@@ -124,6 +126,15 @@
 }
 
 #pragma mark - BMKMapViewDelegate
+
+/**
+ *当点击annotation view弹出的泡泡时，调用此接口
+ *@param mapView 地图View
+ *@param view 泡泡所属的annotation view
+ */
+- (void)mapView:(BMKMapView *)mapView annotationViewForBubble:(BMKAnnotationView *)view {
+    
+}
 
 - (void)mapViewDidFinishLoading:(BMKMapView *)mapView
 {
