@@ -38,12 +38,14 @@
 {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.labelText = @"按钮点击";
-    hud.mode = MBProgressHUDModeText;
+    hud.mode = MBProgressHUDModeCustomView;
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
-    });
-
+    UIImage *image = [[UIImage imageNamed:@"Checkmark"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    hud.customView = [[UIImageView alloc] initWithImage:image];
+    hud.tintColor = [UIColor whiteColor];
+    hud.square = YES;
+    
+    [hud hide:YES afterDelay:1];
 }
 
 @end
