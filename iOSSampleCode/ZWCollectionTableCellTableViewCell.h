@@ -10,5 +10,8 @@
 
 @interface ZWCollectionTableCellTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, assign) CGFloat collectionViewOffset;
+
 - (void)setCollectionViewDataSourceDelegate:(id<UICollectionViewDelegate,UICollectionViewDataSource>)dataSourceDelegate row:(NSInteger)row;
 @end

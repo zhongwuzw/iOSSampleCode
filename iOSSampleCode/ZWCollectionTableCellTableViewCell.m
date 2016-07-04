@@ -9,9 +9,6 @@
 #import "ZWCollectionTableCellTableViewCell.h"
 @interface ZWCollectionTableCellTableViewCell()
 
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-
-
 @end
 
 @implementation ZWCollectionTableCellTableViewCell
@@ -25,6 +22,26 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setCollectionViewDataSourceDelegate:(id<UICollectionViewDelegate,UICollectionViewDataSource>)dataSourceDelegate row:(NSInteger)row
+{
+    self.collectionView.delegate = dataSourceDelegate;
+    self.collectionView.dataSource = dataSourceDelegate;
+    self.collectionView.tag = row;
+    [self.collectionView reloadData];
+}
+
+- (CGFloat)collectionViewOffset
+{
+    return self.collectionView.contentOffset.x;
+}
+
+- (void)setCollectionViewOffset:(CGFloat)collectionViewOffset
+{
+    CGPoint point = _collectionView.contentOffset;
+    point.x = collectionViewOffset;
+    self.collectionView.contentOffset = point;
 }
 
 @end

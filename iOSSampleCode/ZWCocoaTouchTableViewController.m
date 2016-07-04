@@ -22,8 +22,8 @@
 
 - (void)inilializeDataArray
 {
-    self.dataArray = @[@"Button超出父视图范围",@"TextView和inputAccessoryView",@"Text Kit范例",@"百度地图"];
-    self.controllerStrArray = @[@"ZWHitTestViewController",@"ZWTextViewController",@"ZWTextKitTableViewController",@"ZWBaiduMapViewController"];
+    self.dataArray = @[@"Button超出父视图范围",@"TextView和inputAccessoryView",@"Text Kit范例",@"百度地图",@"tableView内嵌collectionView"];
+    self.controllerStrArray = @[@"ZWHitTestViewController",@"ZWTextViewController",@"ZWTextKitTableViewController",@"ZWBaiduMapViewController",@"ZWCollectionTableViewController"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,8 +36,16 @@
 
 - (void)jumpToController:(NSString *)controllerStr
 {
-    id controller = [NSClassFromString(controllerStr) new];
-    [self.navigationController pushViewController:controller animated:YES];
+    if ([controllerStr isEqualToString:@"ZWCollectionTableViewController"])
+    {
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        ZWCollectionTableViewController *controller = [storyBoard instantiateViewControllerWithIdentifier:@"ZWCollectionTableViewController"];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    else{
+        id controller = [NSClassFromString(controllerStr) new];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
 }
 
 @end

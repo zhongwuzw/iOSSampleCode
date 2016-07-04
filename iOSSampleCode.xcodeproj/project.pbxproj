@@ -62,6 +62,7 @@
 		0EC3AAD11D1CFA0B00615F05 /* iOSSampleCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AAD01D1CFA0B00615F05 /* iOSSampleCodeTests.m */; };
 		0EC3AADC1D1CFA0B00615F05 /* iOSSampleCodeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AADB1D1CFA0B00615F05 /* iOSSampleCodeUITests.m */; };
 		0EC3AAEC1D1D1D1600615F05 /* ZWUnderconstrainedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AAEB1D1D1D1600615F05 /* ZWUnderconstrainedViewController.m */; };
+		0EF3434A1D2AA6E80097B182 /* UIColor+ZWUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF343491D2AA6E80097B182 /* UIColor+ZWUtility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,6 +175,8 @@
 		0EC3AADD1D1CFA0B00615F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EC3AAEA1D1D1D1600615F05 /* ZWUnderconstrainedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWUnderconstrainedViewController.h; sourceTree = "<group>"; };
 		0EC3AAEB1D1D1D1600615F05 /* ZWUnderconstrainedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWUnderconstrainedViewController.m; sourceTree = "<group>"; };
+		0EF343481D2AA6E80097B182 /* UIColor+ZWUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ZWUtility.h"; sourceTree = "<group>"; };
+		0EF343491D2AA6E80097B182 /* UIColor+ZWUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZWUtility.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +231,8 @@
 				0E4C0A4E1D20F27700AFC7CF /* ZWBaseViewController.m */,
 				0E51409D1D24C654009672FA /* ZWBaseTableViewCell.h */,
 				0E51409E1D24C654009672FA /* ZWBaseTableViewCell.m */,
+				0EF343481D2AA6E80097B182 /* UIColor+ZWUtility.h */,
+				0EF343491D2AA6E80097B182 /* UIColor+ZWUtility.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -672,6 +677,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E4C0A581D21230F00AFC7CF /* ZWCocoaTouchTableViewController.m in Sources */,
+				0EF3434A1D2AA6E80097B182 /* UIColor+ZWUtility.m in Sources */,
 				0E5354631D23A1B600C2ACAA /* ZWURLProtocolController.m in Sources */,
 				0E8E6CEE1D2668BD00579898 /* ZWCoordinateQuadTree.m in Sources */,
 				0EC3AAEC1D1D1D1600615F05 /* ZWUnderconstrainedViewController.m in Sources */,
