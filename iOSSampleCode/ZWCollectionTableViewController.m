@@ -13,7 +13,7 @@
 @interface ZWCollectionTableViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 
 @property (nonatomic, strong) NSArray<NSArray<UIColor *> *> *colorArray;
-@property (nonatomic, strong) NSMutableDictionary *contentOffsetDictionary;
+@property (nonatomic, strong) NSMutableDictionary<NSString *,NSNumber *> *contentOffsetDictionary;
 
 @end
 
@@ -75,7 +75,7 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(ZWCollectionTableCellTableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [(ZWCollectionTableCellTableViewCell *)cell setCollectionViewDataSourceDelegate:self row:indexPath.row];
+    [cell setCollectionViewDataSourceDelegate:self row:indexPath.row];
     
     NSInteger index = indexPath.row;
     
