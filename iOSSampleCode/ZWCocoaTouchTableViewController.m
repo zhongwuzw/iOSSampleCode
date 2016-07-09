@@ -22,8 +22,8 @@
 
 - (void)inilializeDataArray
 {
-    self.dataArray = @[@"Button超出父视图范围",@"TextView和inputAccessoryView",@"Text Kit范例",@"百度地图",@"tableView内嵌collectionView"];
-    self.controllerStrArray = @[@"ZWHitTestViewController",@"ZWTextViewController",@"ZWTextKitTableViewController",@"ZWBaiduMapViewController",@"ZWCollectionTableViewController"];
+    self.dataArray = @[@"Button超出父视图范围",@"TextView和inputAccessoryView",@"Text Kit范例",@"百度地图",@"tableView内嵌collectionView",@"Core Graphic绘图"];
+    self.controllerStrArray = @[@"ZWHitTestViewController",@"ZWTextViewController",@"ZWTextKitTableViewController",@"ZWBaiduMapViewController",@"ZWCollectionTableViewController",@"ZWDrawViewController"];
 }
 
 - (void)didReceiveMemoryWarning {

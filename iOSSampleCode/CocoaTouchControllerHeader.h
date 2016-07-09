@@ -15,5 +15,6 @@
 #import "ZWTextKitTableViewController.h"
 #import "ZWBaiduMapViewController.h"
 #import "ZWCollectionTableViewController.h"
+#import "ZWDrawViewController.h"
 
 #endif /* CocoaTouchControllerHeader_h */
