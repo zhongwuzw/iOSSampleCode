@@ -21,7 +21,8 @@
     [self.view addSubview:view1];
     
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(25, 25, 80, 20)];
-    button.backgroundColor = [UIColor greenColor];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    button.backgroundColor = [[UIColor greenColor] colorWithAlphaComponent:0.5];
     [view1 addSubview:button];
     [button setTitle:@"点击按钮" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(handleButtonClicked:) forControlEvents:UIControlEventTouchUpInside];

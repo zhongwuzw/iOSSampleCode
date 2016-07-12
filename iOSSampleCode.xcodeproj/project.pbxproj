@@ -56,6 +56,7 @@
 		0E8E6CEF1D2668BD00579898 /* ZWClusterAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E6CEC1D2668BD00579898 /* ZWClusterAnnotation.m */; };
 		0E8E6CF21D2668DB00579898 /* ZWClusterAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E6CF11D2668DB00579898 /* ZWClusterAnnotationView.m */; };
 		0E8E6CF81D2678BE00579898 /* USA-HotelMotel.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0E8E6CF71D2678BE00579898 /* USA-HotelMotel.csv */; };
+		0EA6C6C61D33B27A00358959 /* ZWDynamicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6C6C51D33B27A00358959 /* ZWDynamicsViewController.m */; };
 		0EC3AAB81D1CFA0A00615F05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AAB71D1CFA0A00615F05 /* main.m */; };
 		0EC3AABB1D1CFA0A00615F05 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AABA1D1CFA0A00615F05 /* AppDelegate.mm */; };
 		0EC3AABE1D1CFA0A00615F05 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AABD1D1CFA0A00615F05 /* ViewController.m */; };
@@ -164,6 +165,8 @@
 		0E8E6CF01D2668DB00579898 /* ZWClusterAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWClusterAnnotationView.h; sourceTree = "<group>"; };
 		0E8E6CF11D2668DB00579898 /* ZWClusterAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWClusterAnnotationView.m; sourceTree = "<group>"; };
 		0E8E6CF71D2678BE00579898 /* USA-HotelMotel.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "USA-HotelMotel.csv"; sourceTree = "<group>"; };
+		0EA6C6C41D33B27A00358959 /* ZWDynamicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWDynamicsViewController.h; sourceTree = "<group>"; };
+		0EA6C6C51D33B27A00358959 /* ZWDynamicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWDynamicsViewController.m; sourceTree = "<group>"; };
 		0EC3AAB31D1CFA0A00615F05 /* iOSSampleCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSampleCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC3AAB71D1CFA0A00615F05 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0EC3AAB91D1CFA0A00615F05 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -273,6 +276,8 @@
 				0E1E650B1D2A779C006AC82B /* ZWCollectionTableViewController.m */,
 				0E69BADA1D313590006E159E /* ZWDrawViewController.h */,
 				0E69BADB1D313590006E159E /* ZWDrawViewController.m */,
+				0EA6C6C41D33B27A00358959 /* ZWDynamicsViewController.h */,
+				0EA6C6C51D33B27A00358959 /* ZWDynamicsViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -715,6 +720,7 @@
 				0E1E650C1D2A779C006AC82B /* ZWCollectionTableViewController.m in Sources */,
 				0E8E6CF21D2668DB00579898 /* ZWClusterAnnotationView.m in Sources */,
 				0EC3AAB81D1CFA0A00615F05 /* main.m in Sources */,
+				0EA6C6C61D33B27A00358959 /* ZWDynamicsViewController.m in Sources */,
 				0E8E6CEF1D2668BD00579898 /* ZWClusterAnnotation.m in Sources */,
 				0E51409F1D24C654009672FA /* ZWBaseTableViewCell.m in Sources */,
 			);
