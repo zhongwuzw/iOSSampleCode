@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) UITextView *textView;
 @property (nonatomic, strong) ZWSyntaxHighlightTextStorage *textStorage;
+@property (nonatomic, assign) CGRect textViewFrame;
 
 @end
 
@@ -61,11 +62,7 @@
     
     [self.view addSubview:self.textView];
     
-    [self.textView setTranslatesAutoresizingMaskIntoConstraints:NO];
-    
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_textView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_textView)]];
-    
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_textView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_textView)]];
+    _textViewFrame = self.view.bounds;
     
     _timeView = [[ZWTimeIndicatorView alloc] initWithDate:_note.timestamp];
     [self.view addSubview:_timeView];
@@ -79,6 +76,7 @@
 
 - (void)viewDidLayoutSubviews {
     [self updateTimeIndicatorFrame];
+    _textView.frame = _textViewFrame;
 }
 
 - (void)updateTimeIndicatorFrame {
@@ -98,6 +96,15 @@
 - (void)textViewDidEndEditing:(UITextView *)textView
 {
     _note.contents = textView.text;
+    
+    _textViewFrame = self.view.bounds;
+    _textView.frame = _textViewFrame;
+}
+
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    _textViewFrame = self.view.bounds;
+    _textViewFrame.size.height -= 216.0f;
+    _textView.frame = _textViewFrame;
 }
 
 - (void)dealloc

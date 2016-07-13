@@ -23,7 +23,7 @@
 - (void)inilializeDataArray
 {
     self.dataArray = @[@"Button超出父视图范围",@"TextView和inputAccessoryView",@"Text Kit范例",@"百度地图",@"tableView内嵌collectionView",@"Core Graphic绘图",@"UIKit Dynamics"];
-    self.controllerStrArray = @[@"ZWHitTestViewController",@"ZWTextViewController",@"ZWTextKitTableViewController",@"ZWBaiduMapViewController",@"ZWCollectionTableViewController",@"ZWDrawViewController",@"ZWDynamicsViewController"];
+    self.controllerStrArray = @[@"ZWHitTestViewController",@"ZWTextViewController",@"ZWTextKitTopViewController",@"ZWBaiduMapViewController",@"ZWCollectionTableViewController",@"ZWDrawViewController",@"ZWDynamicsViewController"];
 }
 
 - (void)didReceiveMemoryWarning {

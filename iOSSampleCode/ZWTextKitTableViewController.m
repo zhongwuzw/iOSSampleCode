@@ -27,7 +27,7 @@ static NSString *CELL_IDENTIFIER = @"cell_identifier";
 - (void)inilializeDataArray
 {
     self.dataArray = @[
-                       [ZWNote noteWithText:@"Shopping List\r\r1. Cheese\r2. Biscuits\r3. Sausages\r4. IMPORTANT Cash for going out!\r5. -potatoes-\r6. A copy of iOS6 by tutorials\r7. A new iPhone\r8. A present for mum"],
+                       [ZWNote noteWithText:@"~Shopping List~\r\r1. Cheese\r2. Biscuits\r3. Sausages\r4. IMPORTANT Cash for going out!\r5. -potatoes-\r6. A copy of iOS6 by tutorials\r7. A new iPhone\r8. A present for mum"],
                        [ZWNote noteWithText:@"Meeting notes\rA long and drawn out meeting, it lasted hours and hours and hours!"],
                        [ZWNote noteWithText:@"Perfection ... \n\nPerfection is achieved not when there is nothing left to add, but when there is nothing left to take away - Antoine de Saint-Exupery"],
                        [ZWNote noteWithText:@"Notes on iOS7\nThis is a big change in the UI design, it's going to take a *lot* of getting used to!"],

@@ -32,6 +32,10 @@
 		0E7E3BA61D24F42E00D51178 /* ZWTimeIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E3BA51D24F42E00D51178 /* ZWTimeIndicatorView.m */; };
 		0E7E3BA91D24F81700D51178 /* ZWNoteEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E3BA81D24F81700D51178 /* ZWNoteEditorViewController.m */; };
 		0E7E3BAC1D25168200D51178 /* ZWSyntaxHighlightTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E3BAB1D25168200D51178 /* ZWSyntaxHighlightTextStorage.m */; };
+		0E8324251D364B3600540D82 /* ZWTextKitTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8324241D364B3600540D82 /* ZWTextKitTopViewController.m */; };
+		0E8324281D364C4A00540D82 /* ZWBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8324271D364C4A00540D82 /* ZWBookViewController.m */; };
+		0E83242B1D364CD100540D82 /* ZWBookView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E83242A1D364CD100540D82 /* ZWBookView.m */; };
+		0E83242F1D364D6D00540D82 /* alices_adventures.md in Sources */ = {isa = PBXBuildFile; fileRef = 0E83242E1D364D6D00540D82 /* alices_adventures.md */; };
 		0E8E6CBC1D265B3B00579898 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8E6CBB1D265B3B00579898 /* CoreLocation.framework */; };
 		0E8E6CBE1D265B5A00579898 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8E6CBD1D265B5A00579898 /* QuartzCore.framework */; };
 		0E8E6CC01D265B6400579898 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8E6CBF1D265B6400579898 /* OpenGLES.framework */; };
@@ -136,6 +140,14 @@
 		0E7E3BA81D24F81700D51178 /* ZWNoteEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWNoteEditorViewController.m; sourceTree = "<group>"; };
 		0E7E3BAA1D25168200D51178 /* ZWSyntaxHighlightTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWSyntaxHighlightTextStorage.h; sourceTree = "<group>"; };
 		0E7E3BAB1D25168200D51178 /* ZWSyntaxHighlightTextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWSyntaxHighlightTextStorage.m; sourceTree = "<group>"; };
+		0E8324231D364B3600540D82 /* ZWTextKitTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWTextKitTopViewController.h; sourceTree = "<group>"; };
+		0E8324241D364B3600540D82 /* ZWTextKitTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWTextKitTopViewController.m; sourceTree = "<group>"; };
+		0E8324261D364C4A00540D82 /* ZWBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWBookViewController.h; sourceTree = "<group>"; };
+		0E8324271D364C4A00540D82 /* ZWBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWBookViewController.m; sourceTree = "<group>"; };
+		0E8324291D364CD100540D82 /* ZWBookView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWBookView.h; sourceTree = "<group>"; };
+		0E83242A1D364CD100540D82 /* ZWBookView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWBookView.m; sourceTree = "<group>"; };
+		0E83242E1D364D6D00540D82 /* alices_adventures.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = alices_adventures.md; sourceTree = "<group>"; };
+		0E8324301D364EF300540D82 /* BookViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookViewDelegate.h; sourceTree = "<group>"; };
 		0E8E6CBB1D265B3B00579898 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0E8E6CBD1D265B5A00579898 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0E8E6CBF1D265B6400579898 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -278,6 +290,10 @@
 				0E69BADB1D313590006E159E /* ZWDrawViewController.m */,
 				0EA6C6C41D33B27A00358959 /* ZWDynamicsViewController.h */,
 				0EA6C6C51D33B27A00358959 /* ZWDynamicsViewController.m */,
+				0E8324231D364B3600540D82 /* ZWTextKitTopViewController.h */,
+				0E8324241D364B3600540D82 /* ZWTextKitTopViewController.m */,
+				0E8324261D364C4A00540D82 /* ZWBookViewController.h */,
+				0E8324271D364C4A00540D82 /* ZWBookViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -295,6 +311,8 @@
 				0E1E650E1D2A784F006AC82B /* ZWCollectionTableCellTableViewCell.m */,
 				0E69BAD71D30C1C9006E159E /* ZWCGDrawView.h */,
 				0E69BAD81D30C1C9006E159E /* ZWCGDrawView.m */,
+				0E8324291D364CD100540D82 /* ZWBookView.h */,
+				0E83242A1D364CD100540D82 /* ZWBookView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -327,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				0E5354581D23745600C2ACAA /* CocoaTouchControllerHeader.h */,
+				0E8324301D364EF300540D82 /* BookViewDelegate.h */,
 			);
 			name = Header;
 			sourceTree = "<group>";
@@ -382,7 +401,8 @@
 		0E53546B1D23A95300C2ACAA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0E8E6CF71D2678BE00579898 /* USA-HotelMotel.csv */,
+				0E83242D1D364D6200540D82 /* md */,
+				0E83242C1D364D3700540D82 /* csv */,
 				0E53546C1D23A96B00C2ACAA /* html */,
 			);
 			name = Resources;
@@ -420,6 +440,22 @@
 				0E8E6CEC1D2668BD00579898 /* ZWClusterAnnotation.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		0E83242C1D364D3700540D82 /* csv */ = {
+			isa = PBXGroup;
+			children = (
+				0E8E6CF71D2678BE00579898 /* USA-HotelMotel.csv */,
+			);
+			name = csv;
+			sourceTree = "<group>";
+		};
+		0E83242D1D364D6200540D82 /* md */ = {
+			isa = PBXGroup;
+			children = (
+				0E83242E1D364D6D00540D82 /* alices_adventures.md */,
+			);
+			name = md;
 			sourceTree = "<group>";
 		};
 		0E8E6CBA1D265B1800579898 /* Third party */ = {
@@ -707,11 +743,15 @@
 				0E7E3B9F1D24D68B00D51178 /* ZWTextKitTableViewController.m in Sources */,
 				0E7E3BA31D24F3B800D51178 /* ZWNote.m in Sources */,
 				0E7E3BA61D24F42E00D51178 /* ZWTimeIndicatorView.m in Sources */,
+				0E83242F1D364D6D00540D82 /* alices_adventures.md in Sources */,
+				0E8324281D364C4A00540D82 /* ZWBookViewController.m in Sources */,
 				0E5AF51C1D20E1A1009F9511 /* ZWHitTestView.m in Sources */,
 				0E4C0A4F1D20F27700AFC7CF /* ZWBaseViewController.m in Sources */,
 				0E69BADC1D313590006E159E /* ZWDrawViewController.m in Sources */,
 				0E53545C1D23A11700C2ACAA /* ZWNetworkTableViewController.m in Sources */,
+				0E83242B1D364CD100540D82 /* ZWBookView.m in Sources */,
 				0E4C0A551D2122C100AFC7CF /* ZWAutoLayoutTableViewController.m in Sources */,
+				0E8324251D364B3600540D82 /* ZWTextKitTopViewController.m in Sources */,
 				0E4C0A4C1D20F15C00AFC7CF /* ZWHitTestViewController.m in Sources */,
 				0E53546A1D23A35700C2ACAA /* ZWHybridPackageFileManager.m in Sources */,
 				0EC3AABB1D1CFA0A00615F05 /* AppDelegate.mm in Sources */,
