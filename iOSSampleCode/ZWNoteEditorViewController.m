@@ -9,10 +9,12 @@
 #import "ZWNoteEditorViewController.h"
 #import "ZWNote.h"
 #import "ZWTimeIndicatorView.h"
+#import "ZWSyntaxHighlightTextStorage.h"
 
 @interface ZWNoteEditorViewController()<UITextViewDelegate>
 
 @property (nonatomic, strong) UITextView *textView;
+@property (nonatomic, strong) ZWSyntaxHighlightTextStorage *textStorage;
 
 @end
 
@@ -27,13 +29,36 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.textView = [UITextView new];
+    [self createTextView];
+}
+
+- (void)createTextView
+{
+    NSDictionary *attrs = @{NSFontAttributeName:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]};
+    
+    NSAttributedString *attrString = [[NSAttributedString alloc] initWithString:_note.contents attributes:attrs];
+    
+    _textStorage = [ZWSyntaxHighlightTextStorage new];
+    [_textStorage appendAttributedString:attrString];
+    
+    CGRect newTextViewRect = self.view.bounds;
+    
+    NSLayoutManager *layoutManager = [NSLayoutManager new];
+    
+    CGSize containerSize = CGSizeMake(newTextViewRect.size.width, CGFLOAT_MAX);
+    
+    NSTextContainer *container = [[NSTextContainer alloc] initWithSize:containerSize];
+    container.widthTracksTextView = YES;
+    [layoutManager addTextContainer:container];
+    [_textStorage addLayoutManager:layoutManager];
+    
+    
+    self.textView = [[UITextView alloc] initWithFrame:CGRectZero textContainer:container];
     self.textView.editable = YES;
-    self.textView.text = self.note.contents;
+    self.textView.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     
     self.textView.delegate = self;
-
-    self.textView.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    
     [self.view addSubview:self.textView];
     
     [self.textView setTranslatesAutoresizingMaskIntoConstraints:NO];
