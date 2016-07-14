@@ -25,6 +25,10 @@
 		0E53546E1D23A9B500C2ACAA /* ad_page_pc.html in Resources */ = {isa = PBXBuildFile; fileRef = 0E53546D1D23A9B500C2ACAA /* ad_page_pc.html */; };
 		0E5354821D23D2C600C2ACAA /* images in Resources */ = {isa = PBXBuildFile; fileRef = 0E5354811D23D2C600C2ACAA /* images */; };
 		0E5AF51C1D20E1A1009F9511 /* ZWHitTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AF51B1D20E1A1009F9511 /* ZWHitTestView.m */; };
+		0E67FDC91D373AD500929ACB /* alices_adventures.md in Resources */ = {isa = PBXBuildFile; fileRef = 0E67FDC51D3739BD00929ACB /* alices_adventures.md */; };
+		0E67FDCC1D37675B00929ACB /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E67FDCA1D375B2D00929ACB /* CocoaLumberjack.framework */; };
+		0E67FDCE1D37675B00929ACB /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E67FDCA1D375B2D00929ACB /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0E67FDD41D376D6400929ACB /* ZWMarkdownParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E67FDD31D376D6400929ACB /* ZWMarkdownParser.m */; };
 		0E69BAD91D30C1C9006E159E /* ZWCGDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BAD81D30C1C9006E159E /* ZWCGDrawView.m */; };
 		0E69BADC1D313590006E159E /* ZWDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BADB1D313590006E159E /* ZWDrawViewController.m */; };
 		0E7E3B9F1D24D68B00D51178 /* ZWTextKitTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E3B9E1D24D68B00D51178 /* ZWTextKitTableViewController.m */; };
@@ -35,7 +39,6 @@
 		0E8324251D364B3600540D82 /* ZWTextKitTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8324241D364B3600540D82 /* ZWTextKitTopViewController.m */; };
 		0E8324281D364C4A00540D82 /* ZWBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8324271D364C4A00540D82 /* ZWBookViewController.m */; };
 		0E83242B1D364CD100540D82 /* ZWBookView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E83242A1D364CD100540D82 /* ZWBookView.m */; };
-		0E83242F1D364D6D00540D82 /* alices_adventures.md in Sources */ = {isa = PBXBuildFile; fileRef = 0E83242E1D364D6D00540D82 /* alices_adventures.md */; };
 		0E8E6CBC1D265B3B00579898 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8E6CBB1D265B3B00579898 /* CoreLocation.framework */; };
 		0E8E6CBE1D265B5A00579898 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8E6CBD1D265B5A00579898 /* QuartzCore.framework */; };
 		0E8E6CC01D265B6400579898 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8E6CBF1D265B6400579898 /* OpenGLES.framework */; };
@@ -89,6 +92,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0E67FDCD1D37675B00929ACB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0E67FDCE1D37675B00929ACB /* CocoaLumberjack.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0E0A35901D27B38200E97B62 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = ../Carthage/Build/iOS/MBProgressHUD.framework; sourceTree = "<group>"; };
 		0E0A35931D27FDE100E97B62 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -126,6 +143,11 @@
 		0E5354811D23D2C600C2ACAA /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		0E5AF51A1D20E1A1009F9511 /* ZWHitTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWHitTestView.h; sourceTree = "<group>"; };
 		0E5AF51B1D20E1A1009F9511 /* ZWHitTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWHitTestView.m; sourceTree = "<group>"; };
+		0E67FDC51D3739BD00929ACB /* alices_adventures.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = alices_adventures.md; sourceTree = "<group>"; };
+		0E67FDCA1D375B2D00929ACB /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = ../Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
+		0E67FDCF1D37685000929ACB /* iOSSampleCode.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSSampleCode.pch; sourceTree = SOURCE_ROOT; };
+		0E67FDD21D376D6400929ACB /* ZWMarkdownParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWMarkdownParser.h; sourceTree = "<group>"; };
+		0E67FDD31D376D6400929ACB /* ZWMarkdownParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWMarkdownParser.m; sourceTree = "<group>"; };
 		0E69BAD71D30C1C9006E159E /* ZWCGDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWCGDrawView.h; sourceTree = "<group>"; };
 		0E69BAD81D30C1C9006E159E /* ZWCGDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWCGDrawView.m; sourceTree = "<group>"; };
 		0E69BADA1D313590006E159E /* ZWDrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWDrawViewController.h; sourceTree = "<group>"; };
@@ -146,8 +168,6 @@
 		0E8324271D364C4A00540D82 /* ZWBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWBookViewController.m; sourceTree = "<group>"; };
 		0E8324291D364CD100540D82 /* ZWBookView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWBookView.h; sourceTree = "<group>"; };
 		0E83242A1D364CD100540D82 /* ZWBookView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWBookView.m; sourceTree = "<group>"; };
-		0E83242E1D364D6D00540D82 /* alices_adventures.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = alices_adventures.md; sourceTree = "<group>"; };
-		0E8324301D364EF300540D82 /* BookViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookViewDelegate.h; sourceTree = "<group>"; };
 		0E8E6CBB1D265B3B00579898 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0E8E6CBD1D265B5A00579898 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0E8E6CBF1D265B6400579898 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -206,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E0A35911D27B38200E97B62 /* MBProgressHUD.framework in Frameworks */,
+				0E67FDCC1D37675B00929ACB /* CocoaLumberjack.framework in Frameworks */,
 				0E8E6CE61D26657500579898 /* UIKit.framework in Frameworks */,
 				0E8E6CD91D265CD500579898 /* BaiduMapAPI_Base.framework in Frameworks */,
 				0E8E6CDA1D265CD500579898 /* BaiduMapAPI_Cloud.framework in Frameworks */,
@@ -345,7 +366,6 @@
 			isa = PBXGroup;
 			children = (
 				0E5354581D23745600C2ACAA /* CocoaTouchControllerHeader.h */,
-				0E8324301D364EF300540D82 /* BookViewDelegate.h */,
 			);
 			name = Header;
 			sourceTree = "<group>";
@@ -438,6 +458,8 @@
 				0E8E6CEA1D2668BD00579898 /* ZWCoordinateQuadTree.m */,
 				0E8E6CEB1D2668BD00579898 /* ZWClusterAnnotation.h */,
 				0E8E6CEC1D2668BD00579898 /* ZWClusterAnnotation.m */,
+				0E67FDD21D376D6400929ACB /* ZWMarkdownParser.h */,
+				0E67FDD31D376D6400929ACB /* ZWMarkdownParser.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -453,7 +475,7 @@
 		0E83242D1D364D6200540D82 /* md */ = {
 			isa = PBXGroup;
 			children = (
-				0E83242E1D364D6D00540D82 /* alices_adventures.md */,
+				0E67FDC51D3739BD00929ACB /* alices_adventures.md */,
 			);
 			name = md;
 			sourceTree = "<group>";
@@ -461,6 +483,7 @@
 		0E8E6CBA1D265B1800579898 /* Third party */ = {
 			isa = PBXGroup;
 			children = (
+				0E67FDCA1D375B2D00929ACB /* CocoaLumberjack.framework */,
 				0E0A35901D27B38200E97B62 /* MBProgressHUD.framework */,
 				0E8E6CCD1D265BFA00579898 /* BaiduMap */,
 			);
@@ -516,6 +539,7 @@
 				0EC3AABA1D1CFA0A00615F05 /* AppDelegate.mm */,
 				0EC3AABC1D1CFA0A00615F05 /* ViewController.h */,
 				0EC3AABD1D1CFA0A00615F05 /* ViewController.m */,
+				0E67FDCF1D37685000929ACB /* iOSSampleCode.pch */,
 				0EC3AABF1D1CFA0A00615F05 /* Main.storyboard */,
 				0E0A35931D27FDE100E97B62 /* Launch Screen.storyboard */,
 				0EC3AAC21D1CFA0A00615F05 /* Assets.xcassets */,
@@ -584,6 +608,7 @@
 				0EC3AAB01D1CFA0A00615F05 /* Frameworks */,
 				0EC3AAB11D1CFA0A00615F05 /* Resources */,
 				0E0A35921D27B3AE00E97B62 /* ShellScript */,
+				0E67FDCD1D37675B00929ACB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -679,6 +704,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E67FDC91D373AD500929ACB /* alices_adventures.md in Resources */,
 				0E5354821D23D2C600C2ACAA /* images in Resources */,
 				0E0A35941D27FDE100E97B62 /* Launch Screen.storyboard in Resources */,
 				0E53546E1D23A9B500C2ACAA /* ad_page_pc.html in Resources */,
@@ -743,7 +769,6 @@
 				0E7E3B9F1D24D68B00D51178 /* ZWTextKitTableViewController.m in Sources */,
 				0E7E3BA31D24F3B800D51178 /* ZWNote.m in Sources */,
 				0E7E3BA61D24F42E00D51178 /* ZWTimeIndicatorView.m in Sources */,
-				0E83242F1D364D6D00540D82 /* alices_adventures.md in Sources */,
 				0E8324281D364C4A00540D82 /* ZWBookViewController.m in Sources */,
 				0E5AF51C1D20E1A1009F9511 /* ZWHitTestView.m in Sources */,
 				0E4C0A4F1D20F27700AFC7CF /* ZWBaseViewController.m in Sources */,
@@ -754,6 +779,7 @@
 				0E8324251D364B3600540D82 /* ZWTextKitTopViewController.m in Sources */,
 				0E4C0A4C1D20F15C00AFC7CF /* ZWHitTestViewController.m in Sources */,
 				0E53546A1D23A35700C2ACAA /* ZWHybridPackageFileManager.m in Sources */,
+				0E67FDD41D376D6400929ACB /* ZWMarkdownParser.m in Sources */,
 				0EC3AABB1D1CFA0A00615F05 /* AppDelegate.mm in Sources */,
 				0E8E6CE41D265DA300579898 /* ZWBaiduMapViewController.m in Sources */,
 				0E7E3BAC1D25168200D51178 /* ZWSyntaxHighlightTextStorage.m in Sources */,
@@ -902,7 +928,10 @@
 					"$(PROJECT_DIR)/iOSSampleCode",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iOSSampleCode.pch;
 				INFOPLIST_FILE = iOSSampleCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
@@ -923,7 +952,10 @@
 					"$(PROJECT_DIR)/iOSSampleCode",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iOSSampleCode.pch;
 				INFOPLIST_FILE = iOSSampleCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";

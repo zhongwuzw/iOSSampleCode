@@ -46,11 +46,11 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    NSLog(@"成功");
+    DDLogDebug(@"成功");
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
-    NSLog(@"错误%@",error);
+    DDLogError(@"错误%@",error);
 }
 @end

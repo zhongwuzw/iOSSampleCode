@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ZWHybridPackageProtocol.h"
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
 @interface AppDelegate ()<BMKGeneralDelegate>
 
@@ -20,6 +21,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    [DDLog addLogger:[DDTTYLogger sharedInstance]]; 
     
     [NSURLProtocol registerClass:[ZWHybridPackageProtocol class]];
     

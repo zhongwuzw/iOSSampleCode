@@ -7,10 +7,13 @@
 //
 
 #import "ZWBookViewController.h"
+#import "ZWBookView.h"
+#import "ZWMarkdownParser.h"
 
 @interface ZWBookViewController ()
 
 @property (nonatomic, copy) NSAttributedString *bookMarkup;
+@property (nonatomic, strong) ZWBookView *bookView;
 
 @end
 
@@ -21,10 +24,19 @@
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"alices_adventures" ofType:@"md"];
     
-    NSString *text = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
+    ZWMarkdownParser *parser = [ZWMarkdownParser new];
+    self.bookMarkup = [parser parseMarkdownFile:path];
     
-    self.bookMarkup = [[NSAttributedString alloc] initWithString:text];
+    self.bookView = [[ZWBookView alloc] initWithFrame:self.view.bounds];
+    self.bookView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.bookView.bookMarkup = _bookMarkup;
+    
+    [self.view addSubview:_bookView];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewDidLayoutSubviews{
+    [_bookView buildFrames];
 }
 
 - (void)didReceiveMemoryWarning {
