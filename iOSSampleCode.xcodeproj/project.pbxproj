@@ -295,26 +295,13 @@
 		0E53544E1D23628400C2ACAA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0E4C0A4A1D20F15C00AFC7CF /* ZWHitTestViewController.h */,
-				0E4C0A4B1D20F15C00AFC7CF /* ZWHitTestViewController.m */,
-				0E5354521D2362EF00C2ACAA /* ZWTextViewController.h */,
-				0E5354531D2362EF00C2ACAA /* ZWTextViewController.m */,
-				0E7E3B9D1D24D68B00D51178 /* ZWTextKitTableViewController.h */,
-				0E7E3B9E1D24D68B00D51178 /* ZWTextKitTableViewController.m */,
-				0E7E3BA71D24F81700D51178 /* ZWNoteEditorViewController.h */,
-				0E7E3BA81D24F81700D51178 /* ZWNoteEditorViewController.m */,
-				0E8E6CE21D265DA300579898 /* ZWBaiduMapViewController.h */,
-				0E8E6CE31D265DA300579898 /* ZWBaiduMapViewController.m */,
-				0E1E650A1D2A779C006AC82B /* ZWCollectionTableViewController.h */,
-				0E1E650B1D2A779C006AC82B /* ZWCollectionTableViewController.m */,
-				0E69BADA1D313590006E159E /* ZWDrawViewController.h */,
-				0E69BADB1D313590006E159E /* ZWDrawViewController.m */,
-				0EA6C6C41D33B27A00358959 /* ZWDynamicsViewController.h */,
-				0EA6C6C51D33B27A00358959 /* ZWDynamicsViewController.m */,
-				0E8324231D364B3600540D82 /* ZWTextKitTopViewController.h */,
-				0E8324241D364B3600540D82 /* ZWTextKitTopViewController.m */,
-				0E8324261D364C4A00540D82 /* ZWBookViewController.h */,
-				0E8324271D364C4A00540D82 /* ZWBookViewController.m */,
+				0E67FDDB1D378A5100929ACB /* UIkitDynamics */,
+				0E67FDDA1D378A3500929ACB /* CoreGraphics */,
+				0E67FDD91D378A1E00929ACB /* CollectionViewInTableView */,
+				0E67FDD81D378A0800929ACB /* BaiduMap */,
+				0E67FDD71D3789F900929ACB /* TextKit */,
+				0E67FDD61D3789DF00929ACB /* TextView */,
+				0E67FDD51D3789B000929ACB /* ButtonOutFrame */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -322,18 +309,11 @@
 		0E53544F1D23629000C2ACAA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0E8E6CF01D2668DB00579898 /* ZWClusterAnnotationView.h */,
-				0E8E6CF11D2668DB00579898 /* ZWClusterAnnotationView.m */,
-				0E5AF51A1D20E1A1009F9511 /* ZWHitTestView.h */,
-				0E5AF51B1D20E1A1009F9511 /* ZWHitTestView.m */,
-				0E7E3BA41D24F42E00D51178 /* ZWTimeIndicatorView.h */,
-				0E7E3BA51D24F42E00D51178 /* ZWTimeIndicatorView.m */,
-				0E1E650D1D2A784F006AC82B /* ZWCollectionTableCellTableViewCell.h */,
-				0E1E650E1D2A784F006AC82B /* ZWCollectionTableCellTableViewCell.m */,
-				0E69BAD71D30C1C9006E159E /* ZWCGDrawView.h */,
-				0E69BAD81D30C1C9006E159E /* ZWCGDrawView.m */,
-				0E8324291D364CD100540D82 /* ZWBookView.h */,
-				0E83242A1D364CD100540D82 /* ZWBookView.m */,
+				0E67FDE01D378AC700929ACB /* CoreGraphics */,
+				0E67FDDF1D378AB800929ACB /* CollectionViewInTableView */,
+				0E67FDDE1D378AAB00929ACB /* TextKit */,
+				0E67FDDD1D378A9B00929ACB /* ButtonOutFrame */,
+				0E67FDDC1D378A7E00929ACB /* BaiduMap */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -445,21 +425,153 @@
 			name = Header;
 			sourceTree = "<group>";
 		};
-		0E7E3BA01D24F39600D51178 /* Model */ = {
+		0E67FDD51D3789B000929ACB /* ButtonOutFrame */ = {
 			isa = PBXGroup;
 			children = (
+				0E4C0A4A1D20F15C00AFC7CF /* ZWHitTestViewController.h */,
+				0E4C0A4B1D20F15C00AFC7CF /* ZWHitTestViewController.m */,
+			);
+			name = ButtonOutFrame;
+			sourceTree = "<group>";
+		};
+		0E67FDD61D3789DF00929ACB /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				0E5354521D2362EF00C2ACAA /* ZWTextViewController.h */,
+				0E5354531D2362EF00C2ACAA /* ZWTextViewController.m */,
+			);
+			name = TextView;
+			sourceTree = "<group>";
+		};
+		0E67FDD71D3789F900929ACB /* TextKit */ = {
+			isa = PBXGroup;
+			children = (
+				0E8324261D364C4A00540D82 /* ZWBookViewController.h */,
+				0E8324271D364C4A00540D82 /* ZWBookViewController.m */,
+				0E8324231D364B3600540D82 /* ZWTextKitTopViewController.h */,
+				0E8324241D364B3600540D82 /* ZWTextKitTopViewController.m */,
+				0E7E3B9D1D24D68B00D51178 /* ZWTextKitTableViewController.h */,
+				0E7E3B9E1D24D68B00D51178 /* ZWTextKitTableViewController.m */,
+				0E7E3BA71D24F81700D51178 /* ZWNoteEditorViewController.h */,
+				0E7E3BA81D24F81700D51178 /* ZWNoteEditorViewController.m */,
+			);
+			name = TextKit;
+			sourceTree = "<group>";
+		};
+		0E67FDD81D378A0800929ACB /* BaiduMap */ = {
+			isa = PBXGroup;
+			children = (
+				0E8E6CE21D265DA300579898 /* ZWBaiduMapViewController.h */,
+				0E8E6CE31D265DA300579898 /* ZWBaiduMapViewController.m */,
+			);
+			name = BaiduMap;
+			sourceTree = "<group>";
+		};
+		0E67FDD91D378A1E00929ACB /* CollectionViewInTableView */ = {
+			isa = PBXGroup;
+			children = (
+				0E1E650A1D2A779C006AC82B /* ZWCollectionTableViewController.h */,
+				0E1E650B1D2A779C006AC82B /* ZWCollectionTableViewController.m */,
+			);
+			name = CollectionViewInTableView;
+			sourceTree = "<group>";
+		};
+		0E67FDDA1D378A3500929ACB /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				0E69BADA1D313590006E159E /* ZWDrawViewController.h */,
+				0E69BADB1D313590006E159E /* ZWDrawViewController.m */,
+			);
+			name = CoreGraphics;
+			sourceTree = "<group>";
+		};
+		0E67FDDB1D378A5100929ACB /* UIkitDynamics */ = {
+			isa = PBXGroup;
+			children = (
+				0EA6C6C41D33B27A00358959 /* ZWDynamicsViewController.h */,
+				0EA6C6C51D33B27A00358959 /* ZWDynamicsViewController.m */,
+			);
+			name = UIkitDynamics;
+			sourceTree = "<group>";
+		};
+		0E67FDDC1D378A7E00929ACB /* BaiduMap */ = {
+			isa = PBXGroup;
+			children = (
+				0E8E6CF01D2668DB00579898 /* ZWClusterAnnotationView.h */,
+				0E8E6CF11D2668DB00579898 /* ZWClusterAnnotationView.m */,
+			);
+			name = BaiduMap;
+			sourceTree = "<group>";
+		};
+		0E67FDDD1D378A9B00929ACB /* ButtonOutFrame */ = {
+			isa = PBXGroup;
+			children = (
+				0E5AF51A1D20E1A1009F9511 /* ZWHitTestView.h */,
+				0E5AF51B1D20E1A1009F9511 /* ZWHitTestView.m */,
+			);
+			name = ButtonOutFrame;
+			sourceTree = "<group>";
+		};
+		0E67FDDE1D378AAB00929ACB /* TextKit */ = {
+			isa = PBXGroup;
+			children = (
+				0E8324291D364CD100540D82 /* ZWBookView.h */,
+				0E83242A1D364CD100540D82 /* ZWBookView.m */,
+				0E7E3BA41D24F42E00D51178 /* ZWTimeIndicatorView.h */,
+				0E7E3BA51D24F42E00D51178 /* ZWTimeIndicatorView.m */,
+			);
+			name = TextKit;
+			sourceTree = "<group>";
+		};
+		0E67FDDF1D378AB800929ACB /* CollectionViewInTableView */ = {
+			isa = PBXGroup;
+			children = (
+				0E1E650D1D2A784F006AC82B /* ZWCollectionTableCellTableViewCell.h */,
+				0E1E650E1D2A784F006AC82B /* ZWCollectionTableCellTableViewCell.m */,
+			);
+			name = CollectionViewInTableView;
+			sourceTree = "<group>";
+		};
+		0E67FDE01D378AC700929ACB /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				0E69BAD71D30C1C9006E159E /* ZWCGDrawView.h */,
+				0E69BAD81D30C1C9006E159E /* ZWCGDrawView.m */,
+			);
+			name = CoreGraphics;
+			sourceTree = "<group>";
+		};
+		0E67FDE11D378AFE00929ACB /* TextKit */ = {
+			isa = PBXGroup;
+			children = (
+				0E67FDD21D376D6400929ACB /* ZWMarkdownParser.h */,
+				0E67FDD31D376D6400929ACB /* ZWMarkdownParser.m */,
 				0E7E3BA11D24F3B800D51178 /* ZWNote.h */,
 				0E7E3BA21D24F3B800D51178 /* ZWNote.m */,
 				0E7E3BAA1D25168200D51178 /* ZWSyntaxHighlightTextStorage.h */,
 				0E7E3BAB1D25168200D51178 /* ZWSyntaxHighlightTextStorage.m */,
+			);
+			name = TextKit;
+			sourceTree = "<group>";
+		};
+		0E67FDE21D378B1200929ACB /* BaiduMap */ = {
+			isa = PBXGroup;
+			children = (
 				0E8E6CE71D2668BD00579898 /* ZWQuadTree.h */,
 				0E8E6CE81D2668BD00579898 /* ZWQuadTree.m */,
 				0E8E6CE91D2668BD00579898 /* ZWCoordinateQuadTree.h */,
 				0E8E6CEA1D2668BD00579898 /* ZWCoordinateQuadTree.m */,
 				0E8E6CEB1D2668BD00579898 /* ZWClusterAnnotation.h */,
 				0E8E6CEC1D2668BD00579898 /* ZWClusterAnnotation.m */,
-				0E67FDD21D376D6400929ACB /* ZWMarkdownParser.h */,
-				0E67FDD31D376D6400929ACB /* ZWMarkdownParser.m */,
+			);
+			name = BaiduMap;
+			sourceTree = "<group>";
+		};
+		0E7E3BA01D24F39600D51178 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E67FDE21D378B1200929ACB /* BaiduMap */,
+				0E67FDE11D378AFE00929ACB /* TextKit */,
 			);
 			name = Model;
 			sourceTree = "<group>";
