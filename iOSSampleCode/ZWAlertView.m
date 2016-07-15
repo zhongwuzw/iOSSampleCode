@@ -45,24 +45,15 @@
         _successHandler = [JSManagedValue managedValueWithValue:successHandler];
         [context.virtualMachine addManagedReference:_successHandler withOwner:self];
         
-        _failureHandler = [JSManagedValue managedValueWithValue:successHandler];
+        _failureHandler = [JSManagedValue managedValueWithValue:failureHandler];
         [context.virtualMachine addManagedReference:_failureHandler withOwner:self];
     }
     return self;
 }
 
-- (void)dealloc {
-    
-    //TODO: is this the right place to remove managed reference?
-    
-    
-}
-
 #pragma mark - UIAlertviewDelegate methods
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    
-    //1
     if (buttonIndex == self.cancelButtonIndex) {
         JSValue *function = [self.failureHandler value];
         [function callWithArguments:@[]];
@@ -72,7 +63,6 @@
         [function callWithArguments:@[]];
     }
     
-    //2
     [self.ctxt.virtualMachine removeManagedReference:_failureHandler
                                            withOwner:self];
     

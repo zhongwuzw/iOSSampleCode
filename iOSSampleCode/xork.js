@@ -283,7 +283,7 @@ function removeNewLines(s) {
 }
 
 function saveGame() {
-    presentNativeAlert("Hello", "Do you want to save the game?",
+    presentNativeAlert("Hello","Do you want to save the game?",
                        saveGameConfirm,
                        saveGameCancel);
 }
