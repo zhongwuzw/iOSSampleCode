@@ -31,6 +31,15 @@
     
     [self initJavaScriptContext];
     
+    [self setupKeyboardNotification];
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
+    [self.view addGestureRecognizer:tapGesture];
+    
+    // Do any additional setup after loading the view.
+}
+
+- (void)setupKeyboardNotification{
     //增加监听，当键盘出现或改变时收出消息
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillShow:)
@@ -42,11 +51,6 @@
                                              selector:@selector(keyboardWillHide:)
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
-    
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
-    [self.view addGestureRecognizer:tapGesture];
-    
-    // Do any additional setup after loading the view.
 }
 
 - (void)handleTapGesture:(UITapGestureRecognizer *)sender{
@@ -117,7 +121,7 @@
                                             NSString *message,
                                             JSValue *success,
                                             JSValue *failure) {
-        
+        //使用currentContext来获取以避免直接获取self.context造成循环引用
         JSContext *context = [JSContext currentContext];
         ZWAlertView* alertView = [[ZWAlertView alloc]
                                     initWithTitle:title
@@ -166,6 +170,7 @@
     [self.view addConstraint:_inputTextFieldBottomConstraint];
 }
 
+#pragma mark - Keyboard Related Method
 //当键盘出现或改变时调用
 - (void)keyboardWillShow:(NSNotification *)aNotification
 {
@@ -190,11 +195,6 @@
 - (void)keyboardWillHide:(NSNotification *)aNotification{
     self.inputTextFieldBottomConstraint.constant = 0;
     [self.inputTextField updateConstraintsIfNeeded];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -242,6 +242,11 @@
 
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 /*

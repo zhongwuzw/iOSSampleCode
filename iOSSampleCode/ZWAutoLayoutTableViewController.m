@@ -8,6 +8,7 @@
 
 #import "ZWAutoLayoutTableViewController.h"
 #import "AutoLayoutControllerHeader.h"
+#import "iOSSampleCode-Swift.h"
 
 @implementation ZWAutoLayoutTableViewController
 
@@ -22,8 +23,8 @@
 
 - (void)inilializeDataArray
 {
-    self.dataArray = @[@"不充足的约束"];
-    self.controllerStrArray = @[@"ZWUnderconstrainedViewController"];
+    self.dataArray = @[@"不充足的约束",@"Swift测试"];
+    self.controllerStrArray = @[@"ZWUnderconstrainedViewController",@"TestViewController"];
 }
 
 - (void)didReceiveMemoryWarning {

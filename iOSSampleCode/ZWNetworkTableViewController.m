@@ -22,7 +22,7 @@
 
 - (void)inilializeDataArray
 {
-    self.dataArray = @[@"使用NSURLProtocol来加速hybrid加载",@"JavaScript Core"];
+    self.dataArray = @[@"使用NSURLProtocol来加速hybrid加载",@"JavaScript Core示例"];
     self.controllerStrArray = @[@"ZWURLProtocolController",@"ZWJavaScriptCoreViewController"];
 }
 
