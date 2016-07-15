@@ -9,8 +9,15 @@
 /* Begin PBXBuildFile section */
 		0E0A35911D27B38200E97B62 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0A35901D27B38200E97B62 /* MBProgressHUD.framework */; };
 		0E0A35941D27FDE100E97B62 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E0A35931D27FDE100E97B62 /* Launch Screen.storyboard */; };
+		0E1355AC1D387B1F0039A467 /* ZWJavaScriptCoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1355AB1D387B1F0039A467 /* ZWJavaScriptCoreViewController.m */; };
+		0E1355B01D387BB50039A467 /* ZWConsoleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1355AF1D387BB50039A467 /* ZWConsoleTextView.m */; };
 		0E1E650C1D2A779C006AC82B /* ZWCollectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E650B1D2A779C006AC82B /* ZWCollectionTableViewController.m */; };
 		0E1E650F1D2A784F006AC82B /* ZWCollectionTableCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E650E1D2A784F006AC82B /* ZWCollectionTableCellTableViewCell.m */; };
+		0E29D1661D38AE6F0043F1E5 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E1355A51D387A820039A467 /* JavaScriptCore.framework */; };
+		0E29D16E1D38BE3B0043F1E5 /* xork.js in Resources */ = {isa = PBXBuildFile; fileRef = 0E29D16D1D38BE3B0043F1E5 /* xork.js */; };
+		0E29D1701D38BE5D0043F1E5 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E29D16F1D38BE5D0043F1E5 /* data.json */; };
+		0E29D1741D38C8380043F1E5 /* ZWItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E29D1731D38C8380043F1E5 /* ZWItem.m */; };
+		0E29D1771D38D6810043F1E5 /* ZWAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E29D1761D38D6810043F1E5 /* ZWAlertView.m */; };
 		0E4C0A471D20EFD000AFC7CF /* ZWBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C0A461D20EFD000AFC7CF /* ZWBaseTableViewController.m */; };
 		0E4C0A4C1D20F15C00AFC7CF /* ZWHitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C0A4B1D20F15C00AFC7CF /* ZWHitTestViewController.m */; };
 		0E4C0A4F1D20F27700AFC7CF /* ZWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C0A4E1D20F27700AFC7CF /* ZWBaseViewController.m */; };
@@ -109,10 +116,22 @@
 /* Begin PBXFileReference section */
 		0E0A35901D27B38200E97B62 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = ../Carthage/Build/iOS/MBProgressHUD.framework; sourceTree = "<group>"; };
 		0E0A35931D27FDE100E97B62 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		0E1355A51D387A820039A467 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		0E1355AA1D387B1F0039A467 /* ZWJavaScriptCoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWJavaScriptCoreViewController.h; sourceTree = "<group>"; };
+		0E1355AB1D387B1F0039A467 /* ZWJavaScriptCoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWJavaScriptCoreViewController.m; sourceTree = "<group>"; };
+		0E1355AE1D387BB50039A467 /* ZWConsoleTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWConsoleTextView.h; sourceTree = "<group>"; };
+		0E1355AF1D387BB50039A467 /* ZWConsoleTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWConsoleTextView.m; sourceTree = "<group>"; };
 		0E1E650A1D2A779C006AC82B /* ZWCollectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWCollectionTableViewController.h; sourceTree = "<group>"; };
 		0E1E650B1D2A779C006AC82B /* ZWCollectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWCollectionTableViewController.m; sourceTree = "<group>"; };
 		0E1E650D1D2A784F006AC82B /* ZWCollectionTableCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWCollectionTableCellTableViewCell.h; sourceTree = "<group>"; };
 		0E1E650E1D2A784F006AC82B /* ZWCollectionTableCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWCollectionTableCellTableViewCell.m; sourceTree = "<group>"; };
+		0E29D16B1D38B1410043F1E5 /* CommonMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
+		0E29D16D1D38BE3B0043F1E5 /* xork.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = xork.js; sourceTree = "<group>"; };
+		0E29D16F1D38BE5D0043F1E5 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		0E29D1721D38C8380043F1E5 /* ZWItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWItem.h; sourceTree = "<group>"; };
+		0E29D1731D38C8380043F1E5 /* ZWItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWItem.m; sourceTree = "<group>"; };
+		0E29D1751D38D6810043F1E5 /* ZWAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWAlertView.h; sourceTree = "<group>"; };
+		0E29D1761D38D6810043F1E5 /* ZWAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWAlertView.m; sourceTree = "<group>"; };
 		0E4C0A451D20EFD000AFC7CF /* ZWBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWBaseTableViewController.h; sourceTree = "<group>"; };
 		0E4C0A461D20EFD000AFC7CF /* ZWBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWBaseTableViewController.m; sourceTree = "<group>"; };
 		0E4C0A4A1D20F15C00AFC7CF /* ZWHitTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWHitTestViewController.h; sourceTree = "<group>"; };
@@ -225,6 +244,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E29D1661D38AE6F0043F1E5 /* JavaScriptCore.framework in Frameworks */,
 				0E0A35911D27B38200E97B62 /* MBProgressHUD.framework in Frameworks */,
 				0E67FDCC1D37675B00929ACB /* CocoaLumberjack.framework in Frameworks */,
 				0E8E6CE61D26657500579898 /* UIKit.framework in Frameworks */,
@@ -264,17 +284,115 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E4C0A481D20F10100AFC7CF /* Utilities */ = {
+		0E1355A71D387AAD0039A467 /* HybridAccelerate */ = {
+			isa = PBXGroup;
+			children = (
+				0E5354611D23A1B600C2ACAA /* ZWURLProtocolController.h */,
+				0E5354621D23A1B600C2ACAA /* ZWURLProtocolController.m */,
+				0E5354681D23A35700C2ACAA /* ZWHybridPackageFileManager.h */,
+				0E5354691D23A35700C2ACAA /* ZWHybridPackageFileManager.m */,
+			);
+			name = HybridAccelerate;
+			sourceTree = "<group>";
+		};
+		0E1355A81D387AE10039A467 /* HybridAccelerate */ = {
+			isa = PBXGroup;
+			children = (
+				0E5354651D23A25B00C2ACAA /* ZWHybridPackageProtocol.h */,
+				0E5354661D23A25B00C2ACAA /* ZWHybridPackageProtocol.m */,
+			);
+			name = HybridAccelerate;
+			sourceTree = "<group>";
+		};
+		0E1355A91D387AF30039A467 /* JavaScriptCore */ = {
+			isa = PBXGroup;
+			children = (
+				0E1355AA1D387B1F0039A467 /* ZWJavaScriptCoreViewController.h */,
+				0E1355AB1D387B1F0039A467 /* ZWJavaScriptCoreViewController.m */,
+			);
+			name = JavaScriptCore;
+			sourceTree = "<group>";
+		};
+		0E1355AD1D387B990039A467 /* JavaScriptCore */ = {
+			isa = PBXGroup;
+			children = (
+				0E1355AE1D387BB50039A467 /* ZWConsoleTextView.h */,
+				0E1355AF1D387BB50039A467 /* ZWConsoleTextView.m */,
+				0E29D1751D38D6810043F1E5 /* ZWAlertView.h */,
+				0E29D1761D38D6810043F1E5 /* ZWAlertView.m */,
+			);
+			name = JavaScriptCore;
+			sourceTree = "<group>";
+		};
+		0E29D1611D38A9FC0043F1E5 /* js */ = {
+			isa = PBXGroup;
+			children = (
+				0E29D16D1D38BE3B0043F1E5 /* xork.js */,
+			);
+			name = js;
+			sourceTree = "<group>";
+		};
+		0E29D1671D38B1070043F1E5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				0E4C0A451D20EFD000AFC7CF /* ZWBaseTableViewController.h */,
 				0E4C0A461D20EFD000AFC7CF /* ZWBaseTableViewController.m */,
 				0E4C0A4D1D20F27700AFC7CF /* ZWBaseViewController.h */,
 				0E4C0A4E1D20F27700AFC7CF /* ZWBaseViewController.m */,
-				0E51409D1D24C654009672FA /* ZWBaseTableViewCell.h */,
-				0E51409E1D24C654009672FA /* ZWBaseTableViewCell.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0E29D1681D38B1120043F1E5 /* Category */ = {
+			isa = PBXGroup;
+			children = (
 				0EF343481D2AA6E80097B182 /* UIColor+ZWUtility.h */,
 				0EF343491D2AA6E80097B182 /* UIColor+ZWUtility.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		0E29D1691D38B1200043F1E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0E51409D1D24C654009672FA /* ZWBaseTableViewCell.h */,
+				0E51409E1D24C654009672FA /* ZWBaseTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0E29D16A1D38B12B0043F1E5 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				0E29D16B1D38B1410043F1E5 /* CommonMacros.h */,
+			);
+			name = Header;
+			sourceTree = "<group>";
+		};
+		0E29D16C1D38BE250043F1E5 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				0E29D16F1D38BE5D0043F1E5 /* data.json */,
+			);
+			name = json;
+			sourceTree = "<group>";
+		};
+		0E29D1711D38C8290043F1E5 /* JavaScriptCore */ = {
+			isa = PBXGroup;
+			children = (
+				0E29D1721D38C8380043F1E5 /* ZWItem.h */,
+				0E29D1731D38C8380043F1E5 /* ZWItem.m */,
+			);
+			name = JavaScriptCore;
+			sourceTree = "<group>";
+		};
+		0E4C0A481D20F10100AFC7CF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0E29D16A1D38B12B0043F1E5 /* Header */,
+				0E29D1691D38B1200043F1E5 /* View */,
+				0E29D1681D38B1120043F1E5 /* Category */,
+				0E29D1671D38B1070043F1E5 /* Controller */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -374,6 +492,7 @@
 		0E53545E1D23A14100C2ACAA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0E1355AD1D387B990039A467 /* JavaScriptCore */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -381,10 +500,8 @@
 		0E53545F1D23A14700C2ACAA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0E5354611D23A1B600C2ACAA /* ZWURLProtocolController.h */,
-				0E5354621D23A1B600C2ACAA /* ZWURLProtocolController.m */,
-				0E5354681D23A35700C2ACAA /* ZWHybridPackageFileManager.h */,
-				0E5354691D23A35700C2ACAA /* ZWHybridPackageFileManager.m */,
+				0E1355A91D387AF30039A467 /* JavaScriptCore */,
+				0E1355A71D387AAD0039A467 /* HybridAccelerate */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -392,8 +509,8 @@
 		0E5354641D23A22F00C2ACAA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0E5354651D23A25B00C2ACAA /* ZWHybridPackageProtocol.h */,
-				0E5354661D23A25B00C2ACAA /* ZWHybridPackageProtocol.m */,
+				0E29D1711D38C8290043F1E5 /* JavaScriptCore */,
+				0E1355A81D387AE10039A467 /* HybridAccelerate */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -401,6 +518,8 @@
 		0E53546B1D23A95300C2ACAA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0E29D16C1D38BE250043F1E5 /* json */,
+				0E29D1611D38A9FC0043F1E5 /* js */,
 				0E83242D1D364D6200540D82 /* md */,
 				0E83242C1D364D3700540D82 /* csv */,
 				0E53546C1D23A96B00C2ACAA /* html */,
@@ -664,6 +783,7 @@
 		0EC3AAB61D1CFA0A00615F05 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0E1355A51D387A820039A467 /* JavaScriptCore.framework */,
 				0E8E6CE51D26657500579898 /* UIKit.framework */,
 				0E8E6CCB1D265BB900579898 /* libstdc++.6.0.9.tbd */,
 				0E8E6CC91D265BB000579898 /* CoreTelephony.framework */,
@@ -817,7 +937,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E67FDC91D373AD500929ACB /* alices_adventures.md in Resources */,
+				0E29D16E1D38BE3B0043F1E5 /* xork.js in Resources */,
 				0E5354821D23D2C600C2ACAA /* images in Resources */,
+				0E29D1701D38BE5D0043F1E5 /* data.json in Resources */,
 				0E0A35941D27FDE100E97B62 /* Launch Screen.storyboard in Resources */,
 				0E53546E1D23A9B500C2ACAA /* ad_page_pc.html in Resources */,
 				0E8E6CE11D265CFF00579898 /* mapapi.bundle in Resources */,
@@ -885,9 +1007,13 @@
 				0E5AF51C1D20E1A1009F9511 /* ZWHitTestView.m in Sources */,
 				0E4C0A4F1D20F27700AFC7CF /* ZWBaseViewController.m in Sources */,
 				0E69BADC1D313590006E159E /* ZWDrawViewController.m in Sources */,
+				0E29D1771D38D6810043F1E5 /* ZWAlertView.m in Sources */,
 				0E53545C1D23A11700C2ACAA /* ZWNetworkTableViewController.m in Sources */,
+				0E1355AC1D387B1F0039A467 /* ZWJavaScriptCoreViewController.m in Sources */,
 				0E83242B1D364CD100540D82 /* ZWBookView.m in Sources */,
 				0E4C0A551D2122C100AFC7CF /* ZWAutoLayoutTableViewController.m in Sources */,
+				0E29D1741D38C8380043F1E5 /* ZWItem.m in Sources */,
+				0E1355B01D387BB50039A467 /* ZWConsoleTextView.m in Sources */,
 				0E8324251D364B3600540D82 /* ZWTextKitTopViewController.m in Sources */,
 				0E4C0A4C1D20F15C00AFC7CF /* ZWHitTestViewController.m in Sources */,
 				0E53546A1D23A35700C2ACAA /* ZWHybridPackageFileManager.m in Sources */,

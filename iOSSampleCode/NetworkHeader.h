@@ -10,5 +10,6 @@
 #define NetworkHeader_h
 
 #import "ZWURLProtocolController.h"
+#import "ZWJavaScriptCoreViewController.h"
 
 #endif /* NetworkHeader_h */

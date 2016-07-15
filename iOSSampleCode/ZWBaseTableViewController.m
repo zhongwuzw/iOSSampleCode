@@ -51,6 +51,7 @@ static NSString *CELL_IDENTIFIER = @"cell_identifier";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self jumpToController:_controllerStrArray[indexPath.row]];
 }
 
