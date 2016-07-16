@@ -7,12 +7,20 @@
 //
 
 import Foundation
+
+@objc
 class TView: UIView {
     
 }
-class TestViewController: UIViewController {
+
+class TestViewController: ZWBaseViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "Swift Controller"
     }
     
     required init?(coder aDecoder: NSCoder) {

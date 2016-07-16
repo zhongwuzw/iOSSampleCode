@@ -37,7 +37,13 @@
 
 - (void)jumpToController:(NSString *)controllerStr
 {
-    id controller = [NSClassFromString(controllerStr) new];
+    id controller = nil;
+    
+    if ([controllerStr isEqualToString:@"TestViewController"]) {
+        controller = [TestViewController new];
+    }
+    else
+        controller = [NSClassFromString(controllerStr) new];
     [self.navigationController pushViewController:controller animated:YES];
 }
 
