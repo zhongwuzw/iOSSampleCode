@@ -8,7 +8,6 @@
 
 #import "ZWAutoLayoutTableViewController.h"
 #import "AutoLayoutControllerHeader.h"
-#import "iOSSampleCode-Swift.h"
 
 @implementation ZWAutoLayoutTableViewController
 
@@ -23,8 +22,8 @@
 
 - (void)inilializeDataArray
 {
-    self.dataArray = @[@"不充足的约束",@"Swift测试"];
-    self.controllerStrArray = @[@"ZWUnderconstrainedViewController",@"TestViewController"];
+    self.dataArray = @[@"不充足的约束"];
+    self.controllerStrArray = @[@"ZWUnderconstrainedViewController"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,13 +36,7 @@
 
 - (void)jumpToController:(NSString *)controllerStr
 {
-    id controller = nil;
-    
-    if ([controllerStr isEqualToString:@"TestViewController"]) {
-        controller = [TestViewController new];
-    }
-    else
-        controller = [NSClassFromString(controllerStr) new];
+    id controller = [NSClassFromString(controllerStr) new];
     [self.navigationController pushViewController:controller animated:YES];
 }
 

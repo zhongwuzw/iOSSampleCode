@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -114,5 +115,97 @@
             </objects>
             <point key="canvasLocation" x="-1603" y="-159"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="gaw-G2-HfA">
+            <objects>
+                <viewController id="DdR-M0-4zi" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hgc-NS-MMy"/>
+                        <viewControllerLayoutGuide type="bottom" id="OQU-Pf-jhB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BfF-Ac-atv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" translatesAutoresizingMaskIntoConstraints="NO" id="U9a-qG-xB8">
+                                <rect key="frame" x="150" y="20" width="300" height="197"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wai-St-eMY" userLabel="TextContainer">
+                                <rect key="frame" x="0.0" y="237" width="600" height="363"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="北京" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoZ-FJ-mpl">
+                                        <rect key="frame" x="150" y="0.0" width="300" height="177"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="150"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjD-pt-m3I">
+                                        <rect key="frame" x="73" y="58" width="454" height="295"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="250"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.21568627450980393" green="0.50196078431372548" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="uoZ-FJ-mpl" firstAttribute="centerX" secondItem="Wai-St-eMY" secondAttribute="centerX" id="C0U-wr-dQe"/>
+                                    <constraint firstItem="uoZ-FJ-mpl" firstAttribute="top" secondItem="Wai-St-eMY" secondAttribute="top" id="d1l-C2-n88"/>
+                                    <constraint firstAttribute="bottom" secondItem="CjD-pt-m3I" secondAttribute="bottom" constant="10" id="g6U-tx-eRJ"/>
+                                    <constraint firstItem="CjD-pt-m3I" firstAttribute="centerX" secondItem="Wai-St-eMY" secondAttribute="centerX" id="vja-im-2LB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29019607843137252" green="0.6705882352941176" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="U9a-qG-xB8" firstAttribute="centerY" secondItem="BfF-Ac-atv" secondAttribute="centerY" id="7Bh-2R-I1T"/>
+                            <constraint firstItem="Wai-St-eMY" firstAttribute="width" secondItem="BfF-Ac-atv" secondAttribute="width" multiplier="0.5" id="AKH-tK-4Oj"/>
+                            <constraint firstItem="OQU-Pf-jhB" firstAttribute="top" secondItem="Wai-St-eMY" secondAttribute="bottom" id="B3A-0J-PRl"/>
+                            <constraint firstItem="U9a-qG-xB8" firstAttribute="leading" secondItem="BfF-Ac-atv" secondAttribute="leading" constant="150" id="CgI-tF-wut"/>
+                            <constraint firstItem="U9a-qG-xB8" firstAttribute="width" secondItem="BfF-Ac-atv" secondAttribute="width" multiplier="0.45" id="EZJ-mY-zU2"/>
+                            <constraint firstAttribute="trailing" secondItem="Wai-St-eMY" secondAttribute="trailing" id="HUd-ot-y1a"/>
+                            <constraint firstItem="U9a-qG-xB8" firstAttribute="top" secondItem="Hgc-NS-MMy" secondAttribute="bottom" id="Hsm-8o-K8h"/>
+                            <constraint firstItem="U9a-qG-xB8" firstAttribute="leading" secondItem="BfF-Ac-atv" secondAttribute="leading" constant="10" id="fCg-MY-z6h"/>
+                            <constraint firstItem="Wai-St-eMY" firstAttribute="top" secondItem="U9a-qG-xB8" secondAttribute="bottom" constant="20" id="fCi-wk-pIU"/>
+                            <constraint firstItem="U9a-qG-xB8" firstAttribute="height" relation="lessThanOrEqual" secondItem="BfF-Ac-atv" secondAttribute="height" multiplier="0.4" id="ga2-s9-dBw"/>
+                            <constraint firstItem="Wai-St-eMY" firstAttribute="leading" secondItem="BfF-Ac-atv" secondAttribute="leading" id="pHH-In-VBn"/>
+                            <constraint firstItem="Wai-St-eMY" firstAttribute="top" secondItem="Hgc-NS-MMy" secondAttribute="bottom" constant="180" id="pfq-zB-PkM">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="U9a-qG-xB8" firstAttribute="centerX" secondItem="BfF-Ac-atv" secondAttribute="centerX" id="t3U-LT-YYv"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7Bh-2R-I1T"/>
+                                <exclude reference="CgI-tF-wut"/>
+                                <exclude reference="EZJ-mY-zU2"/>
+                                <exclude reference="fCg-MY-z6h"/>
+                                <exclude reference="AKH-tK-4Oj"/>
+                                <exclude reference="pfq-zB-PkM"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="7Bh-2R-I1T"/>
+                                <exclude reference="CgI-tF-wut"/>
+                                <include reference="EZJ-mY-zU2"/>
+                                <exclude reference="Hsm-8o-K8h"/>
+                                <include reference="fCg-MY-z6h"/>
+                                <exclude reference="ga2-s9-dBw"/>
+                                <exclude reference="t3U-LT-YYv"/>
+                                <include reference="AKH-tK-4Oj"/>
+                                <exclude reference="fCi-wk-pIU"/>
+                                <exclude reference="pHH-In-VBn"/>
+                                <include reference="pfq-zB-PkM"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x7b-u1-6B5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1749" y="634"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="cloud" width="300" height="197"/>
+    </resources>
 </document>

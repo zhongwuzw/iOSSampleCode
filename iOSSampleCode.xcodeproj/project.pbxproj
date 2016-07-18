@@ -18,7 +18,6 @@
 		0E29D1701D38BE5D0043F1E5 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E29D16F1D38BE5D0043F1E5 /* data.json */; };
 		0E29D1741D38C8380043F1E5 /* ZWItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E29D1731D38C8380043F1E5 /* ZWItem.m */; };
 		0E29D1771D38D6810043F1E5 /* ZWAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E29D1761D38D6810043F1E5 /* ZWAlertView.m */; };
-		0E29D17A1D38FADB0043F1E5 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E29D1791D38FADB0043F1E5 /* TestViewController.swift */; };
 		0E4C0A471D20EFD000AFC7CF /* ZWBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C0A461D20EFD000AFC7CF /* ZWBaseTableViewController.m */; };
 		0E4C0A4C1D20F15C00AFC7CF /* ZWHitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C0A4B1D20F15C00AFC7CF /* ZWHitTestViewController.m */; };
 		0E4C0A4F1D20F27700AFC7CF /* ZWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C0A4E1D20F27700AFC7CF /* ZWBaseViewController.m */; };
@@ -133,8 +132,6 @@
 		0E29D1731D38C8380043F1E5 /* ZWItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWItem.m; sourceTree = "<group>"; };
 		0E29D1751D38D6810043F1E5 /* ZWAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWAlertView.h; sourceTree = "<group>"; };
 		0E29D1761D38D6810043F1E5 /* ZWAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWAlertView.m; sourceTree = "<group>"; };
-		0E29D1781D38FADA0043F1E5 /* iOSSampleCode-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSSampleCode-Bridging-Header.h"; sourceTree = "<group>"; };
-		0E29D1791D38FADB0043F1E5 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		0E4C0A451D20EFD000AFC7CF /* ZWBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWBaseTableViewController.h; sourceTree = "<group>"; };
 		0E4C0A461D20EFD000AFC7CF /* ZWBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWBaseTableViewController.m; sourceTree = "<group>"; };
 		0E4C0A4A1D20F15C00AFC7CF /* ZWHitTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWHitTestViewController.h; sourceTree = "<group>"; };
@@ -444,8 +441,6 @@
 			children = (
 				0EC3AAEA1D1D1D1600615F05 /* ZWUnderconstrainedViewController.h */,
 				0EC3AAEB1D1D1D1600615F05 /* ZWUnderconstrainedViewController.m */,
-				0E29D1791D38FADB0043F1E5 /* TestViewController.swift */,
-				0E29D1781D38FADA0043F1E5 /* iOSSampleCode-Bridging-Header.h */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1007,7 +1002,6 @@
 				0E8E6CED1D2668BD00579898 /* ZWQuadTree.m in Sources */,
 				0E7E3B9F1D24D68B00D51178 /* ZWTextKitTableViewController.m in Sources */,
 				0E7E3BA31D24F3B800D51178 /* ZWNote.m in Sources */,
-				0E29D17A1D38FADB0043F1E5 /* TestViewController.swift in Sources */,
 				0E7E3BA61D24F42E00D51178 /* ZWTimeIndicatorView.m in Sources */,
 				0E8324281D364C4A00540D82 /* ZWBookViewController.m in Sources */,
 				0E5AF51C1D20E1A1009F9511 /* ZWHitTestView.m in Sources */,
@@ -1185,6 +1179,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOSSampleCode/iOSSampleCode-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1211,6 +1206,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOSSampleCode/iOSSampleCode-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
