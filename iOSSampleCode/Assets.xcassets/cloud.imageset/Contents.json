@@ -2,16 +2,17 @@
   "images" : [
     {
       "idiom" : "iphone",
-      "filename" : "cloud_big.png",
+      "filename" : "cloud_small-1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "iphone",
-      "filename" : "cloud_big@2x.png",
+      "filename" : "cloud_small@2x-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "iphone",
+      "filename" : "cloud_small@3x-1.png",
       "scale" : "3x"
     },
     {
