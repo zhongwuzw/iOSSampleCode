@@ -22,8 +22,8 @@
 
 - (void)inilializeDataArray
 {
-    self.dataArray = @[@"不充足的约束"];
-    self.controllerStrArray = @[@"ZWUnderconstrainedViewController"];
+    self.dataArray = @[@"不充足的约束",@"Adaptive Layout示例"];
+    self.controllerStrArray = @[@"ZWUnderconstrainedViewController",@"ZWAdaptiveLayoutViewController"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,7 +36,13 @@
 
 - (void)jumpToController:(NSString *)controllerStr
 {
-    id controller = [NSClassFromString(controllerStr) new];
+    id controller;
+    if ([controllerStr isEqualToString:@"ZWAdaptiveLayoutViewController"]) {
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        controller = [storyBoard instantiateViewControllerWithIdentifier:@"ZWAdaptiveLayoutViewController"];
+    }
+    else
+        controller = [NSClassFromString(controllerStr) new];
     [self.navigationController pushViewController:controller animated:YES];
 }
 

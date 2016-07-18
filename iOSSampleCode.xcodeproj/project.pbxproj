@@ -70,6 +70,7 @@
 		0E8E6CEF1D2668BD00579898 /* ZWClusterAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E6CEC1D2668BD00579898 /* ZWClusterAnnotation.m */; };
 		0E8E6CF21D2668DB00579898 /* ZWClusterAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E6CF11D2668DB00579898 /* ZWClusterAnnotationView.m */; };
 		0E8E6CF81D2678BE00579898 /* USA-HotelMotel.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0E8E6CF71D2678BE00579898 /* USA-HotelMotel.csv */; };
+		0E9C928D1D3D2B2D0030ECB5 /* ZWAdaptiveLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C928C1D3D2B2D0030ECB5 /* ZWAdaptiveLayoutViewController.swift */; };
 		0EA6C6C61D33B27A00358959 /* ZWDynamicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6C6C51D33B27A00358959 /* ZWDynamicsViewController.m */; };
 		0EC3AAB81D1CFA0A00615F05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AAB71D1CFA0A00615F05 /* main.m */; };
 		0EC3AABB1D1CFA0A00615F05 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AABA1D1CFA0A00615F05 /* AppDelegate.mm */; };
@@ -216,6 +217,8 @@
 		0E8E6CF01D2668DB00579898 /* ZWClusterAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWClusterAnnotationView.h; sourceTree = "<group>"; };
 		0E8E6CF11D2668DB00579898 /* ZWClusterAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWClusterAnnotationView.m; sourceTree = "<group>"; };
 		0E8E6CF71D2678BE00579898 /* USA-HotelMotel.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "USA-HotelMotel.csv"; sourceTree = "<group>"; };
+		0E9C928B1D3D2B2C0030ECB5 /* iOSSampleCode-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSSampleCode-Bridging-Header.h"; sourceTree = "<group>"; };
+		0E9C928C1D3D2B2D0030ECB5 /* ZWAdaptiveLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZWAdaptiveLayoutViewController.swift; sourceTree = "<group>"; };
 		0EA6C6C41D33B27A00358959 /* ZWDynamicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWDynamicsViewController.h; sourceTree = "<group>"; };
 		0EA6C6C51D33B27A00358959 /* ZWDynamicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWDynamicsViewController.m; sourceTree = "<group>"; };
 		0EC3AAB31D1CFA0A00615F05 /* iOSSampleCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSampleCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -441,6 +444,8 @@
 			children = (
 				0EC3AAEA1D1D1D1600615F05 /* ZWUnderconstrainedViewController.h */,
 				0EC3AAEB1D1D1D1600615F05 /* ZWUnderconstrainedViewController.m */,
+				0E9C928C1D3D2B2D0030ECB5 /* ZWAdaptiveLayoutViewController.swift */,
+				0E9C928B1D3D2B2C0030ECB5 /* iOSSampleCode-Bridging-Header.h */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1002,6 +1007,7 @@
 				0E8E6CED1D2668BD00579898 /* ZWQuadTree.m in Sources */,
 				0E7E3B9F1D24D68B00D51178 /* ZWTextKitTableViewController.m in Sources */,
 				0E7E3BA31D24F3B800D51178 /* ZWNote.m in Sources */,
+				0E9C928D1D3D2B2D0030ECB5 /* ZWAdaptiveLayoutViewController.swift in Sources */,
 				0E7E3BA61D24F42E00D51178 /* ZWTimeIndicatorView.m in Sources */,
 				0E8324281D364C4A00540D82 /* ZWBookViewController.m in Sources */,
 				0E5AF51C1D20E1A1009F9511 /* ZWHitTestView.m in Sources */,

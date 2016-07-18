@@ -115,10 +115,10 @@
             </objects>
             <point key="canvasLocation" x="-1603" y="-159"/>
         </scene>
-        <!--View Controller-->
+        <!--Adaptive Layout View Controller-->
         <scene sceneID="gaw-G2-HfA">
             <objects>
-                <viewController id="DdR-M0-4zi" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ZWAdaptiveLayoutViewController" id="DdR-M0-4zi" customClass="ZWAdaptiveLayoutViewController" customModule="iOSSampleCode" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hgc-NS-MMy"/>
                         <viewControllerLayoutGuide type="bottom" id="OQU-Pf-jhB"/>
@@ -128,29 +128,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" translatesAutoresizingMaskIntoConstraints="NO" id="U9a-qG-xB8">
-                                <rect key="frame" x="150" y="20" width="300" height="197"/>
+                                <rect key="frame" x="50" y="20" width="500" height="240"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wai-St-eMY" userLabel="TextContainer">
-                                <rect key="frame" x="0.0" y="237" width="600" height="363"/>
+                                <rect key="frame" x="0.0" y="280" width="600" height="320"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="北京" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoZ-FJ-mpl">
-                                        <rect key="frame" x="150" y="0.0" width="300" height="177"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="北京" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uoZ-FJ-mpl">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="177"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="150"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="90"/>
+                                        </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjD-pt-m3I">
-                                        <rect key="frame" x="73" y="58" width="454" height="295"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CjD-pt-m3I">
+                                        <rect key="frame" x="0.0" y="15" width="600" height="295"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="250"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="150"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.21568627450980393" green="0.50196078431372548" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="uoZ-FJ-mpl" firstAttribute="centerX" secondItem="Wai-St-eMY" secondAttribute="centerX" id="C0U-wr-dQe"/>
                                     <constraint firstItem="uoZ-FJ-mpl" firstAttribute="top" secondItem="Wai-St-eMY" secondAttribute="top" id="d1l-C2-n88"/>
+                                    <constraint firstItem="uoZ-FJ-mpl" firstAttribute="width" secondItem="Wai-St-eMY" secondAttribute="width" id="ewE-Lg-UYJ"/>
                                     <constraint firstAttribute="bottom" secondItem="CjD-pt-m3I" secondAttribute="bottom" constant="10" id="g6U-tx-eRJ"/>
+                                    <constraint firstItem="CjD-pt-m3I" firstAttribute="width" secondItem="Wai-St-eMY" secondAttribute="width" id="s6H-Lg-MWM"/>
                                     <constraint firstItem="CjD-pt-m3I" firstAttribute="centerX" secondItem="Wai-St-eMY" secondAttribute="centerX" id="vja-im-2LB"/>
                                 </constraints>
                             </view>
@@ -206,6 +214,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cloud" width="300" height="197"/>
+        <image name="cloud" width="500" height="322"/>
     </resources>
 </document>
