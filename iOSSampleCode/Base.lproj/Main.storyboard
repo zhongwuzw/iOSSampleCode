@@ -99,6 +99,56 @@
             </objects>
             <point key="canvasLocation" x="-808" y="609"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="HxK-aj-8yM">
+            <objects>
+                <tableViewController id="e8G-u6-qJg" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZtG-wr-tuk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="120" id="2AS-ri-Ycc">
+                                <rect key="frame" x="0.0" y="28" width="600" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2AS-ri-Ycc" id="k9t-8A-Aa5">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bangkok" translatesAutoresizingMaskIntoConstraints="NO" id="Viy-7X-784">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="119.5"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="城市名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX1-PH-fd2">
+                                            <rect key="frame" x="48" y="48" width="544" height="23.5"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.75" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                            <color key="textColor" red="0.21568627450980393" green="0.50196078431372548" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="eX1-PH-fd2" firstAttribute="leading" secondItem="k9t-8A-Aa5" secondAttribute="leadingMargin" constant="40" id="3HJ-P0-wHp"/>
+                                        <constraint firstItem="Viy-7X-784" firstAttribute="top" secondItem="k9t-8A-Aa5" secondAttribute="top" id="5nC-li-i9G"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="eX1-PH-fd2" secondAttribute="bottom" constant="40" id="Bps-cB-lXb"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="eX1-PH-fd2" secondAttribute="trailing" id="CEm-fj-9L2"/>
+                                        <constraint firstItem="eX1-PH-fd2" firstAttribute="top" secondItem="k9t-8A-Aa5" secondAttribute="topMargin" constant="40" id="Gqw-TV-yfu"/>
+                                        <constraint firstAttribute="bottom" secondItem="Viy-7X-784" secondAttribute="bottom" id="XkY-Ck-Shx"/>
+                                        <constraint firstItem="Viy-7X-784" firstAttribute="leading" secondItem="k9t-8A-Aa5" secondAttribute="leading" id="gQ3-Mz-Etr"/>
+                                        <constraint firstAttribute="trailing" secondItem="Viy-7X-784" secondAttribute="trailing" id="v0H-DV-6Iy"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="e8G-u6-qJg" id="Ku7-3H-Nb6"/>
+                            <outlet property="delegate" destination="e8G-u6-qJg" id="KOr-yu-5Dp"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B0w-qy-7Ac" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1017" y="1719"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Sj9-8B-57J">
             <objects>
@@ -222,6 +272,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bangkok" width="599" height="200"/>
         <image name="cloud" width="300" height="197"/>
     </resources>
 </document>
