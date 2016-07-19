@@ -12,6 +12,6 @@ import UIKit
 class ZWAdaptiveLayoutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        WeatherData()
     }
 }

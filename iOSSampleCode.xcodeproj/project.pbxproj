@@ -72,6 +72,13 @@
 		0E8E6CF81D2678BE00579898 /* USA-HotelMotel.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0E8E6CF71D2678BE00579898 /* USA-HotelMotel.csv */; };
 		0E9C928D1D3D2B2D0030ECB5 /* ZWAdaptiveLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C928C1D3D2B2D0030ECB5 /* ZWAdaptiveLayoutViewController.swift */; };
 		0EA6C6C61D33B27A00358959 /* ZWDynamicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6C6C51D33B27A00358959 /* ZWDynamicsViewController.m */; };
+		0EA917EB1D3E743C00DD0F56 /* ZWCityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA917EA1D3E743C00DD0F56 /* ZWCityTableViewCell.swift */; };
+		0EA917ED1D3E764A00DD0F56 /* ZWMasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA917EC1D3E764A00DD0F56 /* ZWMasterTableViewController.swift */; };
+		0EA917F01D3E781200DD0F56 /* WeatherData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EA917EF1D3E781200DD0F56 /* WeatherData.plist */; };
+		0EA917F41D3E786600DD0F56 /* ZWWeatherStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA917F31D3E786600DD0F56 /* ZWWeatherStatus.swift */; };
+		0EA917F61D3E791200DD0F56 /* ZWDailyWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA917F51D3E791200DD0F56 /* ZWDailyWeather.swift */; };
+		0EA917F81D3E795900DD0F56 /* ZWCityWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA917F71D3E795900DD0F56 /* ZWCityWeather.swift */; };
+		0EA917FA1D3E797F00DD0F56 /* ZWWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA917F91D3E797F00DD0F56 /* ZWWeatherData.swift */; };
 		0EC3AAB81D1CFA0A00615F05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AAB71D1CFA0A00615F05 /* main.m */; };
 		0EC3AABB1D1CFA0A00615F05 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AABA1D1CFA0A00615F05 /* AppDelegate.mm */; };
 		0EC3AABE1D1CFA0A00615F05 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AABD1D1CFA0A00615F05 /* ViewController.m */; };
@@ -221,6 +228,13 @@
 		0E9C928C1D3D2B2D0030ECB5 /* ZWAdaptiveLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZWAdaptiveLayoutViewController.swift; sourceTree = "<group>"; };
 		0EA6C6C41D33B27A00358959 /* ZWDynamicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWDynamicsViewController.h; sourceTree = "<group>"; };
 		0EA6C6C51D33B27A00358959 /* ZWDynamicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWDynamicsViewController.m; sourceTree = "<group>"; };
+		0EA917EA1D3E743C00DD0F56 /* ZWCityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZWCityTableViewCell.swift; sourceTree = "<group>"; };
+		0EA917EC1D3E764A00DD0F56 /* ZWMasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZWMasterTableViewController.swift; sourceTree = "<group>"; };
+		0EA917EF1D3E781200DD0F56 /* WeatherData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WeatherData.plist; sourceTree = "<group>"; };
+		0EA917F31D3E786600DD0F56 /* ZWWeatherStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZWWeatherStatus.swift; sourceTree = "<group>"; };
+		0EA917F51D3E791200DD0F56 /* ZWDailyWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZWDailyWeather.swift; sourceTree = "<group>"; };
+		0EA917F71D3E795900DD0F56 /* ZWCityWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZWCityWeather.swift; sourceTree = "<group>"; };
+		0EA917F91D3E797F00DD0F56 /* ZWWeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZWWeatherData.swift; sourceTree = "<group>"; };
 		0EC3AAB31D1CFA0A00615F05 /* iOSSampleCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSampleCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC3AAB71D1CFA0A00615F05 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0EC3AAB91D1CFA0A00615F05 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -442,10 +456,9 @@
 		0E5354501D2362AF00C2ACAA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0EA917E61D3E734F00DD0F56 /* AdaptiveLayout */,
 				0EC3AAEA1D1D1D1600615F05 /* ZWUnderconstrainedViewController.h */,
 				0EC3AAEB1D1D1D1600615F05 /* ZWUnderconstrainedViewController.m */,
-				0E9C928C1D3D2B2D0030ECB5 /* ZWAdaptiveLayoutViewController.swift */,
-				0E9C928B1D3D2B2C0030ECB5 /* iOSSampleCode-Bridging-Header.h */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -453,6 +466,7 @@
 		0E5354511D2362B700C2ACAA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0EA917E71D3E736C00DD0F56 /* AdaptiveLayout */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -523,6 +537,7 @@
 		0E53546B1D23A95300C2ACAA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0EA917EE1D3E780100DD0F56 /* plist */,
 				0E29D16C1D38BE250043F1E5 /* json */,
 				0E29D1611D38A9FC0043F1E5 /* js */,
 				0E83242D1D364D6200540D82 /* md */,
@@ -741,6 +756,51 @@
 			name = BaiduMap;
 			sourceTree = "<group>";
 		};
+		0EA917E61D3E734F00DD0F56 /* AdaptiveLayout */ = {
+			isa = PBXGroup;
+			children = (
+				0E9C928C1D3D2B2D0030ECB5 /* ZWAdaptiveLayoutViewController.swift */,
+				0E9C928B1D3D2B2C0030ECB5 /* iOSSampleCode-Bridging-Header.h */,
+				0EA917EC1D3E764A00DD0F56 /* ZWMasterTableViewController.swift */,
+			);
+			name = AdaptiveLayout;
+			sourceTree = "<group>";
+		};
+		0EA917E71D3E736C00DD0F56 /* AdaptiveLayout */ = {
+			isa = PBXGroup;
+			children = (
+				0EA917EA1D3E743C00DD0F56 /* ZWCityTableViewCell.swift */,
+			);
+			name = AdaptiveLayout;
+			sourceTree = "<group>";
+		};
+		0EA917EE1D3E780100DD0F56 /* plist */ = {
+			isa = PBXGroup;
+			children = (
+				0EA917EF1D3E781200DD0F56 /* WeatherData.plist */,
+			);
+			name = plist;
+			sourceTree = "<group>";
+		};
+		0EA917F11D3E784100DD0F56 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0EA917F21D3E784E00DD0F56 /* AdaptiveLayout */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0EA917F21D3E784E00DD0F56 /* AdaptiveLayout */ = {
+			isa = PBXGroup;
+			children = (
+				0EA917F31D3E786600DD0F56 /* ZWWeatherStatus.swift */,
+				0EA917F51D3E791200DD0F56 /* ZWDailyWeather.swift */,
+				0EA917F71D3E795900DD0F56 /* ZWCityWeather.swift */,
+				0EA917F91D3E797F00DD0F56 /* ZWWeatherData.swift */,
+			);
+			name = AdaptiveLayout;
+			sourceTree = "<group>";
+		};
 		0EC3AAAA1D1CFA0A00615F05 = {
 			isa = PBXGroup;
 			children = (
@@ -825,6 +885,7 @@
 		0EC3AAE91D1D1C1000615F05 /* AutoLayout */ = {
 			isa = PBXGroup;
 			children = (
+				0EA917F11D3E784100DD0F56 /* Model */,
 				0E5354551D23738F00C2ACAA /* Header */,
 				0E5354511D2362B700C2ACAA /* View */,
 				0E5354501D2362AF00C2ACAA /* Controller */,
@@ -949,6 +1010,7 @@
 				0E53546E1D23A9B500C2ACAA /* ad_page_pc.html in Resources */,
 				0E8E6CE11D265CFF00579898 /* mapapi.bundle in Resources */,
 				0EC3AAC31D1CFA0A00615F05 /* Assets.xcassets in Resources */,
+				0EA917F01D3E781200DD0F56 /* WeatherData.plist in Resources */,
 				0E8E6CF81D2678BE00579898 /* USA-HotelMotel.csv in Resources */,
 				0EC3AAC11D1CFA0A00615F05 /* Main.storyboard in Resources */,
 			);
@@ -995,16 +1057,19 @@
 				0E4C0A581D21230F00AFC7CF /* ZWCocoaTouchTableViewController.m in Sources */,
 				0EF3434A1D2AA6E80097B182 /* UIColor+ZWUtility.m in Sources */,
 				0E5354631D23A1B600C2ACAA /* ZWURLProtocolController.m in Sources */,
+				0EA917F61D3E791200DD0F56 /* ZWDailyWeather.swift in Sources */,
 				0E8E6CEE1D2668BD00579898 /* ZWCoordinateQuadTree.m in Sources */,
 				0EC3AAEC1D1D1D1600615F05 /* ZWUnderconstrainedViewController.m in Sources */,
 				0E5354671D23A25B00C2ACAA /* ZWHybridPackageProtocol.m in Sources */,
 				0E7E3BA91D24F81700D51178 /* ZWNoteEditorViewController.m in Sources */,
 				0EC3AABE1D1CFA0A00615F05 /* ViewController.m in Sources */,
 				0E1E650F1D2A784F006AC82B /* ZWCollectionTableCellTableViewCell.m in Sources */,
+				0EA917F41D3E786600DD0F56 /* ZWWeatherStatus.swift in Sources */,
 				0E69BAD91D30C1C9006E159E /* ZWCGDrawView.m in Sources */,
 				0E5354541D2362EF00C2ACAA /* ZWTextViewController.m in Sources */,
 				0E4C0A471D20EFD000AFC7CF /* ZWBaseTableViewController.m in Sources */,
 				0E8E6CED1D2668BD00579898 /* ZWQuadTree.m in Sources */,
+				0EA917FA1D3E797F00DD0F56 /* ZWWeatherData.swift in Sources */,
 				0E7E3B9F1D24D68B00D51178 /* ZWTextKitTableViewController.m in Sources */,
 				0E7E3BA31D24F3B800D51178 /* ZWNote.m in Sources */,
 				0E9C928D1D3D2B2D0030ECB5 /* ZWAdaptiveLayoutViewController.swift in Sources */,
@@ -1024,13 +1089,16 @@
 				0E4C0A4C1D20F15C00AFC7CF /* ZWHitTestViewController.m in Sources */,
 				0E53546A1D23A35700C2ACAA /* ZWHybridPackageFileManager.m in Sources */,
 				0E67FDD41D376D6400929ACB /* ZWMarkdownParser.m in Sources */,
+				0EA917F81D3E795900DD0F56 /* ZWCityWeather.swift in Sources */,
 				0EC3AABB1D1CFA0A00615F05 /* AppDelegate.mm in Sources */,
 				0E8E6CE41D265DA300579898 /* ZWBaiduMapViewController.m in Sources */,
+				0EA917ED1D3E764A00DD0F56 /* ZWMasterTableViewController.swift in Sources */,
 				0E7E3BAC1D25168200D51178 /* ZWSyntaxHighlightTextStorage.m in Sources */,
 				0E1E650C1D2A779C006AC82B /* ZWCollectionTableViewController.m in Sources */,
 				0E8E6CF21D2668DB00579898 /* ZWClusterAnnotationView.m in Sources */,
 				0EC3AAB81D1CFA0A00615F05 /* main.m in Sources */,
 				0EA6C6C61D33B27A00358959 /* ZWDynamicsViewController.m in Sources */,
+				0EA917EB1D3E743C00DD0F56 /* ZWCityTableViewCell.swift in Sources */,
 				0E8E6CEF1D2668BD00579898 /* ZWClusterAnnotation.m in Sources */,
 				0E51409F1D24C654009672FA /* ZWBaseTableViewCell.m in Sources */,
 			);
