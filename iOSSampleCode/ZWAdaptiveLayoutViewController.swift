@@ -10,8 +10,39 @@ import Foundation
 import UIKit
 
 class ZWAdaptiveLayoutViewController: UIViewController {
+    
+    @IBOutlet weak var weatherIconImageView: UIImageView!
+    
+    // MARK: - Properties
+    var cityWeather: CityWeather? {
+        didSet {
+            // Update the view.
+            if isViewLoaded() {
+                configureView()
+                provideDataToChildViewControllers()
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        WeatherData()
+        configureView()
+        provideDataToChildViewControllers()
+    }
+    
+    // MARK: - Utility methods
+    private func configureView() {
+        if let cityWeather = cityWeather {
+            title = cityWeather.name
+            weatherIconImageView.image = cityWeather.weather[0].status.weatherType.image
+        }
+    }
+    
+    private func provideDataToChildViewControllers() {
+        for vc in childViewControllers {
+            if var cityWeatherContainer = vc as? CityWeatherContainer {
+                cityWeatherContainer.cityWeather = cityWeather
+            }
+        }
     }
 }

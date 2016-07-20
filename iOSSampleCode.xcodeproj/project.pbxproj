@@ -32,6 +32,9 @@
 		0E53546E1D23A9B500C2ACAA /* ad_page_pc.html in Resources */ = {isa = PBXBuildFile; fileRef = 0E53546D1D23A9B500C2ACAA /* ad_page_pc.html */; };
 		0E5354821D23D2C600C2ACAA /* images in Resources */ = {isa = PBXBuildFile; fileRef = 0E5354811D23D2C600C2ACAA /* images */; };
 		0E5AF51C1D20E1A1009F9511 /* ZWHitTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AF51B1D20E1A1009F9511 /* ZWHitTestView.m */; };
+		0E5BC66A1D3F720700F4E454 /* ZWWeatherTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5BC6691D3F720700F4E454 /* ZWWeatherTextViewController.swift */; };
+		0E5BC66C1D3F74CE00F4E454 /* ZWDailyWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5BC66B1D3F74CE00F4E454 /* ZWDailyWeatherCollectionViewCell.swift */; };
+		0E5BC66E1D3F760800F4E454 /* ZWDailyWeatherCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5BC66D1D3F760800F4E454 /* ZWDailyWeatherCollectionViewController.swift */; };
 		0E67FDC91D373AD500929ACB /* alices_adventures.md in Resources */ = {isa = PBXBuildFile; fileRef = 0E67FDC51D3739BD00929ACB /* alices_adventures.md */; };
 		0E67FDCC1D37675B00929ACB /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E67FDCA1D375B2D00929ACB /* CocoaLumberjack.framework */; };
 		0E67FDCE1D37675B00929ACB /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E67FDCA1D375B2D00929ACB /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -170,6 +173,9 @@
 		0E5354811D23D2C600C2ACAA /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		0E5AF51A1D20E1A1009F9511 /* ZWHitTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWHitTestView.h; sourceTree = "<group>"; };
 		0E5AF51B1D20E1A1009F9511 /* ZWHitTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWHitTestView.m; sourceTree = "<group>"; };
+		0E5BC6691D3F720700F4E454 /* ZWWeatherTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZWWeatherTextViewController.swift; sourceTree = "<group>"; };
+		0E5BC66B1D3F74CE00F4E454 /* ZWDailyWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZWDailyWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
+		0E5BC66D1D3F760800F4E454 /* ZWDailyWeatherCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZWDailyWeatherCollectionViewController.swift; sourceTree = "<group>"; };
 		0E67FDC51D3739BD00929ACB /* alices_adventures.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = alices_adventures.md; sourceTree = "<group>"; };
 		0E67FDCA1D375B2D00929ACB /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = ../Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
 		0E67FDCF1D37685000929ACB /* iOSSampleCode.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSSampleCode.pch; sourceTree = SOURCE_ROOT; };
@@ -475,6 +481,7 @@
 			isa = PBXGroup;
 			children = (
 				0E5354571D23742D00C2ACAA /* AutoLayoutControllerHeader.h */,
+				0E9C928B1D3D2B2C0030ECB5 /* iOSSampleCode-Bridging-Header.h */,
 			);
 			name = Header;
 			sourceTree = "<group>";
@@ -760,8 +767,9 @@
 			isa = PBXGroup;
 			children = (
 				0E9C928C1D3D2B2D0030ECB5 /* ZWAdaptiveLayoutViewController.swift */,
-				0E9C928B1D3D2B2C0030ECB5 /* iOSSampleCode-Bridging-Header.h */,
 				0EA917EC1D3E764A00DD0F56 /* ZWMasterTableViewController.swift */,
+				0E5BC6691D3F720700F4E454 /* ZWWeatherTextViewController.swift */,
+				0E5BC66D1D3F760800F4E454 /* ZWDailyWeatherCollectionViewController.swift */,
 			);
 			name = AdaptiveLayout;
 			sourceTree = "<group>";
@@ -770,6 +778,7 @@
 			isa = PBXGroup;
 			children = (
 				0EA917EA1D3E743C00DD0F56 /* ZWCityTableViewCell.swift */,
+				0E5BC66B1D3F74CE00F4E454 /* ZWDailyWeatherCollectionViewCell.swift */,
 			);
 			name = AdaptiveLayout;
 			sourceTree = "<group>";
@@ -1066,6 +1075,7 @@
 				0E1E650F1D2A784F006AC82B /* ZWCollectionTableCellTableViewCell.m in Sources */,
 				0EA917F41D3E786600DD0F56 /* ZWWeatherStatus.swift in Sources */,
 				0E69BAD91D30C1C9006E159E /* ZWCGDrawView.m in Sources */,
+				0E5BC66C1D3F74CE00F4E454 /* ZWDailyWeatherCollectionViewCell.swift in Sources */,
 				0E5354541D2362EF00C2ACAA /* ZWTextViewController.m in Sources */,
 				0E4C0A471D20EFD000AFC7CF /* ZWBaseTableViewController.m in Sources */,
 				0E8E6CED1D2668BD00579898 /* ZWQuadTree.m in Sources */,
@@ -1073,9 +1083,11 @@
 				0E7E3B9F1D24D68B00D51178 /* ZWTextKitTableViewController.m in Sources */,
 				0E7E3BA31D24F3B800D51178 /* ZWNote.m in Sources */,
 				0E9C928D1D3D2B2D0030ECB5 /* ZWAdaptiveLayoutViewController.swift in Sources */,
+				0E5BC66A1D3F720700F4E454 /* ZWWeatherTextViewController.swift in Sources */,
 				0E7E3BA61D24F42E00D51178 /* ZWTimeIndicatorView.m in Sources */,
 				0E8324281D364C4A00540D82 /* ZWBookViewController.m in Sources */,
 				0E5AF51C1D20E1A1009F9511 /* ZWHitTestView.m in Sources */,
+				0E5BC66E1D3F760800F4E454 /* ZWDailyWeatherCollectionViewController.swift in Sources */,
 				0E4C0A4F1D20F27700AFC7CF /* ZWBaseViewController.m in Sources */,
 				0E69BADC1D313590006E159E /* ZWDrawViewController.m in Sources */,
 				0E29D1771D38D6810043F1E5 /* ZWAlertView.m in Sources */,

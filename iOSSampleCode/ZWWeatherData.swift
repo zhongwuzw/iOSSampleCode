@@ -22,8 +22,8 @@ class WeatherData {
     private func loadWeatherData(plistNamed:String) -> [CityWeather]{
         let plistRoot = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource(plistNamed, ofType: "plist")!)
         var cityWeather = [CityWeather]()
-        for (name, dailyWeather) in plistRoot as! [String : [DailyWeather]] {
-            cityWeather.append(CityWeather(name: name, weather: dailyWeather))
+        for (name, dailyWeather) in plistRoot as! [String : [NSDictionary]] {
+            cityWeather.append(CityWeather(array: dailyWeather,name: name))
         }
         return cityWeather
     }

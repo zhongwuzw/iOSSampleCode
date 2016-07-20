@@ -9,7 +9,7 @@
 import UIKit
 
 class ZWMasterTableViewController: UITableViewController {
-    
+    var detailViewController: ZWAdaptiveLayoutViewController? = nil
     let weatherData = WeatherData()
 
     override func viewDidLoad() {
@@ -49,6 +49,12 @@ class ZWMasterTableViewController: UITableViewController {
         
         cell.cityWeather = city
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let controller = UIStoryboard(name: "Main",bundle: nil).instantiateViewControllerWithIdentifier("ZWAdaptiveLayoutViewController") as! ZWAdaptiveLayoutViewController
+        controller.cityWeather = weatherData.cities[indexPath.row]
+        navigationController?.pushViewController(controller, animated: true)
     }
 
     /*
