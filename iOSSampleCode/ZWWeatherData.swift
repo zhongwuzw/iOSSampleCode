@@ -29,3 +29,28 @@ class WeatherData {
     }
 
 }
+
+extension CityWeather {
+    private convenience init(array: [NSDictionary], name: String) {
+        var dailyWeather = [DailyWeather]()
+        for dict in array {
+            dailyWeather.append(DailyWeather(dictionary: dict))
+        }
+        self.init(name: name, weather: dailyWeather)
+    }
+}
+
+extension DailyWeather {
+    private convenience init(dictionary: NSDictionary) {
+        let status = WeatherStatus(dictionary: dictionary)
+        self.init(date: dictionary["date"] as! NSDate, status: status)
+    }
+}
+
+extension WeatherStatus {
+    private init(dictionary: NSDictionary) {
+        let dictType = dictionary["type"] as! String
+        self.init(temperature: dictionary["temperature"] as! Int, type: WeatherStatusType(rawValue: dictType)!)
+    }
+}
+

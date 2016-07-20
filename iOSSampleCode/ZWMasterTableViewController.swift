@@ -9,9 +9,16 @@
 import UIKit
 
 class ZWMasterTableViewController: UITableViewController {
+    
+    let weatherData = WeatherData()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "城市"
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 100
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -28,19 +35,19 @@ class ZWMasterTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return weatherData.cities.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CityCell", forIndexPath: indexPath) as! ZWCityTableViewCell
-
-
+        
+        let city = weatherData.cities[indexPath.row]
+        
+        cell.cityWeather = city
         return cell
     }
 

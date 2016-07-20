@@ -23,7 +23,7 @@
 - (void)inilializeDataArray
 {
     self.dataArray = @[@"不充足的约束",@"Adaptive Layout示例"];
-    self.controllerStrArray = @[@"ZWUnderconstrainedViewController",@"ZWAdaptiveLayoutViewController"];
+    self.controllerStrArray = @[@"ZWUnderconstrainedViewController",@"ZWMasterTableViewController"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,9 +37,9 @@
 - (void)jumpToController:(NSString *)controllerStr
 {
     id controller;
-    if ([controllerStr isEqualToString:@"ZWAdaptiveLayoutViewController"]) {
+    if ([controllerStr isEqualToString:@"ZWMasterTableViewController"]) {
         UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        controller = [storyBoard instantiateViewControllerWithIdentifier:@"ZWAdaptiveLayoutViewController"];
+        controller = [storyBoard instantiateViewControllerWithIdentifier:@"ZWMasterTableViewController"];
     }
     else
         controller = [NSClassFromString(controllerStr) new];

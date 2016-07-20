@@ -99,23 +99,23 @@
             </objects>
             <point key="canvasLocation" x="-808" y="609"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Master Table View Controller-->
         <scene sceneID="HxK-aj-8yM">
             <objects>
-                <tableViewController id="e8G-u6-qJg" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ZWMasterTableViewController" id="e8G-u6-qJg" customClass="ZWMasterTableViewController" customModule="iOSSampleCode" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZtG-wr-tuk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="120" id="2AS-ri-Ycc" customClass="ZWCityTableViewCell" customModule="iOSSampleCode" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CityCell" rowHeight="120" id="2AS-ri-Ycc" customClass="ZWCityTableViewCell" customModule="iOSSampleCode" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2AS-ri-Ycc" id="k9t-8A-Aa5">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bangkok" translatesAutoresizingMaskIntoConstraints="NO" id="Viy-7X-784">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bangkok" translatesAutoresizingMaskIntoConstraints="NO" id="Viy-7X-784">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="119.5"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="城市名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX1-PH-fd2">
@@ -276,7 +276,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bangkok" width="599" height="200"/>
+        <image name="Bangkok" width="599" height="200"/>
         <image name="cloud" width="300" height="197"/>
     </resources>
 </document>
