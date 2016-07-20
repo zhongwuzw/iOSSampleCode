@@ -28,14 +28,10 @@ class ZWDailyWeatherCollectionViewController: UICollectionViewController ,Weekly
 
         self.clearsSelectionOnViewWillAppear = false
 
-        self.collectionView!.registerClass(ZWDailyWeatherCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     /*
