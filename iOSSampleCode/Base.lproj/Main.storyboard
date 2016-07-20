@@ -213,6 +213,9 @@
                             <constraint firstAttribute="trailing" secondItem="yXR-MS-dg4" secondAttribute="trailing" id="jWG-r9-Ohc"/>
                             <constraint firstItem="yXR-MS-dg4" firstAttribute="width" secondItem="BfF-Ac-atv" secondAttribute="width" id="nm3-R4-6A6"/>
                             <constraint firstItem="U9a-qG-xB8" firstAttribute="centerX" secondItem="BfF-Ac-atv" secondAttribute="centerX" id="t3U-LT-YYv"/>
+                            <constraint firstItem="yXR-MS-dg4" firstAttribute="top" secondItem="Hgc-NS-MMy" secondAttribute="bottom" constant="160" id="vTd-a1-A34">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -221,6 +224,7 @@
                                 <exclude reference="EZJ-mY-zU2"/>
                                 <exclude reference="fCg-MY-z6h"/>
                                 <exclude reference="WAp-Bi-77K"/>
+                                <exclude reference="vTd-a1-A34"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -232,6 +236,8 @@
                                 <include reference="fCg-MY-z6h"/>
                                 <exclude reference="ga2-s9-dBw"/>
                                 <exclude reference="t3U-LT-YYv"/>
+                                <exclude reference="Nnk-Uv-hia"/>
+                                <include reference="vTd-a1-A34"/>
                             </mask>
                         </variation>
                     </view>
@@ -328,10 +334,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wai-St-eMY" userLabel="TextContainer">
-                                <rect key="frame" x="0.0" y="0.5" width="600" height="330"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="330"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="北京" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uoZ-FJ-mpl">
-                                        <rect key="frame" x="0.0" y="149.5" width="600" height="177"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="北京" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uoZ-FJ-mpl">
+                                        <rect key="frame" x="0.0" y="149" width="600" height="177"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="150"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -363,12 +369,22 @@
                                         <exclude reference="d1l-C2-n88"/>
                                     </mask>
                                 </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="d1l-C2-n88"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzO-rf-pHP">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="FbH-x1-Tsl"/>
                                 </constraints>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="FbH-x1-Tsl"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <segue destination="IDq-EF-hSs" kind="embed" id="Hhh-p6-Mxy"/>
                                 </connections>
@@ -385,6 +401,17 @@
                             <constraint firstItem="bzO-rf-pHP" firstAttribute="top" secondItem="5s2-Nv-BPR" secondAttribute="top" id="eJB-c8-GIc"/>
                             <constraint firstItem="bzO-rf-pHP" firstAttribute="leading" secondItem="5s2-Nv-BPR" secondAttribute="leading" id="nWs-bL-5ux"/>
                         </constraints>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <exclude reference="bzO-rf-pHP"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Q1P-ML-Dpw"/>
+                                <exclude reference="eJB-c8-GIc"/>
+                                <exclude reference="nWs-bL-5ux"/>
+                                <exclude reference="JAn-l9-gDp"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="cityNameLabel" destination="uoZ-FJ-mpl" id="LwC-PR-fgY"/>
@@ -393,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fBx-F6-Hc9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2540" y="1070"/>
+            <point key="canvasLocation" x="-2525" y="1354.5"/>
         </scene>
     </scenes>
     <resources>
