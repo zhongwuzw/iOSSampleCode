@@ -209,13 +209,14 @@
                             <constraint firstItem="yXR-MS-dg4" firstAttribute="height" secondItem="BfF-Ac-atv" secondAttribute="height" multiplier="0.55" id="Nnk-Uv-hia"/>
                             <constraint firstItem="yXR-MS-dg4" firstAttribute="leading" secondItem="BfF-Ac-atv" secondAttribute="leadingMargin" constant="160" id="WAp-Bi-77K"/>
                             <constraint firstItem="U9a-qG-xB8" firstAttribute="leading" secondItem="BfF-Ac-atv" secondAttribute="leading" constant="10" id="fCg-MY-z6h"/>
-                            <constraint firstItem="U9a-qG-xB8" firstAttribute="height" relation="lessThanOrEqual" secondItem="BfF-Ac-atv" secondAttribute="height" multiplier="0.4" id="ga2-s9-dBw"/>
+                            <constraint firstItem="U9a-qG-xB8" firstAttribute="height" relation="lessThanOrEqual" secondItem="BfF-Ac-atv" secondAttribute="height" multiplier="0.35" id="ga2-s9-dBw"/>
                             <constraint firstAttribute="trailing" secondItem="yXR-MS-dg4" secondAttribute="trailing" id="jWG-r9-Ohc"/>
-                            <constraint firstItem="yXR-MS-dg4" firstAttribute="width" secondItem="BfF-Ac-atv" secondAttribute="width" id="nm3-R4-6A6"/>
+                            <constraint firstItem="yXR-MS-dg4" firstAttribute="width" secondItem="BfF-Ac-atv" secondAttribute="width" multiplier="0.45" id="nm3-R4-6A6"/>
                             <constraint firstItem="U9a-qG-xB8" firstAttribute="centerX" secondItem="BfF-Ac-atv" secondAttribute="centerX" id="t3U-LT-YYv"/>
                             <constraint firstItem="yXR-MS-dg4" firstAttribute="top" secondItem="Hgc-NS-MMy" secondAttribute="bottom" constant="160" id="vTd-a1-A34">
                                 <variation key="heightClass=compact" constant="0.0"/>
                             </constraint>
+                            <constraint firstItem="yXR-MS-dg4" firstAttribute="centerX" secondItem="U9a-qG-xB8" secondAttribute="centerX" id="yDs-mx-L2y"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -224,7 +225,9 @@
                                 <exclude reference="EZJ-mY-zU2"/>
                                 <exclude reference="fCg-MY-z6h"/>
                                 <exclude reference="WAp-Bi-77K"/>
+                                <exclude reference="nm3-R4-6A6"/>
                                 <exclude reference="vTd-a1-A34"/>
+                                <exclude reference="yDs-mx-L2y"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -237,7 +240,13 @@
                                 <exclude reference="ga2-s9-dBw"/>
                                 <exclude reference="t3U-LT-YYv"/>
                                 <exclude reference="Nnk-Uv-hia"/>
+                                <include reference="nm3-R4-6A6"/>
                                 <include reference="vTd-a1-A34"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="yDs-mx-L2y"/>
                             </mask>
                         </variation>
                     </view>
@@ -338,11 +347,11 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="北京" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uoZ-FJ-mpl">
                                         <rect key="frame" x="0.0" y="149" width="600" height="177"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="150"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact">
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="90"/>
+                                        <variation key="heightClass=compact">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="100"/>
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CjD-pt-m3I">
