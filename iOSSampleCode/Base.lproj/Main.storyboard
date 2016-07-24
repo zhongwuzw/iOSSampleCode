@@ -192,7 +192,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yXR-MS-dg4">
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yXR-MS-dg4">
                                 <rect key="frame" x="0.0" y="270" width="600" height="330"/>
                                 <connections>
                                     <segue destination="QfT-7j-DeL" kind="embed" id="Afg-PY-EMH"/>
