@@ -285,9 +285,7 @@ class KeyboardViewController: UIInputViewController,CLLocationManagerDelegate {
                 ScaleSizeOnTap,
                 ScaleSizeOnTap)
             }, completion: {(_) -> Void in
-                button.transform = CGAffineTransformScale(CGAffineTransformIdentity,
-                    1,
-                    1)
+                button.transform = CGAffineTransformIdentity
         })
     }
 

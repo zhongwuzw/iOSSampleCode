@@ -9,6 +9,12 @@
 #import "ZWCocoaTouchTableViewController.h"
 #import "CocoaTouchControllerHeader.h"
 
+@interface ZWCocoaTouchTableViewController ()
+
+@property (nonatomic,strong) NSSet *controllerSet;
+
+@end
+
 @implementation ZWCocoaTouchTableViewController
 
 - (void)viewDidLoad {
@@ -22,8 +28,9 @@
 
 - (void)inilializeDataArray
 {
-    self.dataArray = @[@"Button超出父视图范围",@"TextView和inputAccessoryView",@"Text Kit范例",@"百度地图",@"tableView内嵌collectionView",@"Core Graphic绘图",@"UIKit Dynamics"];
-    self.controllerStrArray = @[@"ZWHitTestViewController",@"ZWTextViewController",@"ZWTextKitTopViewController",@"ZWBaiduMapViewController",@"ZWCollectionTableViewController",@"ZWDrawViewController",@"ZWDynamicsViewController"];
+    self.dataArray = @[@"Button超出父视图范围",@"TextView和inputAccessoryView",@"Text Kit范例",@"百度地图",@"tableView内嵌collectionView",@"Core Graphic绘图",@"UIKit Dynamics",@"Live Rendering"];
+    self.controllerStrArray = @[@"ZWHitTestViewController",@"ZWTextViewController",@"ZWTextKitTopViewController",@"ZWBaiduMapViewController",@"ZWCollectionTableViewController",@"ZWDrawViewController",@"ZWDynamicsViewController",@"ZWLiveRenderingViewController"];
+    self.controllerSet = [NSSet setWithObjects:@"ZWCollectionTableViewController",@"ZWLiveRenderingViewController", nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,16 +43,16 @@
 
 - (void)jumpToController:(NSString *)controllerStr
 {
-    if ([controllerStr isEqualToString:@"ZWCollectionTableViewController"])
-    {
+    id controller = nil;
+    
+    if ([self.controllerSet containsObject:controllerStr]) {
         UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        ZWCollectionTableViewController *controller = [storyBoard instantiateViewControllerWithIdentifier:@"ZWCollectionTableViewController"];
-        [self.navigationController pushViewController:controller animated:YES];
+        controller = [storyBoard instantiateViewControllerWithIdentifier:controllerStr];
     }
     else{
-        id controller = [NSClassFromString(controllerStr) new];
-        [self.navigationController pushViewController:controller animated:YES];
+        controller = [NSClassFromString(controllerStr) new];
     }
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 @end

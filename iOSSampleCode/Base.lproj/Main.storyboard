@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yk1-EM-RqK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yk1-EM-RqK">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -192,7 +192,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yXR-MS-dg4">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yXR-MS-dg4">
                                 <rect key="frame" x="0.0" y="270" width="600" height="330"/>
                                 <connections>
                                     <segue destination="QfT-7j-DeL" kind="embed" id="Afg-PY-EMH"/>
@@ -209,6 +209,7 @@
                             <constraint firstItem="yXR-MS-dg4" firstAttribute="height" secondItem="BfF-Ac-atv" secondAttribute="height" multiplier="0.55" id="Nnk-Uv-hia"/>
                             <constraint firstItem="yXR-MS-dg4" firstAttribute="leading" secondItem="BfF-Ac-atv" secondAttribute="leadingMargin" constant="160" id="WAp-Bi-77K"/>
                             <constraint firstItem="U9a-qG-xB8" firstAttribute="leading" secondItem="BfF-Ac-atv" secondAttribute="leading" constant="10" id="fCg-MY-z6h"/>
+                            <constraint firstItem="yXR-MS-dg4" firstAttribute="centerX" secondItem="U9a-qG-xB8" secondAttribute="centerX" id="gM4-3d-rQt"/>
                             <constraint firstItem="U9a-qG-xB8" firstAttribute="height" relation="lessThanOrEqual" secondItem="BfF-Ac-atv" secondAttribute="height" multiplier="0.35" id="ga2-s9-dBw"/>
                             <constraint firstAttribute="trailing" secondItem="yXR-MS-dg4" secondAttribute="trailing" id="jWG-r9-Ohc"/>
                             <constraint firstItem="yXR-MS-dg4" firstAttribute="width" secondItem="BfF-Ac-atv" secondAttribute="width" multiplier="0.45" id="nm3-R4-6A6"/>
@@ -345,8 +346,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wai-St-eMY" userLabel="TextContainer">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="330"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="北京" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uoZ-FJ-mpl">
-                                        <rect key="frame" x="0.0" y="149" width="600" height="177"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="北京" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uoZ-FJ-mpl">
+                                        <rect key="frame" x="0.0" y="150" width="600" height="59"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -431,9 +432,54 @@
             </objects>
             <point key="canvasLocation" x="-2525" y="1354.5"/>
         </scene>
+        <!--Live Rendering View Controller-->
+        <scene sceneID="SVg-gO-ebn">
+            <objects>
+                <viewController storyboardIdentifier="ZWLiveRenderingViewController" id="PYO-Al-4nu" customClass="ZWLiveRenderingViewController" customModule="iOSSampleCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ErB-Wv-zBs"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZxU-5f-pJP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f0n-SR-axh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmo-zA-h7s" customClass="ZWWatchView" customModule="iOSSampleCode" customModuleProvider="target">
+                                <rect key="frame" x="175" y="175" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="ngO-SN-KkT">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="400"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="250" id="qEv-GL-hAQ">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="400"/>
+                                    </constraint>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="test3"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="ringProgress">
+                                        <real key="value" value="31"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableClockSecondHand" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="jmo-zA-h7s" secondAttribute="centerX" id="jNi-zP-QKl"/>
+                            <constraint firstAttribute="centerY" secondItem="jmo-zA-h7s" secondAttribute="centerY" id="rxG-1D-GJN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="watchView" destination="jmo-zA-h7s" id="NhW-RP-PVq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="smd-ts-qLJ" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="Bangkok" width="599" height="200"/>
         <image name="cloud" width="300" height="197"/>
+        <image name="test3" width="640" height="402"/>
     </resources>
 </document>

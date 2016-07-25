@@ -9,6 +9,8 @@
 #import "ZWDrawViewController.h"
 #import "ZWCGDrawView.h"
 
+#import <QuartzCore/QuartzCore.h>
+
 @implementation ZWDrawViewController
 
 - (void)viewDidLoad
@@ -21,6 +23,7 @@
     [ecllipseView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[ecllipseView]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(ecllipseView)]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[ecllipseView(100)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(ecllipseView)]];
+    
 }
 
 @end

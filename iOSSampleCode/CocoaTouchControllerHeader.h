@@ -17,5 +17,6 @@
 #import "ZWCollectionTableViewController.h"
 #import "ZWDrawViewController.h"
 #import "ZWDynamicsViewController.h"
+#import "iOSSampleCode-Swift.h"
 
 #endif /* CocoaTouchControllerHeader_h */
