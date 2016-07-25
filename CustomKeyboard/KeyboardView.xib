@@ -1519,6 +1519,9 @@
                                 </button>
                                 <button opaque="NO" tag="99" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyb-ZU-pkM">
                                     <rect key="frame" x="246" y="1" width="30" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="FXI-cY-gkk"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
                                     <state key="normal" title="ret">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1577,6 +1580,11 @@
                                 <constraint firstAttribute="bottom" secondItem="Y1j-XI-jaM" secondAttribute="bottom" constant="1" id="ovo-nW-QwS"/>
                                 <constraint firstItem="vyb-ZU-pkM" firstAttribute="height" secondItem="Xxo-5W-hgU" secondAttribute="height" id="pHA-Ak-feU"/>
                             </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="9RO-wy-bIG"/>
+                                </mask>
+                            </variation>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
