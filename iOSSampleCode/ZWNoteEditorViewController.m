@@ -10,12 +10,14 @@
 #import "ZWNote.h"
 #import "ZWTimeIndicatorView.h"
 #import "ZWSyntaxHighlightTextStorage.h"
+#import "ZWWeakTimerTarget.h"
 
 @interface ZWNoteEditorViewController()<UITextViewDelegate>
 
 @property (nonatomic, strong) UITextView *textView;
 @property (nonatomic, strong) ZWSyntaxHighlightTextStorage *textStorage;
 @property (nonatomic, assign) CGRect textViewFrame;
+@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
@@ -31,6 +33,17 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self createTextView];
+    
+    if (_timer) {
+        [_timer invalidate];
+        _timer = nil;
+    }
+    ZWWeakTimerTarget *target = [[ZWWeakTimerTarget alloc] initWithTarget:self selector:@selector(timerFireMethod:)];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:2 target:target selector:@selector(timerDidFire:) userInfo:nil repeats:YES];
+}
+
+- (void)timerFireMethod:(NSTimer *)timer{
+    DDLogDebug(@"break timer cycle retain");
 }
 
 - (void)createTextView

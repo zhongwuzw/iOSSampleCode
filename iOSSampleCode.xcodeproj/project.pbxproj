@@ -12,6 +12,7 @@
 		0E058A0B1D45030F00D10E9C /* KeyboardThemeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E058A0A1D45030F00D10E9C /* KeyboardThemeData.swift */; };
 		0E0A35911D27B38200E97B62 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0A35901D27B38200E97B62 /* MBProgressHUD.framework */; };
 		0E0A35941D27FDE100E97B62 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E0A35931D27FDE100E97B62 /* Launch Screen.storyboard */; };
+		0E0DE6EF1D5878BE0069A2C2 /* ZWWeakTimerTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0DE6EE1D5878BE0069A2C2 /* ZWWeakTimerTarget.m */; };
 		0E131F5B1D45B5DC0016C5BB /* ZWLiveRenderingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E131F5A1D45B5DC0016C5BB /* ZWLiveRenderingViewController.swift */; };
 		0E131F5E1D45BB5D0016C5BB /* ZWWatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E131F5D1D45BB5D0016C5BB /* ZWWatchView.swift */; };
 		0E1355AC1D387B1F0039A467 /* ZWJavaScriptCoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1355AB1D387B1F0039A467 /* ZWJavaScriptCoreViewController.m */; };
@@ -155,6 +156,8 @@
 		0E058A0A1D45030F00D10E9C /* KeyboardThemeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardThemeData.swift; sourceTree = "<group>"; };
 		0E0A35901D27B38200E97B62 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = ../Carthage/Build/iOS/MBProgressHUD.framework; sourceTree = "<group>"; };
 		0E0A35931D27FDE100E97B62 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		0E0DE6ED1D5878BE0069A2C2 /* ZWWeakTimerTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWWeakTimerTarget.h; sourceTree = "<group>"; };
+		0E0DE6EE1D5878BE0069A2C2 /* ZWWeakTimerTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWWeakTimerTarget.m; sourceTree = "<group>"; };
 		0E131F5A1D45B5DC0016C5BB /* ZWLiveRenderingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZWLiveRenderingViewController.swift; sourceTree = "<group>"; };
 		0E131F5D1D45BB5D0016C5BB /* ZWWatchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZWWatchView.swift; sourceTree = "<group>"; };
 		0E1355A51D387A820039A467 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -755,6 +758,8 @@
 				0E7E3BA21D24F3B800D51178 /* ZWNote.m */,
 				0E7E3BAA1D25168200D51178 /* ZWSyntaxHighlightTextStorage.h */,
 				0E7E3BAB1D25168200D51178 /* ZWSyntaxHighlightTextStorage.m */,
+				0E0DE6ED1D5878BE0069A2C2 /* ZWWeakTimerTarget.h */,
+				0E0DE6EE1D5878BE0069A2C2 /* ZWWeakTimerTarget.m */,
 			);
 			name = TextKit;
 			sourceTree = "<group>";
@@ -1169,6 +1174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E0DE6EF1D5878BE0069A2C2 /* ZWWeakTimerTarget.m in Sources */,
 				0E4C0A581D21230F00AFC7CF /* ZWCocoaTouchTableViewController.m in Sources */,
 				0EF3434A1D2AA6E80097B182 /* UIColor+ZWUtility.m in Sources */,
 				0E5354631D23A1B600C2ACAA /* ZWURLProtocolController.m in Sources */,
