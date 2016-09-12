@@ -97,6 +97,8 @@
 		0EC3AAD11D1CFA0B00615F05 /* iOSSampleCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AAD01D1CFA0B00615F05 /* iOSSampleCodeTests.m */; };
 		0EC3AADC1D1CFA0B00615F05 /* iOSSampleCodeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AADB1D1CFA0B00615F05 /* iOSSampleCodeUITests.m */; };
 		0EC3AAEC1D1D1D1600615F05 /* ZWUnderconstrainedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AAEB1D1D1D1600615F05 /* ZWUnderconstrainedViewController.m */; };
+		0ED30F941D86F39200ECED06 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED30F931D86F39200ECED06 /* UIView+Additions.m */; };
+		0EDE05961D86A63400E13A67 /* ZWImageBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE05941D86A63400E13A67 /* ZWImageBrowseViewController.m */; };
 		0EF3434A1D2AA6E80097B182 /* UIColor+ZWUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF343491D2AA6E80097B182 /* UIColor+ZWUtility.m */; };
 		0EFC174F1D428136008E919B /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC174E1D428136008E919B /* KeyboardViewController.swift */; };
 		0EFC17531D428136008E919B /* CustomKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0EFC174C1D428136008E919B /* CustomKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -291,6 +293,10 @@
 		0EC3AADD1D1CFA0B00615F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EC3AAEA1D1D1D1600615F05 /* ZWUnderconstrainedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWUnderconstrainedViewController.h; sourceTree = "<group>"; };
 		0EC3AAEB1D1D1D1600615F05 /* ZWUnderconstrainedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWUnderconstrainedViewController.m; sourceTree = "<group>"; };
+		0ED30F921D86F39200ECED06 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
+		0ED30F931D86F39200ECED06 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
+		0EDE05931D86A63400E13A67 /* ZWImageBrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWImageBrowseViewController.h; sourceTree = "<group>"; };
+		0EDE05941D86A63400E13A67 /* ZWImageBrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWImageBrowseViewController.m; sourceTree = "<group>"; };
 		0EF343481D2AA6E80097B182 /* UIColor+ZWUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ZWUtility.h"; sourceTree = "<group>"; };
 		0EF343491D2AA6E80097B182 /* UIColor+ZWUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZWUtility.m"; sourceTree = "<group>"; };
 		0EFC174C1D428136008E919B /* CustomKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CustomKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -429,6 +435,8 @@
 		0E29D1681D38B1120043F1E5 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				0ED30F921D86F39200ECED06 /* UIView+Additions.h */,
+				0ED30F931D86F39200ECED06 /* UIView+Additions.m */,
 				0EF343481D2AA6E80097B182 /* UIColor+ZWUtility.h */,
 				0EF343491D2AA6E80097B182 /* UIColor+ZWUtility.m */,
 			);
@@ -496,6 +504,7 @@
 		0E53544E1D23628400C2ACAA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0EDE058F1D86A5C400E13A67 /* ImageBrowser */,
 				0E131F591D45B5BB0016C5BB /* LiveRendering */,
 				0E67FDDB1D378A5100929ACB /* UIkitDynamics */,
 				0E67FDDA1D378A3500929ACB /* CoreGraphics */,
@@ -970,6 +979,15 @@
 			name = AutoLayout;
 			sourceTree = "<group>";
 		};
+		0EDE058F1D86A5C400E13A67 /* ImageBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				0EDE05931D86A63400E13A67 /* ZWImageBrowseViewController.h */,
+				0EDE05941D86A63400E13A67 /* ZWImageBrowseViewController.m */,
+			);
+			name = ImageBrowser;
+			sourceTree = "<group>";
+		};
 		0EFC174D1D428136008E919B /* CustomKeyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -1215,7 +1233,9 @@
 				0E67FDD41D376D6400929ACB /* ZWMarkdownParser.m in Sources */,
 				0E131F5B1D45B5DC0016C5BB /* ZWLiveRenderingViewController.swift in Sources */,
 				0EA917F81D3E795900DD0F56 /* ZWCityWeather.swift in Sources */,
+				0EDE05961D86A63400E13A67 /* ZWImageBrowseViewController.m in Sources */,
 				0EC3AABB1D1CFA0A00615F05 /* AppDelegate.mm in Sources */,
+				0ED30F941D86F39200ECED06 /* UIView+Additions.m in Sources */,
 				0E8E6CE41D265DA300579898 /* ZWBaiduMapViewController.m in Sources */,
 				0EA917ED1D3E764A00DD0F56 /* ZWMasterTableViewController.swift in Sources */,
 				0E131F5E1D45BB5D0016C5BB /* ZWWatchView.swift in Sources */,

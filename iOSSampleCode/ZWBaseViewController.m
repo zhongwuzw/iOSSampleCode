@@ -16,6 +16,8 @@
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
+    [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    
     [self.view setBackgroundColor:[UIColor whiteColor]];
 }
 @end

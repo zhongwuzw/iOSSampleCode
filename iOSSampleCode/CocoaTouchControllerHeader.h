@@ -18,5 +18,6 @@
 #import "ZWDrawViewController.h"
 #import "ZWDynamicsViewController.h"
 #import "iOSSampleCode-Swift.h"
+#import "ZWImageBrowseViewController.h"
 
 #endif /* CocoaTouchControllerHeader_h */

@@ -17,6 +17,7 @@
 #import <Foundation/Foundation.h>
 #import <CocoaLumberjack/DDLog.h>
 #import "CommonMacros.h"
+#import "UIView+Additions.h"
 
 #if DEBUG
 static const DDLogLevel ddLogLevel = DDLogLevelDebug;

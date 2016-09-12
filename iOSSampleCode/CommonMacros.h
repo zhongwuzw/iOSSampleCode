@@ -15,4 +15,7 @@ __block __weak typeof(self) self##_ = self; (void) self##_
 #define STRONG_REF(self) \
 __block __strong typeof(self) self##_ = self; (void) self##_;
 
+#define kScreenWidth  [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
 #endif /* CommonMacros_h */
