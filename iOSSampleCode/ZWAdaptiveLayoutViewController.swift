@@ -17,7 +17,7 @@ class ZWAdaptiveLayoutViewController: UIViewController {
     var cityWeather: CityWeather? {
         didSet {
             // Update the view.
-            if isViewLoaded() {
+            if isViewLoaded {
                 configureView()
                 provideDataToChildViewControllers()
             }
@@ -31,14 +31,14 @@ class ZWAdaptiveLayoutViewController: UIViewController {
     }
     
     // MARK: - Utility methods
-    private func configureView() {
+    fileprivate func configureView() {
         if let cityWeather = cityWeather {
             title = cityWeather.name
             weatherIconImageView.image = cityWeather.weather[0].status.weatherType.image
         }
     }
     
-    private func provideDataToChildViewControllers() {
+    fileprivate func provideDataToChildViewControllers() {
         for vc in childViewControllers {
             if var cityWeatherContainer = vc as? CityWeatherContainer {
                 cityWeatherContainer.cityWeather = cityWeather

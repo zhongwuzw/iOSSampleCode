@@ -22,7 +22,7 @@ class ZWDailyWeatherCollectionViewCell: UICollectionViewCell {
     }
     
     // MARK: - Utility methods
-    private func configureView() {
+    fileprivate func configureView() {
         if let dailyWeather = dailyWeather {
             dayNameLabel.text = dailyWeather.dayName
             temperatureLabel.text = "\(dailyWeather.status.temperature)"

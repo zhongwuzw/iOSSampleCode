@@ -19,8 +19,8 @@ enum WeatherStatusType:String {
 }
 
 struct WeatherStatus {
-    private(set) var temperature: Int
-    private(set) var weatherType: WeatherStatusType
+    fileprivate(set) var temperature: Int
+    fileprivate(set) var weatherType: WeatherStatusType
     
     init(temperature: Int, type: WeatherStatusType) {
         self.temperature = temperature

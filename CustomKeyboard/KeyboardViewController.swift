@@ -53,7 +53,7 @@ class KeyboardViewController: UIInputViewController,CLLocationManagerDelegate {
     
     override func loadView() {
         let nib = UINib(nibName: "KeyboardView", bundle: nil)
-        let objects = nib.instantiateWithOwner(self, options: nil)
+        let objects = nib.instantiate(withOwner: self, options: nil)
         containerView = objects[0] as! UIView
         
         view = containerView;
@@ -75,20 +75,20 @@ class KeyboardViewController: UIInputViewController,CLLocationManagerDelegate {
     }
     
     func getCurrentAppSettings(){
-        let defaults = NSUserDefaults.standardUserDefaults()
-        currentThemeID = defaults.integerForKey(ThemePreference)
+        let defaults = UserDefaults.standard
+        currentThemeID = defaults.integer(forKey: ThemePreference)
         
         styleKeyboardWithThemeID(currentThemeID)
     }
     
-    func styleThemeButton(button: UIButton,  theme:KeyboardThemeData) {
-        let image = UIImage(named: "whiteLine")?.imageWithRenderingMode(.AlwaysTemplate)
-        button.selected = false
-        button.setBackgroundImage(image, forState: .Selected)
+    func styleThemeButton(_ button: UIButton,  theme:KeyboardThemeData) {
+        let image = UIImage(named: "whiteLine")?.withRenderingMode(.alwaysTemplate)
+        button.isSelected = false
+        button.setBackgroundImage(image, for: .selected)
         button.tintColor = theme.colorForButtonFont
     }
     
-    func styleKeyboardWithThemeID(themeID: Int) {
+    func styleKeyboardWithThemeID(_ themeID: Int) {
         
         let currentTheme = themeData[themeID]
         
@@ -99,19 +99,19 @@ class KeyboardViewController: UIInputViewController,CLLocationManagerDelegate {
         
         switch themeID {
         case 0:
-            btnTheme1.selected = true
+            btnTheme1.isSelected = true
         case 1:
-            btnTheme2.selected = true
+            btnTheme2.isSelected = true
         case 2:
-            btnTheme3.selected = true
+            btnTheme3.isSelected = true
         case 3:
-            btnTheme4.selected = true
+            btnTheme4.isSelected = true
         default:
-            btnTheme1.selected = true
+            btnTheme1.isSelected = true
         }
         
-        let image = UIImage(named: "pin")?.imageWithRenderingMode(.AlwaysTemplate)
-        btnLocation.setImage(image, forState: .Normal)
+        let image = UIImage(named: "pin")?.withRenderingMode(.alwaysTemplate)
+        btnLocation.setImage(image, for: UIControlState())
         btnLocation.tintColor = currentTheme.colorForButtonFont
         
         containerView.backgroundColor = currentTheme.colorForBackground;
@@ -148,12 +148,12 @@ class KeyboardViewController: UIInputViewController,CLLocationManagerDelegate {
         setShiftStatus(row4)
     }
     
-    func setButtonFont(viewWithButtons: UIView, theme:KeyboardThemeData) {
+    func setButtonFont(_ viewWithButtons: UIView, theme:KeyboardThemeData) {
         for view in viewWithButtons.subviews {
             if let button = view as? UIButton {
                 button.titleLabel!.font = theme.keyboardButtonFont;
                 button.setTitleColor(theme.colorForButtonFont,
-                                     forState: .Normal)
+                                     for: UIControlState())
                 
                 if button.tag == TagForSpecialButtons {
                     button.titleLabel!.font = UIFont(name: button.titleLabel!.font.fontName,
@@ -163,18 +163,18 @@ class KeyboardViewController: UIInputViewController,CLLocationManagerDelegate {
         }
     }
     
-    func setShiftStatus(viewWithButtons: UIView) {
+    func setShiftStatus(_ viewWithButtons: UIView) {
         for view in viewWithButtons.subviews {
             if let button = view as? UIButton {
                 let buttonText = button.titleLabel!.text
                 if shiftOn {
                     if button.tag != TagForSpecialButtons {
-                        let text = buttonText!.uppercaseString
-                        button.setTitle("\(text)", forState: .Normal)
+                        let text = buttonText!.uppercased()
+                        button.setTitle("\(text)", for: UIControlState())
                     }
                 } else {
-                    let text = buttonText!.lowercaseString
-                    button.setTitle("\(text)", forState: .Normal)
+                    let text = buttonText!.lowercased()
+                    button.setTitle("\(text)", for: UIControlState())
                 }
             }
         }
@@ -186,14 +186,14 @@ class KeyboardViewController: UIInputViewController,CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated
     }
 
-    override func textWillChange(textInput: UITextInput?) {
+    override func textWillChange(_ textInput: UITextInput?) {
         // The app is about to change the document's contents. Perform any preparation here.
     }
 
-    @IBAction func btnBackspaceKeyTap(sender: UIButton) {
+    @IBAction func btnBackspaceKeyTap(_ sender: UIButton) {
         (textDocumentProxy as UIKeyInput).deleteBackward()
     }
-    @IBAction func btnKeyPressedTap(button: UIButton) {
+    @IBAction func btnKeyPressedTap(_ button: UIButton) {
         let string = button.titleLabel!.text
         (textDocumentProxy as UIKeyInput).insertText("\(string!)")
         
@@ -204,63 +204,63 @@ class KeyboardViewController: UIInputViewController,CLLocationManagerDelegate {
         animateButtonTapForButton(button)
 
     }
-    @IBAction func btnSpacebarKeyTap(sender: UIButton) {
+    @IBAction func btnSpacebarKeyTap(_ sender: UIButton) {
         (textDocumentProxy as UIKeyInput).insertText(" ")
     }
-    @IBAction func btnReturnKeyTap(sender: UIButton) {
+    @IBAction func btnReturnKeyTap(_ sender: UIButton) {
         (textDocumentProxy as UIKeyInput).insertText("\n")
     }
-    @IBAction func btnChangeAltRowTap(button: UIButton) {
-        rowCustom.hidden = true
+    @IBAction func btnChangeAltRowTap(_ button: UIButton) {
+        rowCustom.isHidden = true
         
-        rowCustomAlt1.hidden = true
-        rowCustomAlt2.hidden = true
-        rowCustomAlt3.hidden = true
-        rowCustomAlt4.hidden = true
+        rowCustomAlt1.isHidden = true
+        rowCustomAlt2.isHidden = true
+        rowCustomAlt3.isHidden = true
+        rowCustomAlt4.isHidden = true
         
         if button.titleLabel!.text == "#1" {
-            rowCustom.hidden = true
-            rowCustomAlt1.hidden = false
-            button.setTitle("#2", forState: .Normal)
+            rowCustom.isHidden = true
+            rowCustomAlt1.isHidden = false
+            button.setTitle("#2", for: UIControlState())
         } else if button.titleLabel!.text == "#2" {
-            rowCustom.hidden = true
-            rowCustomAlt2.hidden = false
-            button.setTitle("#3", forState: .Normal)
+            rowCustom.isHidden = true
+            rowCustomAlt2.isHidden = false
+            button.setTitle("#3", for: UIControlState())
         } else if button.titleLabel!.text == "#3" {
-            rowCustom.hidden = true
-            rowCustomAlt3.hidden = false
-            button.setTitle("#4", forState: .Normal)
+            rowCustom.isHidden = true
+            rowCustomAlt3.isHidden = false
+            button.setTitle("#4", for: UIControlState())
         } else if button.titleLabel!.text == "#4" {
-            rowCustom.hidden = true
-            rowCustomAlt4.hidden = false
-            button.setTitle("#0", forState: .Normal)
+            rowCustom.isHidden = true
+            rowCustomAlt4.isHidden = false
+            button.setTitle("#0", for: UIControlState())
         } else if button.titleLabel!.text == "#0" {
-            rowCustom.hidden = false
-            button.setTitle("#1", forState: .Normal)
+            rowCustom.isHidden = false
+            button.setTitle("#1", for: UIControlState())
         }
     }
-    @IBAction func btnChangeThemeTap(button: UIButton) {
-        button.selected = true
+    @IBAction func btnChangeThemeTap(_ button: UIButton) {
+        button.isSelected = true
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setInteger(button.tag, forKey: ThemePreference)
+        let defaults = UserDefaults.standard
+        defaults.set(button.tag, forKey: ThemePreference)
         defaults.synchronize()
         
-        currentThemeID = defaults.integerForKey(ThemePreference)
+        currentThemeID = defaults.integer(forKey: ThemePreference)
         
         styleKeyboardWithThemeID(currentThemeID)
     }
-    @IBAction func btnLocationTap(sender: AnyObject) {
+    @IBAction func btnLocationTap(_ sender: AnyObject) {
         if (currentLocation != nil) {
             let string = "\(currentLocation.coordinate.latitude), \(currentLocation.coordinate.longitude)"
             (textDocumentProxy as UIKeyInput).insertText(string)
         }
     }
-    @IBAction func btnShiftKeyTap(sender: UIButton) {
+    @IBAction func btnShiftKeyTap(_ sender: UIButton) {
         shiftOn = !shiftOn
         setButtonCase()
     }
-    @IBAction func btnAdvanceToNextInputModeTap(sender: UIButton) {
+    @IBAction func btnAdvanceToNextInputModeTap(_ sender: UIButton) {
         advanceToNextInputMode()
     }
     
@@ -271,35 +271,34 @@ class KeyboardViewController: UIInputViewController,CLLocationManagerDelegate {
         locationManager.distanceFilter = 30
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        btnLocation.enabled = false
+        btnLocation.isEnabled = false
     }
 
-    func locationManager(manager:CLLocationManager, didUpdateLocations locations:[CLLocation]) {
+    func locationManager(_ manager:CLLocationManager, didUpdateLocations locations:[CLLocation]) {
         currentLocation = locations.first! as CLLocation
-        btnLocation.enabled = true
+        btnLocation.isEnabled = true
     }
 
-    func animateButtonTapForButton(button: UIButton) {
-        UIView.animateWithDuration(ScaleSpeedOnTap, animations: {
-            button.transform = CGAffineTransformScale(CGAffineTransformIdentity,
-                ScaleSizeOnTap,
-                ScaleSizeOnTap)
+    func animateButtonTapForButton(_ button: UIButton) {
+        UIView.animate(withDuration: ScaleSpeedOnTap, animations: {
+            button.transform = CGAffineTransform.identity.scaledBy(x: ScaleSizeOnTap,
+                y: ScaleSizeOnTap)
             }, completion: {(_) -> Void in
-                button.transform = CGAffineTransformIdentity
+                button.transform = CGAffineTransform.identity
         })
     }
 
-    func configureGesturesForView(view: UIView) {
+    func configureGesturesForView(_ view: UIView) {
         for index in 1...10 {
             let button: UIButton? = view.viewWithTag(index) as? UIButton;
             let swipeUp = UISwipeGestureRecognizer(target: self,
                                                    action: #selector(KeyboardViewController.swipeForNumber(_:)))
-            swipeUp.direction = .Up
+            swipeUp.direction = .up
             button?.addGestureRecognizer(swipeUp)
         }
     }
     
-    func swipeForNumber(gesture: UISwipeGestureRecognizer) {
+    func swipeForNumber(_ gesture: UISwipeGestureRecognizer) {
         if gesture.view!.tag == 10 {
             (textDocumentProxy as UIKeyInput).insertText("0")
         } else {

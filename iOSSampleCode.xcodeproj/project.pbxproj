@@ -48,6 +48,7 @@
 		0E67FDD41D376D6400929ACB /* ZWMarkdownParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E67FDD31D376D6400929ACB /* ZWMarkdownParser.m */; };
 		0E69BAD91D30C1C9006E159E /* ZWCGDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BAD81D30C1C9006E159E /* ZWCGDrawView.m */; };
 		0E69BADC1D313590006E159E /* ZWDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BADB1D313590006E159E /* ZWDrawViewController.m */; };
+		0E743A0B1D88E2C800CCFFBE /* ZWImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E743A0A1D88E2C800CCFFBE /* ZWImageScrollView.m */; };
 		0E7E3B9F1D24D68B00D51178 /* ZWTextKitTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E3B9E1D24D68B00D51178 /* ZWTextKitTableViewController.m */; };
 		0E7E3BA31D24F3B800D51178 /* ZWNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E3BA21D24F3B800D51178 /* ZWNote.m */; };
 		0E7E3BA61D24F42E00D51178 /* ZWTimeIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E3BA51D24F42E00D51178 /* ZWTimeIndicatorView.m */; };
@@ -220,6 +221,8 @@
 		0E69BAD81D30C1C9006E159E /* ZWCGDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWCGDrawView.m; sourceTree = "<group>"; };
 		0E69BADA1D313590006E159E /* ZWDrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWDrawViewController.h; sourceTree = "<group>"; };
 		0E69BADB1D313590006E159E /* ZWDrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWDrawViewController.m; sourceTree = "<group>"; };
+		0E743A091D88E2C800CCFFBE /* ZWImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWImageScrollView.h; sourceTree = "<group>"; };
+		0E743A0A1D88E2C800CCFFBE /* ZWImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWImageScrollView.m; sourceTree = "<group>"; };
 		0E7E3B9D1D24D68B00D51178 /* ZWTextKitTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWTextKitTableViewController.h; sourceTree = "<group>"; };
 		0E7E3B9E1D24D68B00D51178 /* ZWTextKitTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWTextKitTableViewController.m; sourceTree = "<group>"; };
 		0E7E3BA11D24F3B800D51178 /* ZWNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWNote.h; sourceTree = "<group>"; };
@@ -520,6 +523,7 @@
 		0E53544F1D23629000C2ACAA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0E743A081D88E2AD00CCFFBE /* ImageBrowser */,
 				0E131F5C1D45BB3B0016C5BB /* LiveRendering */,
 				0E67FDE01D378AC700929ACB /* CoreGraphics */,
 				0E67FDDF1D378AB800929ACB /* CollectionViewInTableView */,
@@ -784,6 +788,15 @@
 				0E8E6CEC1D2668BD00579898 /* ZWClusterAnnotation.m */,
 			);
 			name = BaiduMap;
+			sourceTree = "<group>";
+		};
+		0E743A081D88E2AD00CCFFBE /* ImageBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				0E743A091D88E2C800CCFFBE /* ZWImageScrollView.h */,
+				0E743A0A1D88E2C800CCFFBE /* ZWImageScrollView.m */,
+			);
+			name = ImageBrowser;
 			sourceTree = "<group>";
 		};
 		0E7E3BA01D24F39600D51178 /* Model */ = {
@@ -1090,6 +1103,7 @@
 					0EC3AAB21D1CFA0A00615F05 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 9R74JVS7P9;
+						LastSwiftMigration = 0800;
 					};
 					0EC3AACB1D1CFA0B00615F05 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -1102,6 +1116,7 @@
 					0EFC174B1D428136008E919B = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 9R74JVS7P9;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -1196,6 +1211,7 @@
 				0E4C0A581D21230F00AFC7CF /* ZWCocoaTouchTableViewController.m in Sources */,
 				0EF3434A1D2AA6E80097B182 /* UIColor+ZWUtility.m in Sources */,
 				0E5354631D23A1B600C2ACAA /* ZWURLProtocolController.m in Sources */,
+				0E743A0B1D88E2C800CCFFBE /* ZWImageScrollView.m in Sources */,
 				0EA917F61D3E791200DD0F56 /* ZWDailyWeather.swift in Sources */,
 				0E8E6CEE1D2668BD00579898 /* ZWCoordinateQuadTree.m in Sources */,
 				0EC3AAEC1D1D1D1600615F05 /* ZWUnderconstrainedViewController.m in Sources */,
@@ -1415,6 +1431,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOSSampleCode/iOSSampleCode-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1444,6 +1461,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOSSampleCode/iOSSampleCode-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1505,6 +1523,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1518,6 +1537,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = zhongwu.iOSSampleCode.CustomKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

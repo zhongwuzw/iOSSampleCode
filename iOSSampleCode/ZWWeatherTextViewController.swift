@@ -22,7 +22,7 @@ class ZWWeatherTextViewController: UIViewController,CityWeatherContainer {
     // MARK: - Properties
     var cityWeather: CityWeather?{
         didSet{
-            if isViewLoaded() {
+            if isViewLoaded {
                 configureView()
             }
             provideDataToChildViewControllers()
@@ -42,14 +42,14 @@ class ZWWeatherTextViewController: UIViewController,CityWeatherContainer {
     }
     
     // MARK: - Utility methods
-    private func configureView() {
+    fileprivate func configureView() {
         if let cityWeather = cityWeather {
             cityNameLabel.text = cityWeather.name
             temperatureLabel.text = "\(cityWeather.weather[0].status.temperature)"
         }
     }
     
-    private func provideDataToChildViewControllers(){
+    fileprivate func provideDataToChildViewControllers(){
         for vc in childViewControllers {
             if var weeklyWeatherContainer = vc as? WeeklyWeatherContainer {
                 if let weeklyWeather = cityWeather?.weather {

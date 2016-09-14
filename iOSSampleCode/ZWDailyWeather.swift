@@ -8,17 +8,17 @@
 
 import Foundation
 
-let dayNameDateFormatter = NSDateFormatter()
+let dayNameDateFormatter = DateFormatter()
 
 class DailyWeather {
-    private(set) var date: NSDate
-    private(set) var status: WeatherStatus
+    fileprivate(set) var date: Date
+    fileprivate(set) var status: WeatherStatus
     var dayName: String {
         dayNameDateFormatter.dateFormat = "E"
-        return dayNameDateFormatter.stringFromDate(date)
+        return dayNameDateFormatter.string(from: date)
     }
     
-    init(date: NSDate, status: WeatherStatus) {
+    init(date: Date, status: WeatherStatus) {
         self.date = date
         self.status = status
     }

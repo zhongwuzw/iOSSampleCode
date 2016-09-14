@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 class CityWeather {
-    private(set) var name: String
-    private(set) var weather: [DailyWeather]
+    fileprivate(set) var name: String
+    fileprivate(set) var weather: [DailyWeather]
     var cityImage: UIImage {
         return UIImage(named: name)!
     }

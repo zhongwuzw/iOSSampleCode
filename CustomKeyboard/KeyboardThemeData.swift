@@ -20,14 +20,14 @@ class KeyboardThemeData: NSObject {
     var themeID: Int = 0
     var themeName: String = ""
     
-    var colorForBackground: UIColor = UIColor.clearColor()
-    var colorForCustomRow: UIColor = UIColor.clearColor()
-    var colorForRow1: UIColor = UIColor.clearColor()
-    var colorForRow2: UIColor = UIColor.clearColor()
-    var colorForRow3: UIColor = UIColor.clearColor()
-    var colorForRow4: UIColor = UIColor.clearColor()
+    var colorForBackground: UIColor = UIColor.clear
+    var colorForCustomRow: UIColor = UIColor.clear
+    var colorForRow1: UIColor = UIColor.clear
+    var colorForRow2: UIColor = UIColor.clear
+    var colorForRow3: UIColor = UIColor.clear
+    var colorForRow4: UIColor = UIColor.clear
     
-    var colorForButtonFont: UIColor = UIColor.clearColor()
+    var colorForButtonFont: UIColor = UIColor.clear
     
     var keyboardButtonFont: UIFont = UIFont(name: ButtonFontName, size: ButtonFontSize)!
     var buttonFontSize = 16
@@ -56,7 +56,7 @@ class KeyboardThemeData: NSObject {
         theme.colorForRow3 = UIColor(red: 69.0/255.0, green: 195.0/255.0, blue: 136.0/255.0, alpha: 1.0)
         theme.colorForRow4 = UIColor(red: 69.0/255.0, green: 195.0/255.0, blue: 136.0/255.0, alpha: 1.0)
         
-        theme.colorForButtonFont = UIColor.whiteColor()
+        theme.colorForButtonFont = UIColor.white
         
         theme.keyboardButtonFont = UIFont(name: ButtonFontName, size: ButtonFontSize)!
         
@@ -77,7 +77,7 @@ class KeyboardThemeData: NSObject {
         theme.colorForRow3 = UIColor(red: 103.0/255, green: 203.0/255, blue: 156.0/255, alpha: 1.0)
         theme.colorForRow4 = UIColor(red: 86.0/255, green: 198.0/255, blue: 146.0/255, alpha: 1.0)
         
-        theme.colorForButtonFont = UIColor.whiteColor()
+        theme.colorForButtonFont = UIColor.white
         
         theme.keyboardButtonFont = UIFont(name: ButtonFontName, size: ButtonFontSize)!
         
@@ -98,7 +98,7 @@ class KeyboardThemeData: NSObject {
         theme.colorForRow3 = UIColor(red: 69.0/255.0, green: 195.0/255.0, blue: 136.0/255.0, alpha: 1.0)
         theme.colorForRow4 = UIColor(red: 103.0/255.0, green: 203.0/255, blue: 156.0/255, alpha: 1.0)
         
-        theme.colorForButtonFont = UIColor.whiteColor()
+        theme.colorForButtonFont = UIColor.white
         
         theme.keyboardButtonFont = UIFont(name: ButtonFontName, size: ButtonFontSize)!
         

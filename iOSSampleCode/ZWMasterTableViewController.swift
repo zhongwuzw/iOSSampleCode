@@ -34,26 +34,26 @@ class ZWMasterTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return weatherData.cities.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CityCell", forIndexPath: indexPath) as! ZWCityTableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CityCell", for: indexPath) as! ZWCityTableViewCell
         
-        let city = weatherData.cities[indexPath.row]
+        let city = weatherData.cities[(indexPath as NSIndexPath).row]
         
         cell.cityWeather = city
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let controller = UIStoryboard(name: "Main",bundle: nil).instantiateViewControllerWithIdentifier("ZWAdaptiveLayoutViewController") as! ZWAdaptiveLayoutViewController
-        controller.cityWeather = weatherData.cities[indexPath.row]
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let controller = UIStoryboard(name: "Main",bundle: nil).instantiateViewController(withIdentifier: "ZWAdaptiveLayoutViewController") as! ZWAdaptiveLayoutViewController
+        controller.cityWeather = weatherData.cities[(indexPath as NSIndexPath).row]
         navigationController?.pushViewController(controller, animated: true)
     }
 
