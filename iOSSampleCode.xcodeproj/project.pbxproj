@@ -42,12 +42,17 @@
 		0E5BC66A1D3F720700F4E454 /* ZWWeatherTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5BC6691D3F720700F4E454 /* ZWWeatherTextViewController.swift */; };
 		0E5BC66C1D3F74CE00F4E454 /* ZWDailyWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5BC66B1D3F74CE00F4E454 /* ZWDailyWeatherCollectionViewCell.swift */; };
 		0E5BC66E1D3F760800F4E454 /* ZWDailyWeatherCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5BC66D1D3F760800F4E454 /* ZWDailyWeatherCollectionViewController.swift */; };
+		0E666CA31D9543AB00DC5947 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E666CA21D9543AB00DC5947 /* AVFoundation.framework */; };
+		0E666CA51D95452800DC5947 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E666CA41D95452800DC5947 /* AudioToolbox.framework */; };
 		0E67FDC91D373AD500929ACB /* alices_adventures.md in Resources */ = {isa = PBXBuildFile; fileRef = 0E67FDC51D3739BD00929ACB /* alices_adventures.md */; };
 		0E67FDCC1D37675B00929ACB /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E67FDCA1D375B2D00929ACB /* CocoaLumberjack.framework */; };
 		0E67FDCE1D37675B00929ACB /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E67FDCA1D375B2D00929ACB /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0E67FDD41D376D6400929ACB /* ZWMarkdownParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E67FDD31D376D6400929ACB /* ZWMarkdownParser.m */; };
 		0E69BAD91D30C1C9006E159E /* ZWCGDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BAD81D30C1C9006E159E /* ZWCGDrawView.m */; };
 		0E69BADC1D313590006E159E /* ZWDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BADB1D313590006E159E /* ZWDrawViewController.m */; };
+		0E6F92171D9BCC5B00757E1B /* ZWAVFoundationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F92161D9BCC5B00757E1B /* ZWAVFoundationViewController.m */; };
+		0E6F921E1D9BCD9B00757E1B /* ZWAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F921C1D9BCD9B00757E1B /* ZWAudioViewController.m */; };
+		0E6F921F1D9BCD9B00757E1B /* ZWAudioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E6F921D1D9BCD9B00757E1B /* ZWAudioViewController.xib */; };
 		0E743A0B1D88E2C800CCFFBE /* ZWImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E743A0A1D88E2C800CCFFBE /* ZWImageScrollView.m */; };
 		0E7E3B9F1D24D68B00D51178 /* ZWTextKitTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E3B9E1D24D68B00D51178 /* ZWTextKitTableViewController.m */; };
 		0E7E3BA31D24F3B800D51178 /* ZWNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E3BA21D24F3B800D51178 /* ZWNote.m */; };
@@ -212,6 +217,8 @@
 		0E5BC6691D3F720700F4E454 /* ZWWeatherTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZWWeatherTextViewController.swift; sourceTree = "<group>"; };
 		0E5BC66B1D3F74CE00F4E454 /* ZWDailyWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZWDailyWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E5BC66D1D3F760800F4E454 /* ZWDailyWeatherCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZWDailyWeatherCollectionViewController.swift; sourceTree = "<group>"; };
+		0E666CA21D9543AB00DC5947 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0E666CA41D95452800DC5947 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0E67FDC51D3739BD00929ACB /* alices_adventures.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = alices_adventures.md; sourceTree = "<group>"; };
 		0E67FDCA1D375B2D00929ACB /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = ../Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
 		0E67FDCF1D37685000929ACB /* iOSSampleCode.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSSampleCode.pch; sourceTree = SOURCE_ROOT; };
@@ -221,6 +228,12 @@
 		0E69BAD81D30C1C9006E159E /* ZWCGDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWCGDrawView.m; sourceTree = "<group>"; };
 		0E69BADA1D313590006E159E /* ZWDrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWDrawViewController.h; sourceTree = "<group>"; };
 		0E69BADB1D313590006E159E /* ZWDrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWDrawViewController.m; sourceTree = "<group>"; };
+		0E6F92151D9BCC5B00757E1B /* ZWAVFoundationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWAVFoundationViewController.h; sourceTree = "<group>"; };
+		0E6F92161D9BCC5B00757E1B /* ZWAVFoundationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWAVFoundationViewController.m; sourceTree = "<group>"; };
+		0E6F92191D9BCC8F00757E1B /* AVFoundationHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVFoundationHeader.h; sourceTree = "<group>"; };
+		0E6F921B1D9BCD9B00757E1B /* ZWAudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWAudioViewController.h; sourceTree = "<group>"; };
+		0E6F921C1D9BCD9B00757E1B /* ZWAudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWAudioViewController.m; sourceTree = "<group>"; };
+		0E6F921D1D9BCD9B00757E1B /* ZWAudioViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZWAudioViewController.xib; sourceTree = "<group>"; };
 		0E743A091D88E2C800CCFFBE /* ZWImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWImageScrollView.h; sourceTree = "<group>"; };
 		0E743A0A1D88E2C800CCFFBE /* ZWImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWImageScrollView.m; sourceTree = "<group>"; };
 		0E7E3B9D1D24D68B00D51178 /* ZWTextKitTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWTextKitTableViewController.h; sourceTree = "<group>"; };
@@ -312,6 +325,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E8E6CCA1D265BB000579898 /* CoreTelephony.framework in Frameworks */,
+				0E666CA51D95452800DC5947 /* AudioToolbox.framework in Frameworks */,
+				0E666CA31D9543AB00DC5947 /* AVFoundation.framework in Frameworks */,
 				0E29D1661D38AE6F0043F1E5 /* JavaScriptCore.framework in Frameworks */,
 				0E0A35911D27B38200E97B62 /* MBProgressHUD.framework in Frameworks */,
 				0E67FDCC1D37675B00929ACB /* CocoaLumberjack.framework in Frameworks */,
@@ -324,7 +340,6 @@
 				0E8E6CDE1D265CD500579898 /* BaiduMapAPI_Search.framework in Frameworks */,
 				0E8E6CDF1D265CD500579898 /* BaiduMapAPI_Utils.framework in Frameworks */,
 				0E8E6CCC1D265BB900579898 /* libstdc++.6.0.9.tbd in Frameworks */,
-				0E8E6CCA1D265BB000579898 /* CoreTelephony.framework in Frameworks */,
 				0E8E6CC81D265B9F00579898 /* libsqlite3.0.tbd in Frameworks */,
 				0E8E6CC61D265B8000579898 /* Security.framework in Frameworks */,
 				0E8E6CC41D265B7800579898 /* CoreGraphics.framework in Frameworks */,
@@ -646,6 +661,15 @@
 			name = Header;
 			sourceTree = "<group>";
 		};
+		0E666CA11D9543AB00DC5947 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E666CA41D95452800DC5947 /* AudioToolbox.framework */,
+				0E666CA21D9543AB00DC5947 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0E67FDD51D3789B000929ACB /* ButtonOutFrame */ = {
 			isa = PBXGroup;
 			children = (
@@ -790,6 +814,35 @@
 			name = BaiduMap;
 			sourceTree = "<group>";
 		};
+		0E6F92141D9BCC1300757E1B /* AVFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				0E6F921A1D9BCD6200757E1B /* Controller */,
+				0E6F92181D9BCC7800757E1B /* Header */,
+				0E6F92151D9BCC5B00757E1B /* ZWAVFoundationViewController.h */,
+				0E6F92161D9BCC5B00757E1B /* ZWAVFoundationViewController.m */,
+			);
+			name = AVFoundation;
+			sourceTree = "<group>";
+		};
+		0E6F92181D9BCC7800757E1B /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				0E6F92191D9BCC8F00757E1B /* AVFoundationHeader.h */,
+			);
+			name = Header;
+			sourceTree = "<group>";
+		};
+		0E6F921A1D9BCD6200757E1B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0E6F921B1D9BCD9B00757E1B /* ZWAudioViewController.h */,
+				0E6F921C1D9BCD9B00757E1B /* ZWAudioViewController.m */,
+				0E6F921D1D9BCD9B00757E1B /* ZWAudioViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		0E743A081D88E2AD00CCFFBE /* ImageBrowser */ = {
 			isa = PBXGroup;
 			children = (
@@ -904,6 +957,7 @@
 				0EC3AADA1D1CFA0B00615F05 /* iOSSampleCodeUITests */,
 				0EFC174D1D428136008E919B /* CustomKeyboard */,
 				0EC3AAB41D1CFA0A00615F05 /* Products */,
+				0E666CA11D9543AB00DC5947 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -921,6 +975,7 @@
 		0EC3AAB51D1CFA0A00615F05 /* iOSSampleCode */ = {
 			isa = PBXGroup;
 			children = (
+				0E6F92141D9BCC1300757E1B /* AVFoundation */,
 				0E8E6CBA1D265B1800579898 /* Third party */,
 				0E5354761D23AD2F00C2ACAA /* Header */,
 				0E53546B1D23A95300C2ACAA /* Resources */,
@@ -1104,6 +1159,12 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 9R74JVS7P9;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					0EC3AACB1D1CFA0B00615F05 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -1117,6 +1178,7 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 9R74JVS7P9;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -1146,6 +1208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E6F921F1D9BCD9B00757E1B /* ZWAudioViewController.xib in Resources */,
 				0E67FDC91D373AD500929ACB /* alices_adventures.md in Resources */,
 				0E29D16E1D38BE3B0043F1E5 /* xork.js in Resources */,
 				0E5354821D23D2C600C2ACAA /* images in Resources */,
@@ -1249,6 +1312,7 @@
 				0E67FDD41D376D6400929ACB /* ZWMarkdownParser.m in Sources */,
 				0E131F5B1D45B5DC0016C5BB /* ZWLiveRenderingViewController.swift in Sources */,
 				0EA917F81D3E795900DD0F56 /* ZWCityWeather.swift in Sources */,
+				0E6F92171D9BCC5B00757E1B /* ZWAVFoundationViewController.m in Sources */,
 				0EDE05961D86A63400E13A67 /* ZWImageBrowseViewController.m in Sources */,
 				0EC3AABB1D1CFA0A00615F05 /* AppDelegate.mm in Sources */,
 				0ED30F941D86F39200ECED06 /* UIView+Additions.m in Sources */,
@@ -1260,6 +1324,7 @@
 				0E8E6CF21D2668DB00579898 /* ZWClusterAnnotationView.m in Sources */,
 				0EC3AAB81D1CFA0A00615F05 /* main.m in Sources */,
 				0EA6C6C61D33B27A00358959 /* ZWDynamicsViewController.m in Sources */,
+				0E6F921E1D9BCD9B00757E1B /* ZWAudioViewController.m in Sources */,
 				0EA917EB1D3E743C00DD0F56 /* ZWCityTableViewCell.swift in Sources */,
 				0E8E6CEF1D2668BD00579898 /* ZWClusterAnnotation.m in Sources */,
 				0E51409F1D24C654009672FA /* ZWBaseTableViewCell.m in Sources */,
@@ -1410,8 +1475,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: BoLooMo (Beijing) Technology Co., Ltd. (P6LCGC9VU2)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9R74JVS7P9;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1426,7 +1492,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = zhongwu.iOSSampleCode;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhongwu.iOSSampleCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOSSampleCode/iOSSampleCode-Bridging-Header.h";
@@ -1441,8 +1507,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: BoLooMo (Beijing) Technology Co., Ltd. (P6LCGC9VU2)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9R74JVS7P9;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1457,7 +1524,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = zhongwu.iOSSampleCode;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhongwu.iOSSampleCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOSSampleCode/iOSSampleCode-Bridging-Header.h";
@@ -1517,9 +1584,10 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9R74JVS7P9;
 				INFOPLIST_FILE = CustomKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zhongwu.iOSSampleCode.CustomKeyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhongwu.iOSSampleCode.CustomKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1532,9 +1600,10 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9R74JVS7P9;
 				INFOPLIST_FILE = CustomKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zhongwu.iOSSampleCode.CustomKeyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhongwu.iOSSampleCode.CustomKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;

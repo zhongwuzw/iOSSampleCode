@@ -26,8 +26,8 @@
 
 - (void)inilializeDataArray
 {
-    self.dataArray = @[@"AutoLayout样例",@"UIkit样例",@"Network样例"];
-    self.controllerStrArray = @[@"ZWAutoLayoutTableViewController",@"ZWCocoaTouchTableViewController",@"ZWNetworkTableViewController"];
+    self.dataArray = @[@"AutoLayout样例",@"UIkit样例",@"Network样例",@"AVFoundation样例"];
+    self.controllerStrArray = @[@"ZWAutoLayoutTableViewController",@"ZWCocoaTouchTableViewController",@"ZWNetworkTableViewController",@"ZWAVFoundationViewController"];
 }
 
 - (void)didReceiveMemoryWarning {

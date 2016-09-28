@@ -12,5 +12,6 @@
 #import "ZWCocoaTouchTableViewController.h"
 #import "ZWNetworkTableViewController.h"
 #import "ZWAutoLayoutTableViewController.h"
+#import "ZWAVFoundationViewController.h"
 
 #endif /* Header_h */

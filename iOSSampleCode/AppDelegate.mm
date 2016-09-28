@@ -37,7 +37,6 @@
     _mapManager = [[BMKMapManager alloc]init];
     [_mapManager start:@"Cgyj45Ndrhl5pxgzgLtI6mGpymrl6hmG" generalDelegate:nil];
         
-    // Override point for customization after application launch.
     return YES;
 }
 

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZWAudioViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G53-T8-xbZ">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="A8E-cb-ywy"/>
+                    </constraints>
+                    <state key="normal" title="开始录音"/>
+                    <connections>
+                        <action selector="startAudioRecord:" destination="-1" eventType="touchUpInside" id="aeb-rn-bpv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wr5-Uu-YTx">
+                    <state key="normal" title="结束录音"/>
+                    <connections>
+                        <action selector="stopAudioRecord:" destination="-1" eventType="touchUpInside" id="lgn-3R-ajR"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtI-Nz-roW">
+                    <state key="normal" title="播放"/>
+                    <connections>
+                        <action selector="playAudio:" destination="-1" eventType="touchUpInside" id="wEJ-t8-0Pw"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="G53-T8-xbZ" firstAttribute="leading" secondItem="Wr5-Uu-YTx" secondAttribute="leading" id="2oW-K6-vuc"/>
+                <constraint firstItem="Wr5-Uu-YTx" firstAttribute="trailing" secondItem="qtI-Nz-roW" secondAttribute="trailing" id="FXw-nh-VRF"/>
+                <constraint firstItem="G53-T8-xbZ" firstAttribute="trailing" secondItem="Wr5-Uu-YTx" secondAttribute="trailing" id="Uhe-BX-uIj"/>
+                <constraint firstItem="qtI-Nz-roW" firstAttribute="top" secondItem="Wr5-Uu-YTx" secondAttribute="bottom" constant="8" symbolic="YES" id="fWV-9A-tjn"/>
+                <constraint firstItem="G53-T8-xbZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="195" id="kUj-Ym-jvR"/>
+                <constraint firstItem="Wr5-Uu-YTx" firstAttribute="top" secondItem="G53-T8-xbZ" secondAttribute="bottom" constant="8" symbolic="YES" id="nYl-1Q-ezW"/>
+                <constraint firstItem="Wr5-Uu-YTx" firstAttribute="leading" secondItem="qtI-Nz-roW" secondAttribute="leading" id="thW-lg-1Ru"/>
+                <constraint firstItem="G53-T8-xbZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uss-iC-suo"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
