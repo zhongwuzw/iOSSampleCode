@@ -17,6 +17,8 @@
 		0E131F5E1D45BB5D0016C5BB /* ZWWatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E131F5D1D45BB5D0016C5BB /* ZWWatchView.swift */; };
 		0E1355AC1D387B1F0039A467 /* ZWJavaScriptCoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1355AB1D387B1F0039A467 /* ZWJavaScriptCoreViewController.m */; };
 		0E1355B01D387BB50039A467 /* ZWConsoleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1355AF1D387BB50039A467 /* ZWConsoleTextView.m */; };
+		0E16D1C41DBF624A00A4C0C2 /* ZWCurlHttpDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E16D1C31DBF624A00A4C0C2 /* ZWCurlHttpDownloadViewController.m */; };
+		0E16D1D01DBF66B100A4C0C2 /* libCstaticTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E16D1CF1DBF66B100A4C0C2 /* libCstaticTest.a */; };
 		0E1E650C1D2A779C006AC82B /* ZWCollectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E650B1D2A779C006AC82B /* ZWCollectionTableViewController.m */; };
 		0E1E650F1D2A784F006AC82B /* ZWCollectionTableCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E650E1D2A784F006AC82B /* ZWCollectionTableCellTableViewCell.m */; };
 		0E29D1661D38AE6F0043F1E5 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E1355A51D387A820039A467 /* JavaScriptCore.framework */; };
@@ -173,6 +175,19 @@
 		0E1355AB1D387B1F0039A467 /* ZWJavaScriptCoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWJavaScriptCoreViewController.m; sourceTree = "<group>"; };
 		0E1355AE1D387BB50039A467 /* ZWConsoleTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWConsoleTextView.h; sourceTree = "<group>"; };
 		0E1355AF1D387BB50039A467 /* ZWConsoleTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWConsoleTextView.m; sourceTree = "<group>"; };
+		0E16D1C21DBF624A00A4C0C2 /* ZWCurlHttpDownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWCurlHttpDownloadViewController.h; sourceTree = "<group>"; };
+		0E16D1C31DBF624A00A4C0C2 /* ZWCurlHttpDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWCurlHttpDownloadViewController.m; sourceTree = "<group>"; };
+		0E16D1CF1DBF66B100A4C0C2 /* libCstaticTest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCstaticTest.a; sourceTree = "<group>"; };
+		0E16D1D31DBF66BC00A4C0C2 /* CStaticTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CStaticTest.h; sourceTree = "<group>"; };
+		0E16D1D41DBF66BC00A4C0C2 /* curl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curl.h; sourceTree = "<group>"; };
+		0E16D1D51DBF66BC00A4C0C2 /* curlbuild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curlbuild.h; sourceTree = "<group>"; };
+		0E16D1D61DBF66BC00A4C0C2 /* curlrules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curlrules.h; sourceTree = "<group>"; };
+		0E16D1D71DBF66BC00A4C0C2 /* curlver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curlver.h; sourceTree = "<group>"; };
+		0E16D1D81DBF66BC00A4C0C2 /* easy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = easy.h; sourceTree = "<group>"; };
+		0E16D1D91DBF66BC00A4C0C2 /* mprintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprintf.h; sourceTree = "<group>"; };
+		0E16D1DA1DBF66BC00A4C0C2 /* multi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = multi.h; sourceTree = "<group>"; };
+		0E16D1DB1DBF66BC00A4C0C2 /* stdcheaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdcheaders.h; sourceTree = "<group>"; };
+		0E16D1DC1DBF66BC00A4C0C2 /* typecheck-gcc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "typecheck-gcc.h"; sourceTree = "<group>"; };
 		0E1E650A1D2A779C006AC82B /* ZWCollectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWCollectionTableViewController.h; sourceTree = "<group>"; };
 		0E1E650B1D2A779C006AC82B /* ZWCollectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWCollectionTableViewController.m; sourceTree = "<group>"; };
 		0E1E650D1D2A784F006AC82B /* ZWCollectionTableCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWCollectionTableCellTableViewCell.h; sourceTree = "<group>"; };
@@ -346,6 +361,7 @@
 				0E8E6CC21D265B6B00579898 /* SystemConfiguration.framework in Frameworks */,
 				0E8E6CC01D265B6400579898 /* OpenGLES.framework in Frameworks */,
 				0E8E6CBE1D265B5A00579898 /* QuartzCore.framework in Frameworks */,
+				0E16D1D01DBF66B100A4C0C2 /* libCstaticTest.a in Frameworks */,
 				0E8E6CBC1D265B3B00579898 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +445,49 @@
 				0E29D1761D38D6810043F1E5 /* ZWAlertView.m */,
 			);
 			name = JavaScriptCore;
+			sourceTree = "<group>";
+		};
+		0E16D1C11DBF621400A4C0C2 /* CurlHTTPDownload */ = {
+			isa = PBXGroup;
+			children = (
+				0E16D1C21DBF624A00A4C0C2 /* ZWCurlHttpDownloadViewController.h */,
+				0E16D1C31DBF624A00A4C0C2 /* ZWCurlHttpDownloadViewController.m */,
+			);
+			name = CurlHTTPDownload;
+			sourceTree = "<group>";
+		};
+		0E16D1CE1DBF66A200A4C0C2 /* libCstaticTest.a */ = {
+			isa = PBXGroup;
+			children = (
+				0E16D1D11DBF66BC00A4C0C2 /* include */,
+				0E16D1CF1DBF66B100A4C0C2 /* libCstaticTest.a */,
+			);
+			name = libCstaticTest.a;
+			sourceTree = "<group>";
+		};
+		0E16D1D11DBF66BC00A4C0C2 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				0E16D1D21DBF66BC00A4C0C2 /* CStaticTest */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		0E16D1D21DBF66BC00A4C0C2 /* CStaticTest */ = {
+			isa = PBXGroup;
+			children = (
+				0E16D1D31DBF66BC00A4C0C2 /* CStaticTest.h */,
+				0E16D1D41DBF66BC00A4C0C2 /* curl.h */,
+				0E16D1D51DBF66BC00A4C0C2 /* curlbuild.h */,
+				0E16D1D61DBF66BC00A4C0C2 /* curlrules.h */,
+				0E16D1D71DBF66BC00A4C0C2 /* curlver.h */,
+				0E16D1D81DBF66BC00A4C0C2 /* easy.h */,
+				0E16D1D91DBF66BC00A4C0C2 /* mprintf.h */,
+				0E16D1DA1DBF66BC00A4C0C2 /* multi.h */,
+				0E16D1DB1DBF66BC00A4C0C2 /* stdcheaders.h */,
+				0E16D1DC1DBF66BC00A4C0C2 /* typecheck-gcc.h */,
+			);
+			path = CStaticTest;
 			sourceTree = "<group>";
 		};
 		0E29D1611D38A9FC0043F1E5 /* js */ = {
@@ -616,6 +675,7 @@
 		0E53545F1D23A14700C2ACAA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0E16D1C11DBF621400A4C0C2 /* CurlHTTPDownload */,
 				0E1355A91D387AF30039A467 /* JavaScriptCore */,
 				0E1355A71D387AAD0039A467 /* HybridAccelerate */,
 			);
@@ -861,6 +921,14 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		0E82A4411DAF80AE00F13D4E /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				0E16D1CE1DBF66A200A4C0C2 /* libCstaticTest.a */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
 		0E83242C1D364D3700540D82 /* csv */ = {
 			isa = PBXGroup;
 			children = (
@@ -975,6 +1043,7 @@
 		0EC3AAB51D1CFA0A00615F05 /* iOSSampleCode */ = {
 			isa = PBXGroup;
 			children = (
+				0E82A4411DAF80AE00F13D4E /* Vendor */,
 				0E6F92141D9BCC1300757E1B /* AVFoundation */,
 				0E8E6CBA1D265B1800579898 /* Third party */,
 				0E5354761D23AD2F00C2ACAA /* Header */,
@@ -1312,6 +1381,7 @@
 				0E67FDD41D376D6400929ACB /* ZWMarkdownParser.m in Sources */,
 				0E131F5B1D45B5DC0016C5BB /* ZWLiveRenderingViewController.swift in Sources */,
 				0EA917F81D3E795900DD0F56 /* ZWCityWeather.swift in Sources */,
+				0E16D1C41DBF624A00A4C0C2 /* ZWCurlHttpDownloadViewController.m in Sources */,
 				0E6F92171D9BCC5B00757E1B /* ZWAVFoundationViewController.m in Sources */,
 				0EDE05961D86A63400E13A67 /* ZWImageBrowseViewController.m in Sources */,
 				0EC3AABB1D1CFA0A00615F05 /* AppDelegate.mm in Sources */,
@@ -1491,6 +1561,10 @@
 				INFOPLIST_FILE = iOSSampleCode/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iOSSampleCode",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhongwu.iOSSampleCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1523,6 +1597,10 @@
 				INFOPLIST_FILE = iOSSampleCode/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iOSSampleCode",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhongwu.iOSSampleCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";

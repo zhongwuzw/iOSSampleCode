@@ -22,8 +22,8 @@
 
 - (void)inilializeDataArray
 {
-    self.dataArray = @[@"使用NSURLProtocol来加速hybrid加载",@"JavaScript Core示例"];
-    self.controllerStrArray = @[@"ZWURLProtocolController",@"ZWJavaScriptCoreViewController"];
+    self.dataArray = @[@"使用NSURLProtocol来加速hybrid加载",@"JavaScript Core示例",@"Curl实现HTTP下载测速"];
+    self.controllerStrArray = @[@"ZWURLProtocolController",@"ZWJavaScriptCoreViewController",@"ZWCurlHttpDownloadViewController"];
 }
 
 - (void)didReceiveMemoryWarning {

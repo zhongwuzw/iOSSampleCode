@@ -11,5 +11,6 @@
 
 #import "ZWURLProtocolController.h"
 #import "ZWJavaScriptCoreViewController.h"
+#import "ZWCurlHttpDownloadViewController.h"
 
 #endif /* NetworkHeader_h */
