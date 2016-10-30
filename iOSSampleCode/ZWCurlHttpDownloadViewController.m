@@ -12,6 +12,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+
 @interface ZWCurlHttpDownloadViewController ()
 
 @end
@@ -28,10 +30,12 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         CStaticTest *test = [CStaticTest new];
         
+        //文件下载存放路径
         NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/a"];
         
         char url[256];
         snprintf(url, sizeof(url), "%s",[docPath cStringUsingEncoding:NSUTF8StringEncoding]);
+        //log路径
         NSString *logPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/b"];
         NSFileManager *fileManager = [NSFileManager defaultManager];
         if ([fileManager fileExistsAtPath:docPath]) {

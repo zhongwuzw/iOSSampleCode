@@ -11,12 +11,12 @@ import UIKit
 class ZWLiveRenderingViewController: UIViewController {
 
     @IBOutlet weak var watchView: ZWWatchView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         watchView.startTimeWithTimeZone("Asia/Beijing")
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
