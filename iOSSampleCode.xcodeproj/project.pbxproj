@@ -60,6 +60,8 @@
 		0E7E3BA61D24F42E00D51178 /* ZWTimeIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E3BA51D24F42E00D51178 /* ZWTimeIndicatorView.m */; };
 		0E7E3BA91D24F81700D51178 /* ZWNoteEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E3BA81D24F81700D51178 /* ZWNoteEditorViewController.m */; };
 		0E7E3BAC1D25168200D51178 /* ZWSyntaxHighlightTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E3BAB1D25168200D51178 /* ZWSyntaxHighlightTextStorage.m */; };
+		0E7F0FAC1DD30A1000D2C8EE /* ZWSafariMultiSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F0FAB1DD30A1000D2C8EE /* ZWSafariMultiSelectViewController.m */; };
+		0E7F0FB01DD30EAE00D2C8EE /* ZWSafariCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F0FAF1DD30EAE00D2C8EE /* ZWSafariCollectionViewFlowLayout.m */; };
 		0E8324251D364B3600540D82 /* ZWTextKitTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8324241D364B3600540D82 /* ZWTextKitTopViewController.m */; };
 		0E8324281D364C4A00540D82 /* ZWBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8324271D364C4A00540D82 /* ZWBookViewController.m */; };
 		0E83242B1D364CD100540D82 /* ZWBookView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E83242A1D364CD100540D82 /* ZWBookView.m */; };
@@ -260,6 +262,10 @@
 		0E7E3BA81D24F81700D51178 /* ZWNoteEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWNoteEditorViewController.m; sourceTree = "<group>"; };
 		0E7E3BAA1D25168200D51178 /* ZWSyntaxHighlightTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWSyntaxHighlightTextStorage.h; sourceTree = "<group>"; };
 		0E7E3BAB1D25168200D51178 /* ZWSyntaxHighlightTextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWSyntaxHighlightTextStorage.m; sourceTree = "<group>"; };
+		0E7F0FAA1DD30A1000D2C8EE /* ZWSafariMultiSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWSafariMultiSelectViewController.h; sourceTree = "<group>"; };
+		0E7F0FAB1DD30A1000D2C8EE /* ZWSafariMultiSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWSafariMultiSelectViewController.m; sourceTree = "<group>"; };
+		0E7F0FAE1DD30EAE00D2C8EE /* ZWSafariCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWSafariCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		0E7F0FAF1DD30EAE00D2C8EE /* ZWSafariCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWSafariCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		0E8324231D364B3600540D82 /* ZWTextKitTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWTextKitTopViewController.h; sourceTree = "<group>"; };
 		0E8324241D364B3600540D82 /* ZWTextKitTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWTextKitTopViewController.m; sourceTree = "<group>"; };
 		0E8324261D364C4A00540D82 /* ZWBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWBookViewController.h; sourceTree = "<group>"; };
@@ -581,6 +587,7 @@
 		0E53544E1D23628400C2ACAA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0E7F0FA91DD309D800D2C8EE /* SafariMultiPage */,
 				0EDE058F1D86A5C400E13A67 /* ImageBrowser */,
 				0E131F591D45B5BB0016C5BB /* LiveRendering */,
 				0E67FDDB1D378A5100929ACB /* UIkitDynamics */,
@@ -915,10 +922,29 @@
 		0E7E3BA01D24F39600D51178 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0E7F0FAD1DD30E8300D2C8EE /* SafariMultiPage */,
 				0E67FDE21D378B1200929ACB /* BaiduMap */,
 				0E67FDE11D378AFE00929ACB /* TextKit */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		0E7F0FA91DD309D800D2C8EE /* SafariMultiPage */ = {
+			isa = PBXGroup;
+			children = (
+				0E7F0FAA1DD30A1000D2C8EE /* ZWSafariMultiSelectViewController.h */,
+				0E7F0FAB1DD30A1000D2C8EE /* ZWSafariMultiSelectViewController.m */,
+			);
+			name = SafariMultiPage;
+			sourceTree = "<group>";
+		};
+		0E7F0FAD1DD30E8300D2C8EE /* SafariMultiPage */ = {
+			isa = PBXGroup;
+			children = (
+				0E7F0FAE1DD30EAE00D2C8EE /* ZWSafariCollectionViewFlowLayout.h */,
+				0E7F0FAF1DD30EAE00D2C8EE /* ZWSafariCollectionViewFlowLayout.m */,
+			);
+			name = SafariMultiPage;
 			sourceTree = "<group>";
 		};
 		0E82A4411DAF80AE00F13D4E /* Vendor */ = {
@@ -1349,6 +1375,7 @@
 				0EA917F61D3E791200DD0F56 /* ZWDailyWeather.swift in Sources */,
 				0E8E6CEE1D2668BD00579898 /* ZWCoordinateQuadTree.m in Sources */,
 				0EC3AAEC1D1D1D1600615F05 /* ZWUnderconstrainedViewController.m in Sources */,
+				0E7F0FB01DD30EAE00D2C8EE /* ZWSafariCollectionViewFlowLayout.m in Sources */,
 				0E5354671D23A25B00C2ACAA /* ZWHybridPackageProtocol.m in Sources */,
 				0E7E3BA91D24F81700D51178 /* ZWNoteEditorViewController.m in Sources */,
 				0EC3AABE1D1CFA0A00615F05 /* ViewController.m in Sources */,
@@ -1376,6 +1403,7 @@
 				0E83242B1D364CD100540D82 /* ZWBookView.m in Sources */,
 				0E4C0A551D2122C100AFC7CF /* ZWAutoLayoutTableViewController.m in Sources */,
 				0E29D1741D38C8380043F1E5 /* ZWItem.m in Sources */,
+				0E7F0FAC1DD30A1000D2C8EE /* ZWSafariMultiSelectViewController.m in Sources */,
 				0E1355B01D387BB50039A467 /* ZWConsoleTextView.m in Sources */,
 				0E8324251D364B3600540D82 /* ZWTextKitTopViewController.m in Sources */,
 				0E4C0A4C1D20F15C00AFC7CF /* ZWHitTestViewController.m in Sources */,

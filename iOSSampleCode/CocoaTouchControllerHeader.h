@@ -19,5 +19,6 @@
 #import "ZWDynamicsViewController.h"
 #import "iOSSampleCode-Swift.h"
 #import "ZWImageBrowseViewController.h"
+#import "ZWSafariMultiSelectViewController.h"
 
 #endif /* CocoaTouchControllerHeader_h */
