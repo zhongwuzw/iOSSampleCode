@@ -118,5 +118,7 @@
  */
 - (CGPoint)offsetFromView:(UIView*)otherView;
 
+- (UIView *)getSubViewByClass:(Class)className;
+
 
 @end

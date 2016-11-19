@@ -235,4 +235,14 @@
     return CGPointMake(x, y);
 }
 
+- (UIView *)getSubViewByClass:(Class)className
+{
+    for (UIView *view in self.subviews) {
+        if ([view isKindOfClass:className]) {
+            return view;
+        }
+    }
+    return nil;
+}
+
 @end
