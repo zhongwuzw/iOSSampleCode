@@ -8,11 +8,9 @@
 
 #import "ZWSearchTableViewController.h"
 
-@interface ZWSearchTableViewController ()<UISearchDisplayDelegate, UITableViewDelegate, UITableViewDataSource>
-//@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
-@property (nonatomic, copy) NSArray *dataArray;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@interface ZWSearchTableViewController ()<UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating>
 
+@property (nonatomic, strong) UISearchController *searchController;
 
 @end
 
@@ -21,23 +19,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Search";
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+
+    UITableViewController *tableViewController = [UITableViewController new];
+    tableViewController.tableView.delegate = self;
+    tableViewController.tableView.dataSource = self;
+    [tableViewController.tableView registerNib:[UINib nibWithNibName:@"Cell" bundle:nil] forCellReuseIdentifier:@"Cell"];
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:tableViewController];
+    self.searchController.searchResultsUpdater = self;
+    [self.searchController.searchBar sizeToFit];
     
-    self.dataArray = @[@"sasa",@"dsds"];
     [self.tableView registerNib:[UINib nibWithNibName:@"Cell" bundle:nil] forCellReuseIdentifier:@"Cell"];
     
-//    [self.view addSubview:self.searchBar];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+    self.searchController.searchBar.delegate = self;
+
+    self.definesPresentationContext = YES;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - UISearchBarDelegate
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
 }
 
 #pragma mark - Table view data source
@@ -58,13 +60,13 @@
     
     return cell;
 }
-- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString{
-//   [[controller.searchResultsTableView getSubViewByClass:NSClassFromString(@"_UISearchBarShadowView")] setHidden:YES];
-    return YES;
+
+#pragma mark - UISearchResultsUpdating
+
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    [self.tableView reloadData];
 }
-- (void)searchDisplayController:(UISearchDisplayController *)controller didLoadSearchResultsTableView:(UITableView *)tableView{
-    [tableView registerNib:[UINib nibWithNibName:@"Cell" bundle:nil] forCellReuseIdentifier:@"Cell"];
-}
+
 
 /*
 // Override to support conditional editing of the table view.

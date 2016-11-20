@@ -25,7 +25,6 @@
 		0E29D1701D38BE5D0043F1E5 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E29D16F1D38BE5D0043F1E5 /* data.json */; };
 		0E29D1741D38C8380043F1E5 /* ZWItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E29D1731D38C8380043F1E5 /* ZWItem.m */; };
 		0E29D1771D38D6810043F1E5 /* ZWAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E29D1761D38D6810043F1E5 /* ZWAlertView.m */; };
-		0E45248E1DE0115A00D2CF78 /* ZWNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E45248D1DE0115A00D2CF78 /* ZWNavigationViewController.m */; };
 		0E4C0A471D20EFD000AFC7CF /* ZWBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C0A461D20EFD000AFC7CF /* ZWBaseTableViewController.m */; };
 		0E4C0A4C1D20F15C00AFC7CF /* ZWHitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C0A4B1D20F15C00AFC7CF /* ZWHitTestViewController.m */; };
 		0E4C0A4F1D20F27700AFC7CF /* ZWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C0A4E1D20F27700AFC7CF /* ZWBaseViewController.m */; };
@@ -203,8 +202,6 @@
 		0E29D1731D38C8380043F1E5 /* ZWItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWItem.m; sourceTree = "<group>"; };
 		0E29D1751D38D6810043F1E5 /* ZWAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWAlertView.h; sourceTree = "<group>"; };
 		0E29D1761D38D6810043F1E5 /* ZWAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWAlertView.m; sourceTree = "<group>"; };
-		0E45248C1DE0115A00D2CF78 /* ZWNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWNavigationViewController.h; sourceTree = "<group>"; };
-		0E45248D1DE0115A00D2CF78 /* ZWNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWNavigationViewController.m; sourceTree = "<group>"; };
 		0E4C0A451D20EFD000AFC7CF /* ZWBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWBaseTableViewController.h; sourceTree = "<group>"; };
 		0E4C0A461D20EFD000AFC7CF /* ZWBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWBaseTableViewController.m; sourceTree = "<group>"; };
 		0E4C0A4A1D20F15C00AFC7CF /* ZWHitTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWHitTestViewController.h; sourceTree = "<group>"; };
@@ -519,8 +516,6 @@
 				0E4C0A461D20EFD000AFC7CF /* ZWBaseTableViewController.m */,
 				0E4C0A4D1D20F27700AFC7CF /* ZWBaseViewController.h */,
 				0E4C0A4E1D20F27700AFC7CF /* ZWBaseViewController.m */,
-				0E45248C1DE0115A00D2CF78 /* ZWNavigationViewController.h */,
-				0E45248D1DE0115A00D2CF78 /* ZWNavigationViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1390,7 +1385,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E0DE6EF1D5878BE0069A2C2 /* ZWWeakTimerTarget.m in Sources */,
-				0E45248E1DE0115A00D2CF78 /* ZWNavigationViewController.m in Sources */,
 				0E4C0A581D21230F00AFC7CF /* ZWCocoaTouchTableViewController.m in Sources */,
 				0EF3434A1D2AA6E80097B182 /* UIColor+ZWUtility.m in Sources */,
 				0E5354631D23A1B600C2ACAA /* ZWURLProtocolController.m in Sources */,
