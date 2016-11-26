@@ -19,9 +19,13 @@
 
 @implementation AppDelegate
 
+#define homePath NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0]
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSString *str = @"file:///Users/zhongwu/Library/Developer/CoreSimulator/Devices/3BA5EE76-E451-433D-85AA-C3D66548CB8B/data/Containers/Data/Application/E45CB50B-9B1E-4EC7-A507-66579C27D2E6/Library/Docsets/Dash/VueJS/VueJS.docset/Contents/Resources/Documents/vuejs.org/v2/api/index.html#//dash_ref_vm%2Doff/Method/vm.$off/0";
     
+    NSArray *array = [str componentsSeparatedByString:@"/Library/Docsets"];
+    NSLog(@"%@",homePath);
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     [DDLog addLogger:[DDTTYLogger sharedInstance]]; 
     

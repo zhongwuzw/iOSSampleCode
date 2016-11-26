@@ -109,6 +109,8 @@
 		0ED30F941D86F39200ECED06 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED30F931D86F39200ECED06 /* UIView+Additions.m */; };
 		0EDA1F6F1DDC0D6B0031D1AC /* ZWSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA1F6D1DDC0D6B0031D1AC /* ZWSearchTableViewController.m */; };
 		0EDA1F721DDC0FD90031D1AC /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDA1F711DDC0FD90031D1AC /* Cell.xib */; };
+		0EDB3B4C1DE40270007C3A49 /* ZWSafariCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB3B4A1DE40270007C3A49 /* ZWSafariCollectionViewCell.m */; };
+		0EDB3B4D1DE40270007C3A49 /* ZWSafariCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDB3B4B1DE40270007C3A49 /* ZWSafariCollectionViewCell.xib */; };
 		0EDE05961D86A63400E13A67 /* ZWImageBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE05941D86A63400E13A67 /* ZWImageBrowseViewController.m */; };
 		0EF3434A1D2AA6E80097B182 /* UIColor+ZWUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF343491D2AA6E80097B182 /* UIColor+ZWUtility.m */; };
 		0EFC174F1D428136008E919B /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC174E1D428136008E919B /* KeyboardViewController.swift */; };
@@ -336,6 +338,9 @@
 		0EDA1F6C1DDC0D6B0031D1AC /* ZWSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWSearchTableViewController.h; sourceTree = "<group>"; };
 		0EDA1F6D1DDC0D6B0031D1AC /* ZWSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWSearchTableViewController.m; sourceTree = "<group>"; };
 		0EDA1F711DDC0FD90031D1AC /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
+		0EDB3B491DE40270007C3A49 /* ZWSafariCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWSafariCollectionViewCell.h; sourceTree = "<group>"; };
+		0EDB3B4A1DE40270007C3A49 /* ZWSafariCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWSafariCollectionViewCell.m; sourceTree = "<group>"; };
+		0EDB3B4B1DE40270007C3A49 /* ZWSafariCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZWSafariCollectionViewCell.xib; sourceTree = "<group>"; };
 		0EDE05931D86A63400E13A67 /* ZWImageBrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWImageBrowseViewController.h; sourceTree = "<group>"; };
 		0EDE05941D86A63400E13A67 /* ZWImageBrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWImageBrowseViewController.m; sourceTree = "<group>"; };
 		0EF343481D2AA6E80097B182 /* UIColor+ZWUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ZWUtility.h"; sourceTree = "<group>"; };
@@ -610,6 +615,7 @@
 		0E53544F1D23629000C2ACAA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0EDB3B461DE401BE007C3A49 /* SafariMultiPage */,
 				0E743A081D88E2AD00CCFFBE /* ImageBrowser */,
 				0E131F5C1D45BB3B0016C5BB /* LiveRendering */,
 				0E67FDE01D378AC700929ACB /* CoreGraphics */,
@@ -1158,6 +1164,16 @@
 			name = TableViewWithSearch;
 			sourceTree = "<group>";
 		};
+		0EDB3B461DE401BE007C3A49 /* SafariMultiPage */ = {
+			isa = PBXGroup;
+			children = (
+				0EDB3B491DE40270007C3A49 /* ZWSafariCollectionViewCell.h */,
+				0EDB3B4A1DE40270007C3A49 /* ZWSafariCollectionViewCell.m */,
+				0EDB3B4B1DE40270007C3A49 /* ZWSafariCollectionViewCell.xib */,
+			);
+			name = SafariMultiPage;
+			sourceTree = "<group>";
+		};
 		0EDE058F1D86A5C400E13A67 /* ImageBrowser */ = {
 			isa = PBXGroup;
 			children = (
@@ -1324,6 +1340,7 @@
 				0E6F921F1D9BCD9B00757E1B /* ZWAudioViewController.xib in Resources */,
 				0E67FDC91D373AD500929ACB /* alices_adventures.md in Resources */,
 				0E29D16E1D38BE3B0043F1E5 /* xork.js in Resources */,
+				0EDB3B4D1DE40270007C3A49 /* ZWSafariCollectionViewCell.xib in Resources */,
 				0EDA1F721DDC0FD90031D1AC /* Cell.xib in Resources */,
 				0E5354821D23D2C600C2ACAA /* images in Resources */,
 				0E29D1701D38BE5D0043F1E5 /* data.json in Resources */,
@@ -1416,6 +1433,7 @@
 				0E4C0A4F1D20F27700AFC7CF /* ZWBaseViewController.m in Sources */,
 				0E69BADC1D313590006E159E /* ZWDrawViewController.m in Sources */,
 				0E29D1771D38D6810043F1E5 /* ZWAlertView.m in Sources */,
+				0EDB3B4C1DE40270007C3A49 /* ZWSafariCollectionViewCell.m in Sources */,
 				0E53545C1D23A11700C2ACAA /* ZWNetworkTableViewController.m in Sources */,
 				0E1355AC1D387B1F0039A467 /* ZWJavaScriptCoreViewController.m in Sources */,
 				0E83242B1D364CD100540D82 /* ZWBookView.m in Sources */,

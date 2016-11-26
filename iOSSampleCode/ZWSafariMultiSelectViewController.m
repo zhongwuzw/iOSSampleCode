@@ -8,8 +8,9 @@
 
 #import "ZWSafariMultiSelectViewController.h"
 #import "ZWSafariCollectionViewFlowLayout.h"
+#import "ZWSafariCollectionViewCell.h"
 
-@interface ZWSafariMultiSelectViewController ()
+@interface ZWSafariMultiSelectViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
@@ -24,15 +25,28 @@
 }
 
 - (void)initializeView{
-//    self.collectionView = ({
-//       UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:]
-//    });
+    self.collectionView = ({
+        ZWSafariCollectionViewFlowLayout *layout = [ZWSafariCollectionViewFlowLayout new];
+        layout.itemSize = CGSizeMake(self.view.width - 30, self.view.height - 100);
+        UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+        [self.view addSubview:collectionView];
+        collectionView.backgroundColor = [UIColor whiteColor];
+        collectionView.delegate = self;
+        collectionView.dataSource = self;
+        [collectionView registerNib:[UINib nibWithNibName:@"ZWSafariCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"Cell"];
+        collectionView;
+    });
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark <UICollectionViewDataSource>
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 20;
 }
 
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    ZWSafariCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    cell.label.text = @"sss";
+    return cell;
+}
 
 @end
