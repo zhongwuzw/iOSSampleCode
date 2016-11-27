@@ -1,0 +1,1 @@
+alert("out js src");
