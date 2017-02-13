@@ -9,41 +9,41 @@
 
 #import <Foundation/Foundation.h>
 
-typedef struct TBQuadTreeNodeData {//包含经纬度、data字段包含其他信息，如旅馆电话等
+typedef struct ZWQuadTreeNodeData {//包含经纬度、data字段包含其他信息，如旅馆电话等
     double x;
     double y;
     void* data;
-} TBQuadTreeNodeData;
-TBQuadTreeNodeData TBQuadTreeNodeDataMake(double x, double y, void* data);
+} ZWQuadTreeNodeData;
+ZWQuadTreeNodeData ZWQuadTreeNodeDataMake(double x, double y, void* data);
 
-typedef struct TBBoundingBox {
+typedef struct ZWBoundingBox {
     double x0; double y0;
     double xf; double yf;
-} TBBoundingBox;
-TBBoundingBox TBBoundingBoxMake(double x0, double y0, double xf, double yf);
+} ZWBoundingBox;
+ZWBoundingBox ZWBoundingBoxMake(double x0, double y0, double xf, double yf);
 
 typedef struct quadTreeNode {
     struct quadTreeNode* northWest;
     struct quadTreeNode* northEast;
     struct quadTreeNode* southWest;
     struct quadTreeNode* southEast;
-    TBBoundingBox boundingBox;  //该节点的框的范围
+    ZWBoundingBox boundingBox;  //该节点的框的范围
     int bucketCapacity;
-    TBQuadTreeNodeData *points;
+    ZWQuadTreeNodeData *points;
     int count;
-} TBQuadTreeNode;
-TBQuadTreeNode* TBQuadTreeNodeMake(TBBoundingBox boundary, int bucketCapacity);
+} ZWQuadTreeNode;
+ZWQuadTreeNode* ZWQuadTreeNodeMake(ZWBoundingBox boundary, int bucketCapacity);
 
-void TBFreeQuadTreeNode(TBQuadTreeNode* node);
+void ZWFreeQuadTreeNode(ZWQuadTreeNode* node, ZWQuadTreeNode* root);
 
-bool TBBoundingBoxContainsData(TBBoundingBox box, TBQuadTreeNodeData data);
-bool TBBoundingBoxIntersectsBoundingBox(TBBoundingBox b1, TBBoundingBox b2);
+bool ZWBoundingBoxContainsData(ZWBoundingBox box, ZWQuadTreeNodeData data);
+bool ZWBoundingBoxIntersectsBoundingBox(ZWBoundingBox b1, ZWBoundingBox b2);
 
-typedef void(^TBQuadTreeTraverseBlock)(TBQuadTreeNode* currentNode);
-void TBQuadTreeTraverse(TBQuadTreeNode* node, TBQuadTreeTraverseBlock block);
+typedef void(^ZWQuadTreeTraverseBlock)(ZWQuadTreeNode* currentNode);
+void ZWQuadTreeTraverse(ZWQuadTreeNode* node, ZWQuadTreeTraverseBlock block);
 
-typedef void(^TBDataReturnBlock)(TBQuadTreeNodeData data);
-void TBQuadTreeGatherDataInRange(TBQuadTreeNode* node, TBBoundingBox range, TBDataReturnBlock block);
+typedef void(^ZWDataReturnBlock)(ZWQuadTreeNodeData data);
+void ZWQuadTreeGatherDataInRange(ZWQuadTreeNode* node, ZWBoundingBox range, ZWDataReturnBlock block);
 
-bool TBQuadTreeNodeInsertData(TBQuadTreeNode* node, TBQuadTreeNodeData data);
-TBQuadTreeNode* TBQuadTreeBuildWithData(TBQuadTreeNodeData *data, NSInteger count, TBBoundingBox boundingBox, int capacity);
+bool ZWQuadTreeNodeInsertData(ZWQuadTreeNode* node, ZWQuadTreeNodeData data);
+ZWQuadTreeNode* TBQuadTreeBuildWithData(ZWQuadTreeNodeData *data, NSInteger count, ZWBoundingBox boundingBox, int capacity);

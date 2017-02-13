@@ -11,37 +11,39 @@
 
 #pragma mark - Constructors
 
-TBQuadTreeNodeData TBQuadTreeNodeDataMake(double x, double y, void* data)
+ZWQuadTreeNodeData ZWQuadTreeNodeDataMake(double x, double y, void* data)
 {
-    TBQuadTreeNodeData d; d.x = x; d.y = y; d.data = data;
+    ZWQuadTreeNodeData d; d.x = x; d.y = y; d.data = data;
     return d;
 }
 
-TBBoundingBox TBBoundingBoxMake(double x0, double y0, double xf, double yf)
+ZWBoundingBox ZWBoundingBoxMake(double x0, double y0, double xf, double yf)
 {
-    TBBoundingBox bb; bb.x0 = x0; bb.y0 = y0; bb.xf = xf; bb.yf = yf;
+    ZWBoundingBox bb; bb.x0 = x0; bb.y0 = y0; bb.xf = xf; bb.yf = yf;
     return bb;
 }
 
-TBQuadTreeNode* TBQuadTreeNodeMake(TBBoundingBox boundary, int bucketCapacity)
+ZWQuadTreeNode* ZWQuadTreeNodeMake(ZWBoundingBox boundary, int bucketCapacity)
 {
-    TBQuadTreeNode* node = (TBQuadTreeNode*)malloc(sizeof(TBQuadTreeNode));
-    node->northWest = NULL;
-    node->northEast = NULL;
-    node->southWest = NULL;
-    node->southEast = NULL;
-
-    node->boundingBox = boundary;
-    node->bucketCapacity = bucketCapacity;
-    node->count = 0;
-    node->points = (TBQuadTreeNodeData*)malloc(sizeof(TBQuadTreeNodeData) * bucketCapacity);
-
+    ZWQuadTreeNode* node = (ZWQuadTreeNode*)malloc(sizeof(ZWQuadTreeNode));
+    if (node != NULL) {
+        node->northWest = NULL;
+        node->northEast = NULL;
+        node->southWest = NULL;
+        node->southEast = NULL;
+        
+        node->boundingBox = boundary;
+        node->bucketCapacity = bucketCapacity;
+        node->count = 0;
+        node->points = (ZWQuadTreeNodeData*)malloc(sizeof(ZWQuadTreeNodeData) * bucketCapacity);
+    }
+    
     return node;
 }
 
 #pragma mark - Bounding Box Functions
 
-bool TBBoundingBoxContainsData(TBBoundingBox box, TBQuadTreeNodeData data)
+bool ZWBoundingBoxContainsData(ZWBoundingBox box, ZWQuadTreeNodeData data)
 {
     bool containsX = box.x0 <= data.x && data.x <= box.xf;
     bool containsY = box.y0 <= data.y && data.y <= box.yf;
@@ -49,7 +51,7 @@ bool TBBoundingBoxContainsData(TBBoundingBox box, TBQuadTreeNodeData data)
     return containsX && containsY;
 }
 
-bool TBBoundingBoxIntersectsBoundingBox(TBBoundingBox b1, TBBoundingBox b2)
+bool ZWBoundingBoxIntersectsBoundingBox(ZWBoundingBox b1, ZWBoundingBox b2)
 {
     return (b1.x0 <= b2.xf && b1.xf >= b2.x0 && b1.y0 <= b2.yf && b1.yf >= b2.y0);
 }
@@ -62,24 +64,24 @@ bool TBBoundingBoxIntersectsBoundingBox(TBBoundingBox b1, TBBoundingBox b2)
  *
  *  @param node
  */
-void TBQuadTreeNodeSubdivide(TBQuadTreeNode* node)
+void ZWQuadTreeNodeSubdivide(ZWQuadTreeNode* node)
 {
-    TBBoundingBox box = node->boundingBox;
+    ZWBoundingBox box = node->boundingBox;
 
     double xMid = (box.xf + box.x0) / 2.0;
     double yMid = (box.yf + box.y0) / 2.0;
 
-    TBBoundingBox northWest = TBBoundingBoxMake(box.x0, box.y0, xMid, yMid);
-    node->northWest = TBQuadTreeNodeMake(northWest, node->bucketCapacity);
+    ZWBoundingBox northWest = ZWBoundingBoxMake(box.x0, box.y0, xMid, yMid);
+    node->northWest = ZWQuadTreeNodeMake(northWest, node->bucketCapacity);
 
-    TBBoundingBox northEast = TBBoundingBoxMake(xMid, box.y0, box.xf, yMid);
-    node->northEast = TBQuadTreeNodeMake(northEast, node->bucketCapacity);
+    ZWBoundingBox northEast = ZWBoundingBoxMake(xMid, box.y0, box.xf, yMid);
+    node->northEast = ZWQuadTreeNodeMake(northEast, node->bucketCapacity);
 
-    TBBoundingBox southWest = TBBoundingBoxMake(box.x0, yMid, xMid, box.yf);
-    node->southWest = TBQuadTreeNodeMake(southWest, node->bucketCapacity);
+    ZWBoundingBox southWest = ZWBoundingBoxMake(box.x0, yMid, xMid, box.yf);
+    node->southWest = ZWQuadTreeNodeMake(southWest, node->bucketCapacity);
 
-    TBBoundingBox southEast = TBBoundingBoxMake(xMid, yMid, box.xf, box.yf);
-    node->southEast = TBQuadTreeNodeMake(southEast, node->bucketCapacity);
+    ZWBoundingBox southEast = ZWBoundingBoxMake(xMid, yMid, box.xf, box.yf);
+    node->southEast = ZWQuadTreeNodeMake(southEast, node->bucketCapacity);
 }
 
 /**
@@ -92,9 +94,9 @@ void TBQuadTreeNodeSubdivide(TBQuadTreeNode* node)
  *
  *  @return
  */
-bool TBQuadTreeNodeInsertData(TBQuadTreeNode* node, TBQuadTreeNodeData data)
+bool ZWQuadTreeNodeInsertData(ZWQuadTreeNode* node, ZWQuadTreeNodeData data)
 {
-    if (!TBBoundingBoxContainsData(node->boundingBox, data)) {
+    if (!ZWBoundingBoxContainsData(node->boundingBox, data)) {
         return false;
     }
 
@@ -104,25 +106,25 @@ bool TBQuadTreeNodeInsertData(TBQuadTreeNode* node, TBQuadTreeNodeData data)
     }
 
     if (node->northWest == NULL) {
-        TBQuadTreeNodeSubdivide(node);
+        ZWQuadTreeNodeSubdivide(node);
     }
 
-    if (TBQuadTreeNodeInsertData(node->northWest, data)) return true;
-    if (TBQuadTreeNodeInsertData(node->northEast, data)) return true;
-    if (TBQuadTreeNodeInsertData(node->southWest, data)) return true;
-    if (TBQuadTreeNodeInsertData(node->southEast, data)) return true;
+    if (ZWQuadTreeNodeInsertData(node->northWest, data)) return true;
+    if (ZWQuadTreeNodeInsertData(node->northEast, data)) return true;
+    if (ZWQuadTreeNodeInsertData(node->southWest, data)) return true;
+    if (ZWQuadTreeNodeInsertData(node->southEast, data)) return true;
 
     return false;
 }
 
-void TBQuadTreeGatherDataInRange(TBQuadTreeNode* node, TBBoundingBox range, TBDataReturnBlock block)
+void ZWQuadTreeGatherDataInRange(ZWQuadTreeNode* node, ZWBoundingBox range, ZWDataReturnBlock block)
 {
-    if (!TBBoundingBoxIntersectsBoundingBox(node->boundingBox, range)) {
+    if (!ZWBoundingBoxIntersectsBoundingBox(node->boundingBox, range)) {
         return;
     }
 
     for (int i = 0; i < node->count; i++) {
-        if (TBBoundingBoxContainsData(range, node->points[i])) {
+        if (ZWBoundingBoxContainsData(range, node->points[i])) {
             block(node->points[i]);
         }
     }
@@ -131,13 +133,13 @@ void TBQuadTreeGatherDataInRange(TBQuadTreeNode* node, TBBoundingBox range, TBDa
         return;
     }
 
-    TBQuadTreeGatherDataInRange(node->northWest, range, block);
-    TBQuadTreeGatherDataInRange(node->northEast, range, block);
-    TBQuadTreeGatherDataInRange(node->southWest, range, block);
-    TBQuadTreeGatherDataInRange(node->southEast, range, block);
+    ZWQuadTreeGatherDataInRange(node->northWest, range, block);
+    ZWQuadTreeGatherDataInRange(node->northEast, range, block);
+    ZWQuadTreeGatherDataInRange(node->southWest, range, block);
+    ZWQuadTreeGatherDataInRange(node->southEast, range, block);
 }
 
-void TBQuadTreeTraverse(TBQuadTreeNode* node, TBQuadTreeTraverseBlock block)
+void ZWQuadTreeTraverse(ZWQuadTreeNode* node, ZWQuadTreeTraverseBlock block)
 {
     block(node);
 
@@ -145,35 +147,43 @@ void TBQuadTreeTraverse(TBQuadTreeNode* node, TBQuadTreeTraverseBlock block)
         return;
     }
 
-    TBQuadTreeTraverse(node->northWest, block);
-    TBQuadTreeTraverse(node->northEast, block);
-    TBQuadTreeTraverse(node->southWest, block);
-    TBQuadTreeTraverse(node->southEast, block);
+    ZWQuadTreeTraverse(node->northWest, block);
+    ZWQuadTreeTraverse(node->northEast, block);
+    ZWQuadTreeTraverse(node->southWest, block);
+    ZWQuadTreeTraverse(node->southEast, block);
 }
 
-TBQuadTreeNode* TBQuadTreeBuildWithData(TBQuadTreeNodeData *data, NSInteger count, TBBoundingBox boundingBox, int capacity)
+ZWQuadTreeNode* TBQuadTreeBuildWithData(ZWQuadTreeNodeData *data, NSInteger count, ZWBoundingBox boundingBox, int capacity)
 {
-    TBQuadTreeNode* root = TBQuadTreeNodeMake(boundingBox, capacity);
+    ZWQuadTreeNode* root = ZWQuadTreeNodeMake(boundingBox, capacity);
     for (int i = 0; i < count; i++) {
-        TBQuadTreeNodeInsertData(root, data[i]);
+        ZWQuadTreeNodeInsertData(root, data[i]);
     }
 
     return root;
 }
 
-void TBFreeQuadTreeNode(TBQuadTreeNode* node)
+void ZWFreeQuadTreeNode(ZWQuadTreeNode* node,ZWQuadTreeNode* root)
 {
-    if (node->northWest != NULL) TBFreeQuadTreeNode(node->northWest);
-    if (node->northEast != NULL) TBFreeQuadTreeNode(node->northEast);
-    if (node->southWest != NULL) TBFreeQuadTreeNode(node->southWest);
-    if (node->southEast != NULL) TBFreeQuadTreeNode(node->southEast);
+    if (node->northWest != NULL) ZWFreeQuadTreeNode(node->northWest,root);
+    if (node->northEast != NULL) ZWFreeQuadTreeNode(node->northEast,root);
+    if (node->southWest != NULL) ZWFreeQuadTreeNode(node->southWest,root);
+    if (node->southEast != NULL) ZWFreeQuadTreeNode(node->southEast,root);
 
+    if (node == root) {
+        ;
+    }
     for (int i=0; i < node->count; i++) {
         //修复内存泄露
-        free(((TBHotelInfo *)(node->points[i].data))->hotelName);
-        free(((TBHotelInfo *)(node->points[i].data))->hotelPhoneNumber);
-        free((TBHotelInfo *)(node->points[i].data));
+        free(((ZWHotelInfo *)(node->points[i].data))->hotelName);
+        ((ZWHotelInfo *)(node->points[i].data))->hotelName = NULL;
+        free(((ZWHotelInfo *)(node->points[i].data))->hotelPhoneNumber);
+        ((ZWHotelInfo *)(node->points[i].data))->hotelPhoneNumber = NULL;
+        free((ZWHotelInfo *)(node->points[i].data));
+        node->points[i].data = NULL;
     }
     free(node->points);
+    node->points = NULL;
     free(node);
+    node = NULL;
 }

@@ -10,26 +10,33 @@
 #import "ZWClusterAnnotation.h"
 #import <BaiduMapAPI_Utils/BMKUtilsComponent.h>
 
-TBQuadTreeNodeData TBDataFromLine(NSString *line)
+ZWQuadTreeNodeData TBDataFromLine(NSString *line)
 {
     NSArray *components = [line componentsSeparatedByString:@","];
     double latitude = [components[1] doubleValue];
     double longitude = [components[0] doubleValue];
 
-    TBHotelInfo* hotelInfo = (TBHotelInfo*)malloc(sizeof(TBHotelInfo));
+    ZWHotelInfo* hotelInfo = (ZWHotelInfo*)malloc(sizeof(ZWHotelInfo));
+    
+    if (hotelInfo != NULL) {
+        NSString *hotelName = [components[2] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        hotelInfo->hotelName = (char *)malloc(sizeof(char) * hotelName.length + 1);
+        if (hotelInfo->hotelName != NULL) {
+            strncpy(hotelInfo->hotelName, [hotelName UTF8String], hotelName.length + 1);
+        }
+        
+        NSString *hotelPhoneNumber = [components[4] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        hotelInfo->hotelPhoneNumber = (char *)malloc(sizeof(char) * hotelPhoneNumber.length + 1);
+        if (hotelInfo->hotelPhoneNumber != NULL) {
+            strncpy(hotelInfo->hotelPhoneNumber, [hotelPhoneNumber UTF8String], hotelPhoneNumber.length + 1);
+        }
+        
+    }
 
-    NSString *hotelName = [components[2] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    hotelInfo->hotelName = (char *)malloc(sizeof(char) * hotelName.length + 1);
-    strncpy(hotelInfo->hotelName, [hotelName UTF8String], hotelName.length + 1);
-
-    NSString *hotelPhoneNumber = [components[4] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    hotelInfo->hotelPhoneNumber = (char *)malloc(sizeof(char) * hotelPhoneNumber.length + 1);
-    strncpy(hotelInfo->hotelPhoneNumber, [hotelPhoneNumber UTF8String], hotelPhoneNumber.length + 1);
-
-    return TBQuadTreeNodeDataMake(latitude, longitude, hotelInfo);
+    return ZWQuadTreeNodeDataMake(latitude, longitude, hotelInfo);
 }
 
-TBBoundingBox TBBoundingBoxForMapRect(BMKMapRect mapRect)
+ZWBoundingBox ZWBoundingBoxForMapRect(BMKMapRect mapRect)
 {
     CLLocationCoordinate2D topLeft = BMKCoordinateForMapPoint(mapRect.origin);
     CLLocationCoordinate2D botRight = BMKCoordinateForMapPoint(BMKMapPointMake(BMKMapRectGetMaxX(mapRect), BMKMapRectGetMaxY(mapRect)));
@@ -40,10 +47,10 @@ TBBoundingBox TBBoundingBoxForMapRect(BMKMapRect mapRect)
     CLLocationDegrees minLon = topLeft.longitude;
     CLLocationDegrees maxLon = botRight.longitude;
 
-    return TBBoundingBoxMake(minLat, minLon, maxLat, maxLon);
+    return ZWBoundingBoxMake(minLat, minLon, maxLat, maxLon);
 }
 
-BMKMapRect TBMapRectForBoundingBox(TBBoundingBox boundingBox)
+BMKMapRect TBMapRectForBoundingBox(ZWBoundingBox boundingBox)
 {
     BMKMapPoint topLeft = BMKMapPointForCoordinate(CLLocationCoordinate2DMake(boundingBox.x0, boundingBox.y0));
     BMKMapPoint botRight = BMKMapPointForCoordinate(CLLocationCoordinate2DMake(boundingBox.xf, boundingBox.yf));
@@ -81,7 +88,7 @@ float TBCellSizeForZoomScale(BMKZoomScale zoomScale)
     }
 }
 
-@implementation TBCoordinateQuadTree
+@implementation ZWCoordinateQuadTree
 
 - (void)buildTreeWithCompletion:(BuildCompletionBlock)completion{
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
@@ -89,7 +96,9 @@ float TBCellSizeForZoomScale(BMKZoomScale zoomScale)
         
         self.isFinished = YES;
         if (completion) {
-            completion();
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion();
+            });
         }
     });
 }
@@ -104,20 +113,24 @@ float TBCellSizeForZoomScale(BMKZoomScale zoomScale)
 
         NSInteger count = lines.count - 1;
 
-        TBQuadTreeNodeData *dataArray = (TBQuadTreeNodeData *)malloc(sizeof(TBQuadTreeNodeData) * count);
-        for (NSInteger i = 0; i < count; i++) {
-            dataArray[i] = TBDataFromLine(lines[i]);
+        ZWQuadTreeNodeData *dataArray = (ZWQuadTreeNodeData *)malloc(sizeof(ZWQuadTreeNodeData) * count);
+        
+        if (dataArray != NULL) {
+            for (NSInteger i = 0; i < count; i++) {
+                dataArray[i] = TBDataFromLine(lines[i]);
+            }
+            
+            ZWBoundingBox world = ZWBoundingBoxMake(19, 73, 72, 131);
+            _root = TBQuadTreeBuildWithData(dataArray, count, world, 4);
         }
 
-        TBBoundingBox world = TBBoundingBoxMake(19, 73, 72, 131);
-        _root = TBQuadTreeBuildWithData(dataArray, count, world, 4);
         free(dataArray);
     }
 }
 
 - (void)freeTree
 {
-    TBFreeQuadTreeNode(self.root);
+    ZWFreeQuadTreeNode(self.root,self.root);
 }
 
 - (NSArray *)clusteredAnnotationsWithinMapRect:(BMKMapRect)rect withZoomScale:(double)zoomScale
@@ -138,16 +151,16 @@ float TBCellSizeForZoomScale(BMKZoomScale zoomScale)
             __block double totalX = 0;
             __block double totalY = 0;
             __block int count = 0;
-
+            
             NSMutableArray *names = [[NSMutableArray alloc] init];
             NSMutableArray *phoneNumbers = [[NSMutableArray alloc] init];
 
-            TBQuadTreeGatherDataInRange(self.root, TBBoundingBoxForMapRect(mapRect), ^(TBQuadTreeNodeData data) {
+            ZWQuadTreeGatherDataInRange(self.root, ZWBoundingBoxForMapRect(mapRect), ^(ZWQuadTreeNodeData data) {
                 totalX += data.x;
                 totalY += data.y;
                 count++;
 
-                TBHotelInfo hotelInfo = *(TBHotelInfo *)data.data;
+                ZWHotelInfo hotelInfo = *(ZWHotelInfo *)data.data;
                 [names addObject:[NSString stringWithFormat:@"%s", hotelInfo.hotelName]];
                 [phoneNumbers addObject:[NSString stringWithFormat:@"%s", hotelInfo.hotelPhoneNumber]];
             });

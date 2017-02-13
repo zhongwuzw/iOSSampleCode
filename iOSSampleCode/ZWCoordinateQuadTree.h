@@ -12,14 +12,14 @@
 
 typedef void(^BuildCompletionBlock)();
 
-typedef struct TBHotelInfo {
+typedef struct ZWHotelInfo {
     char* hotelName;
     char* hotelPhoneNumber;
-} TBHotelInfo;
+} ZWHotelInfo;
 
-@interface TBCoordinateQuadTree : NSObject
+@interface ZWCoordinateQuadTree : NSObject
 
-@property (assign, nonatomic) TBQuadTreeNode* root;
+@property (assign, nonatomic) ZWQuadTreeNode* root;
 @property (weak, nonatomic) BMKMapView *mapView;
 @property (assign, nonatomic) BOOL isFinished;
 

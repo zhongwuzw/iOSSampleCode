@@ -48,6 +48,17 @@
     return @{NSFontAttributeName: font};
 }
 
+- (void)parseMarkdownFile:(NSString *)path completion:(ParseMarkdownBlock)completion{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+       NSAttributedString *attributeStr = [self parseMarkdownFile:path];
+        if (completion) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion(attributeStr);
+            });
+        }
+    });
+}
+
 - (NSAttributedString *)parseMarkdownFile:(NSString *)path {
     NSMutableAttributedString *parsedOutput = [NSMutableAttributedString new];
     

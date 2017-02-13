@@ -16,7 +16,7 @@
 
 
 @property (nonatomic, strong) BMKMapView *mapView;
-@property (nonatomic, strong) TBCoordinateQuadTree *coordinateQuadTree;
+@property (nonatomic, strong) ZWCoordinateQuadTree *coordinateQuadTree;
 @property (nonatomic, assign) BOOL mapFinished;
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
 
@@ -37,7 +37,7 @@
     self.operationQueue = [NSOperationQueue new];
     self.operationQueue.maxConcurrentOperationCount = 1;
     
-    self.coordinateQuadTree = [[TBCoordinateQuadTree alloc] init];
+    self.coordinateQuadTree = [[ZWCoordinateQuadTree alloc] init];
     self.coordinateQuadTree.mapView = self.mapView;
     
     WEAK_REF(self);

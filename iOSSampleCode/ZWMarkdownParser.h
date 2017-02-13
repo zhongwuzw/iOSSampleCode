@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^ParseMarkdownBlock)(NSAttributedString *);
+
 @interface ZWMarkdownParser : NSObject
 
-- (NSAttributedString *)parseMarkdownFile:(NSString *)path;
+- (void)parseMarkdownFile:(NSString *)path completion:(ParseMarkdownBlock)completion;
 
 @end
