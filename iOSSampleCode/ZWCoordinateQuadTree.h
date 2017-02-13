@@ -10,6 +10,8 @@
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 #import "ZWQuadTree.h"
 
+typedef void(^BuildCompletionBlock)();
+
 typedef struct TBHotelInfo {
     char* hotelName;
     char* hotelPhoneNumber;
@@ -19,8 +21,9 @@ typedef struct TBHotelInfo {
 
 @property (assign, nonatomic) TBQuadTreeNode* root;
 @property (weak, nonatomic) BMKMapView *mapView;
+@property (assign, nonatomic) BOOL isFinished;
 
-- (void)buildTree;
+- (void)buildTreeWithCompletion:(BuildCompletionBlock)completion;
 - (void)freeTree;
 - (NSArray *)clusteredAnnotationsWithinMapRect:(BMKMapRect)rect withZoomScale:(double)zoomScale;
 

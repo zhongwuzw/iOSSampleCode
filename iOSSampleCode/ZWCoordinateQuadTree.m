@@ -83,9 +83,22 @@ float TBCellSizeForZoomScale(BMKZoomScale zoomScale)
 
 @implementation TBCoordinateQuadTree
 
+- (void)buildTreeWithCompletion:(BuildCompletionBlock)completion{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        [self buildTree];
+        
+        self.isFinished = YES;
+        if (completion) {
+            completion();
+        }
+    });
+}
+
 - (void)buildTree
 {
     @autoreleasepool {
+        self.isFinished = NO;
+        
         NSString *data = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"USA-HotelMotel" ofType:@"csv"] encoding:NSASCIIStringEncoding error:nil];
         NSArray *lines = [data componentsSeparatedByString:@"\n"];
 
@@ -98,6 +111,7 @@ float TBCellSizeForZoomScale(BMKZoomScale zoomScale)
 
         TBBoundingBox world = TBBoundingBoxMake(19, 73, 72, 131);
         _root = TBQuadTreeBuildWithData(dataArray, count, world, 4);
+        free(dataArray);
     }
 }
 

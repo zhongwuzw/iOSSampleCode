@@ -31,10 +31,6 @@
     self.dataArray = @[@"Button超出父视图范围",@"TextView和inputAccessoryView",@"Text Kit范例",@"百度地图",@"tableView内嵌collectionView",@"Core Graphic绘图",@"UIKit Dynamics",@"Live Rendering",@"图片浏览器",@"Safari多界面选择",@"TableView With SearchBar"];
     self.controllerStrArray = @[@"ZWHitTestViewController",@"ZWTextViewController",@"ZWTextKitTopViewController",@"ZWBaiduMapViewController",@"ZWCollectionTableViewController",@"ZWDrawViewController",@"ZWDynamicsViewController",@"ZWLiveRenderingViewController",@"ZWImageBrowseViewController",@"ZWSafariMultiSelectViewController",@"ZWSearchTableViewController"];
     self.controllerSet = [NSSet setWithObjects:@"ZWCollectionTableViewController",@"ZWLiveRenderingViewController",@"ZWSearchTableViewController", nil];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self jumpToController:@"ZWSafariMultiSelectViewController"];
-    });
 }
 
 - (void)didReceiveMemoryWarning {

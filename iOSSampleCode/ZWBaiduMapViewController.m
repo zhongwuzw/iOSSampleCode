@@ -15,8 +15,10 @@
 @interface ZWBaiduMapViewController ()<BMKMapViewDelegate>
 
 
-@property (nonatomic, strong)BMKMapView *mapView;
-@property (strong, nonatomic) TBCoordinateQuadTree *coordinateQuadTree;
+@property (nonatomic, strong) BMKMapView *mapView;
+@property (nonatomic, strong) TBCoordinateQuadTree *coordinateQuadTree;
+@property (nonatomic, assign) BOOL mapFinished;
+@property (nonatomic, strong) NSOperationQueue *operationQueue;
 
 @end
 
@@ -32,10 +34,19 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[_mapView]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_mapView)]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[_mapView]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_mapView)]];
     
+    self.operationQueue = [NSOperationQueue new];
+    self.operationQueue.maxConcurrentOperationCount = 1;
+    
     self.coordinateQuadTree = [[TBCoordinateQuadTree alloc] init];
     self.coordinateQuadTree.mapView = self.mapView;
-    [self.coordinateQuadTree buildTree];
-    // Do any additional setup after loading the view.
+    
+    WEAK_REF(self);
+    [self.coordinateQuadTree buildTreeWithCompletion:^{
+        STRONG_REF(self_);
+        if (self__) {
+            [self__ prepareMapModelWithMapView:self__.mapView];
+        }
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -50,20 +61,7 @@
     _mapView.delegate = nil;
 }
 
-- (void)dealloc
-{
-    if (_mapView) {
-        _mapView = nil;
-    }
-    [self.coordinateQuadTree freeTree];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark -map general delegate
+#pragma mark - map general delegate
 - (void)onGetNetworkState:(int)iError
 {
     if (0 == iError) {
@@ -85,7 +83,7 @@
     }
 }
 
-#pragma mark -annotation animation
+#pragma mark - annotation animation
 
 - (void)addBounceAnnimationToView:(UIView *)view
 {
@@ -125,6 +123,19 @@
     }];
 }
 
+- (void)prepareMapModelWithMapView:(BMKMapView *)mapView{
+    if (self.mapFinished && self.coordinateQuadTree.isFinished) {
+        [self.operationQueue cancelAllOperations];
+        
+        [self.operationQueue addOperationWithBlock:^{
+            double scale = self.mapView.bounds.size.width / self.mapView.visibleMapRect.size.width;
+            NSArray *annotations = [self.coordinateQuadTree clusteredAnnotationsWithinMapRect:mapView.visibleMapRect withZoomScale:scale];
+            
+            [self updateMapViewAnnotationsWithAnnotations:annotations];
+        }];
+    }
+}
+
 #pragma mark - BMKMapViewDelegate
 
 /**
@@ -138,22 +149,14 @@
 
 - (void)mapViewDidFinishLoading:(BMKMapView *)mapView
 {
-    [[NSOperationQueue new] addOperationWithBlock:^{
-        double scale = self.mapView.bounds.size.width / self.mapView.visibleMapRect.size.width;
-        NSArray *annotations = [self.coordinateQuadTree clusteredAnnotationsWithinMapRect:mapView.visibleMapRect withZoomScale:scale];
-        
-        [self updateMapViewAnnotationsWithAnnotations:annotations];
-    }];
+    self.mapFinished = YES;
+    
+    [self prepareMapModelWithMapView:mapView];
 }
 
 - (void)mapView:(BMKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
 {
-    [[NSOperationQueue new] addOperationWithBlock:^{
-        double scale = self.mapView.bounds.size.width / self.mapView.visibleMapRect.size.width;
-        NSArray *annotations = [self.coordinateQuadTree clusteredAnnotationsWithinMapRect:mapView.visibleMapRect withZoomScale:scale];
-        
-        [self updateMapViewAnnotationsWithAnnotations:annotations];
-    }];
+    [self prepareMapModelWithMapView:mapView];
 }
 
 - (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id<BMKAnnotation>)annotation
@@ -179,14 +182,15 @@
     }
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Dealloc
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)dealloc
+{
+    if (_mapView) {
+        _mapView = nil;
+    }
+    [self.operationQueue cancelAllOperations];
+    [self.coordinateQuadTree freeTree];
 }
-*/
 
 @end

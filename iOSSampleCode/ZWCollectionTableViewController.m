@@ -57,7 +57,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark -UITableViewDataSource
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -71,7 +71,7 @@
     return cell;
 }
 
-#pragma mark -UITableViewDelegate
+#pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(ZWCollectionTableCellTableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {

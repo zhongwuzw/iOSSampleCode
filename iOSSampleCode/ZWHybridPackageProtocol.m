@@ -13,7 +13,9 @@ static NSString *const HybridResourceProtocolKey = @"HybridResourceProtocolKey";
 
 @interface ZWHybridPackageProtocol ()<NSURLConnectionDataDelegate,NSURLSessionDataDelegate,NSURLSessionTaskDelegate>
 
-@property (nonatomic, strong)NSURLConnection *connection;
+//@property (nonatomic, strong)NSURLConnection *connection;
+@property (nonatomic, strong) NSURLSessionDataTask *task;
+@property (nonatomic, strong) NSURLSession *session;
 
 @end
 
@@ -65,8 +67,9 @@ static NSString *const HybridResourceProtocolKey = @"HybridResourceProtocolKey";
         
         [NSURLProtocol setProperty:@YES forKey:HybridResourceProtocolKey inRequest:newRequest];
 
-        NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:nil];
-        [[session dataTaskWithRequest:newRequest] resume];
+        self.session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:nil];
+        self.task = [self.session dataTaskWithRequest:newRequest];
+        [self.task resume];
 
         //使用NSURLSession替换NSURLConnection
 //        self.connection = [NSURLConnection connectionWithRequest:newRequest delegate:self];
@@ -75,10 +78,11 @@ static NSString *const HybridResourceProtocolKey = @"HybridResourceProtocolKey";
 
 - (void)stopLoading
 {
-    [self.connection cancel];
+//    [self.connection cancel];
+    [self.task cancel];
 }
 
-#pragma mark -NSURLConnectionDelegate
+#pragma mark - NSURLConnectionDelegate
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
@@ -100,7 +104,7 @@ static NSString *const HybridResourceProtocolKey = @"HybridResourceProtocolKey";
     [self.client URLProtocol:self didFailWithError:error];
 }
 
-#pragma mark -NSURLSessionDelegate
+#pragma mark - NSURLSessionDelegate
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler
 {
@@ -121,6 +125,12 @@ static NSString *const HybridResourceProtocolKey = @"HybridResourceProtocolKey";
     }
     else
         [self.client URLProtocolDidFinishLoading:self];
+}
+
+#pragma mark - Dealloc
+
+- (void)dealloc{
+    [self.session invalidateAndCancel];
 }
 
 @end

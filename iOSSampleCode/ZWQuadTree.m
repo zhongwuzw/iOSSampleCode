@@ -172,7 +172,7 @@ void TBFreeQuadTreeNode(TBQuadTreeNode* node)
         //修复内存泄露
         free(((TBHotelInfo *)(node->points[i].data))->hotelName);
         free(((TBHotelInfo *)(node->points[i].data))->hotelPhoneNumber);
-        free(node->points[i].data);
+        free((TBHotelInfo *)(node->points[i].data));
     }
     free(node->points);
     free(node);
